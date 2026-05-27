@@ -11,11 +11,21 @@ func _weapon_behavior() -> void:
 		anim_player.stop()
 	anim_player.play("fire")
 	
-	# 2. HIT DETECTION
+	# ... inside your _weapon_behavior() function ...
+	
 	raycast.force_raycast_update() 
 	
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
-		print("I hit: ", target.name)
+		var hit_point = raycast.get_collision_point()
+		var hit_normal = raycast.get_collision_normal()
+		
+		# 1. Did we hit an enemy?
 		if target.has_method("take_damage"):
 			target.take_damage(damage)
+			# Spawn the blood exactly where the ray hit the enemy!
+			ObjectPoolManager.spawn_blood(hit_point, hit_normal)
+			
+		# 2. Or did we hit a wall?
+		else:
+			ObjectPoolManager.spawn_impact(hit_point, hit_normal)

@@ -29,3 +29,19 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 [node name="MovementComponent" type="Node" parent="." unique_id=628733723]
 script = ExtResource("2_btcbx")
 air_acceleration = 5.0
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=8961476]
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD" unique_id=1296094594]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/CenterContainer" unique_id=320163302]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 1, 0, 1)

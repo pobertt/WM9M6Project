@@ -151,10 +151,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.73743, 0.1702973, -1.320904
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.749928, 0.27490127, -4.161568)
 
 [node name="sbushtro_02" parent="SubViewportContainer/SubViewport" unique_id=739681258 instance=ExtResource("7_f3h0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.816764, -0.12220812, -6.33469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.816764, 0.35827148, -6.33469)
 
 [node name="sbushtro_12" parent="SubViewportContainer/SubViewport" unique_id=1350652718 instance=ExtResource("8_kqqvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.189165, -0.13800597, 0.27084637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.189165, 0.22382784, 0.27084637)
 
 [node name="enemy_dummy" parent="SubViewportContainer/SubViewport" unique_id=158084193 instance=ExtResource("9_oq04h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77336, 1.1147871, -9.298522)

@@ -15,6 +15,10 @@ run/main_scene="uid://7lhhmdta07gd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ObjectPoolManager="*uid://diy4o2mru1isx"
+
 [file_customization]
 
 folder_colors={
@@ -22,6 +26,7 @@ folder_colors={
 "res://assets/": "orange",
 "res://level/": "purple",
 "res://player/": "green",
+"res://ui/": "pink",
 "res://weapons/": "red"
 }
 
@@ -75,5 +80,3 @@ weapon_prev={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

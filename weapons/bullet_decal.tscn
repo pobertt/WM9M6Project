@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://iw3hc8mxbnlr"]
+
+[ext_resource type="Texture2D" uid="uid://c8xyavxy1o4vh" path="res://icon.svg" id="1_emkd3"]
+
+[node name="BulletDecal" type="Node3D" unique_id=1195181375]
+
+[node name="Decal" type="Decal" parent="." unique_id=941599879]
+size = Vector3(0.2, 0.2, 0.2)
+texture_albedo = ExtResource("1_emkd3")
