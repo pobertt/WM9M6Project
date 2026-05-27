@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3dmua133cfok"]
+
+[ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="1_mj3t4"]
+[ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_uakvn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvx7b"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kvx7b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mj3t4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvx7b"]
+radius = 0.6
+
+[node name="enemy_dummy" type="CharacterBody3D" unique_id=158084193]
+script = ExtResource("1_uakvn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=999045282]
+material_override = SubResource("StandardMaterial3D_kvx7b")
+mesh = SubResource("CapsuleMesh_kvx7b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=629176959]
+shape = SubResource("CapsuleShape3D_mj3t4")
+
+[node name="HurtBox" type="Area3D" parent="." unique_id=1541307442]
+script = ExtResource("1_mj3t4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1501934923]
+shape = SubResource("CapsuleShape3D_kvx7b")
+
+[connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]

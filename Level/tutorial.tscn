@@ -1,6 +1,21 @@
 [gd_scene format=3 uid="uid://7lhhmdta07gd"]
 
-[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://Player/Player.tscn" id="1_acdnu"]
+[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="1_n60el"]
+[ext_resource type="Shader" uid="uid://bck48hnmrajtv" path="res://assets/shaders/ps1_shader.gdshader" id="2_33a3j"]
+[ext_resource type="Shader" uid="uid://ds7djltl52yak" path="res://assets/shaders/pp_psx.gdshader" id="2_kw67p"]
+[ext_resource type="PackedScene" uid="uid://der6fq8oag7nh" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/grasstro_0.glb" id="4_1klka"]
+[ext_resource type="PackedScene" uid="uid://bfqgder1r5e1n" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/plantcac.glb" id="5_oq04h"]
+[ext_resource type="PackedScene" uid="uid://cpka08gmmtl8s" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/plantflr_2.glb" id="6_yiu3q"]
+[ext_resource type="PackedScene" uid="uid://bopa07qa1bcls" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_0.glb" id="7_f3h0t"]
+[ext_resource type="PackedScene" uid="uid://djoe4bcs640p0" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_1.glb" id="8_kqqvm"]
+[ext_resource type="PackedScene" uid="uid://3dmua133cfok" path="res://ai/enemies/enemy_dummy.tscn" id="9_oq04h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
+shader = ExtResource("2_kw67p")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 12
+shader_parameter/dither_size = 1
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vonw3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,8 +30,37 @@ sky = SubResource("Sky_q35fs")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0b4ue"]
-albedo_color = Color(3.85046e-07, 0.798547, 0.458923, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ur6eb"]
+render_priority = 0
+shader = ExtResource("2_33a3j")
+shader_parameter/albedo_colour = Color(0, 0.8, 0.45882353, 1)
+shader_parameter/specular = 0.0
+shader_parameter/emission_colour = Color(0, 0, 0, 1)
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/uv_scale = Vector3(1, 1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/triplanar = false
+shader_parameter/uv_blend_sharpness = 0.0
+shader_parameter/alpha_scissor = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lob8"]
+render_priority = 0
+shader = ExtResource("2_33a3j")
+shader_parameter/albedo_colour = Color(0.8589353, 0.7256001, 1, 1)
+shader_parameter/specular = 0.0
+shader_parameter/emission_colour = Color(0, 0, 0, 1)
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/uv_scale = Vector3(1, 1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/triplanar = false
+shader_parameter/uv_blend_sharpness = 0.0
+shader_parameter/alpha_scissor = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6hdu"]
 albedo_color = Color(0.988598, 0, 0.451246, 1)
@@ -27,54 +71,105 @@ albedo_color = Color(0, 0.705962, 0.347684, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2t4f"]
 albedo_color = Color(0, 0.318943, 0.30604, 1)
 
-[node name="World" type="Node3D" unique_id=841627381]
+[node name="GameRoot" type="Node3D" unique_id=841627381]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1321150051]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=265809596]
+material = SubResource("ShaderMaterial_33a3j")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1951232541]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1321150051]
+transform = Transform3D(-0.86602354, -0.43301606, 0.25000072, 0, 0.49999818, 0.86602646, -0.5000033, 0.7499993, -0.4330102, 0, 0, 0)
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1679115605]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=1679115605]
 environment = SubResource("Environment_oi3di")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1592699797]
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1592699797]
 transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, -0.385212, 0)
-material_override = SubResource("StandardMaterial3D_0b4ue")
+material_override = SubResource("ShaderMaterial_ur6eb")
 use_collision = true
 size = Vector3(5, 1, 5)
 
-[node name="Wall1" type="CSGBox3D" parent="." unique_id=2137629368]
+[node name="Wall1" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=2137629368]
 transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 7, -18, 1.5, 0)
+material_override = SubResource("ShaderMaterial_2lob8")
 use_collision = true
 size = Vector3(1, 1, 5)
 
-[node name="Wall2" type="CSGBox3D" parent="." unique_id=594900196]
+[node name="Wall2" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=594900196]
 transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 7, 18, 1.5, 0)
+material_override = SubResource("ShaderMaterial_2lob8")
 use_collision = true
 size = Vector3(1, 1, 5)
 
-[node name="Wall3" type="CSGBox3D" parent="." unique_id=1040363673]
+[node name="Wall3" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1040363673]
 transform = Transform3D(-4.37114e-08, 0, -7, 0, 3, 0, 1, 0, -3.0598e-07, 0, 1.5, -18)
+material_override = SubResource("ShaderMaterial_2lob8")
 use_collision = true
 size = Vector3(1, 1, 5)
 
-[node name="Wall4" type="CSGBox3D" parent="." unique_id=1245444879]
+[node name="Wall4" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1245444879]
 transform = Transform3D(-4.37114e-08, 0, -7, 0, 3, 0, 1, 0, -3.0598e-07, 0, 1.5, 18)
+material_override = SubResource("ShaderMaterial_2lob8")
 use_collision = true
 size = Vector3(1, 1, 5)
 
-[node name="Box1" type="CSGBox3D" parent="." unique_id=1801911534]
+[node name="Box1" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1801911534]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 1.37571, -10.8443)
 material_override = SubResource("StandardMaterial3D_n6hdu")
 use_collision = true
 
-[node name="Box2" type="CSGBox3D" parent="." unique_id=104690584]
+[node name="Box2" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=104690584]
 transform = Transform3D(2.5, 0, 0, 0, 1.5, 0, 0, 0, 2.5, 0, 0.813702, -7.33415)
 material_override = SubResource("StandardMaterial3D_km5ld")
 use_collision = true
 
-[node name="Box3" type="CSGBox3D" parent="." unique_id=172554411]
+[node name="Box3" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=172554411]
 transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, 0.00791597, 0.623743, -3.73191)
 material_override = SubResource("StandardMaterial3D_i2t4f")
 use_collision = true
 
-[node name="Player" parent="." unique_id=1400928574 instance=ExtResource("1_acdnu")]
+[node name="Player" parent="SubViewportContainer/SubViewport" unique_id=1400928574 instance=ExtResource("1_n60el")]
+
+[node name="grasstro_02" parent="SubViewportContainer/SubViewport" unique_id=1368014197 instance=ExtResource("4_1klka")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6670265, 0.11414516, -6.5296535)
+
+[node name="plantcac2" parent="SubViewportContainer/SubViewport" unique_id=108797699 instance=ExtResource("5_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.73743, 0.1702973, -1.320904)
+
+[node name="plantflr_22" parent="SubViewportContainer/SubViewport" unique_id=331956738 instance=ExtResource("6_yiu3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.749928, 0.27490127, -4.161568)
+
+[node name="sbushtro_02" parent="SubViewportContainer/SubViewport" unique_id=739681258 instance=ExtResource("7_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.816764, -0.12220812, -6.33469)
+
+[node name="sbushtro_12" parent="SubViewportContainer/SubViewport" unique_id=1350652718 instance=ExtResource("8_kqqvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.189165, -0.13800597, 0.27084637)
+
+[node name="enemy_dummy" parent="SubViewportContainer/SubViewport" unique_id=158084193 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77336, 1.1147871, -9.298522)
+
+[node name="enemy_dummy2" parent="SubViewportContainer/SubViewport" unique_id=1957702743 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.906189, 1.114788, -7.202942)
+
+[node name="enemy_dummy3" parent="SubViewportContainer/SubViewport" unique_id=1604993973 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4160213, 1.114788, 6.197077)
+
+[node name="enemy_dummy4" parent="SubViewportContainer/SubViewport" unique_id=501705445 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.960923, 1.114788, 11.176264)
+
+[node name="enemy_dummy5" parent="SubViewportContainer/SubViewport" unique_id=973946689 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.349653, 1.114788, 13.242177)
+
+[node name="enemy_dummy6" parent="SubViewportContainer/SubViewport" unique_id=960999599 instance=ExtResource("9_oq04h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.058422, 1.114788, 12.483154)
