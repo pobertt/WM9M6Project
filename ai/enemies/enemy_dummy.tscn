@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="1_mj3t4"]
 [ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_uakvn"]
+[ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_b1q82"]
+[ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_ufc1m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvx7b"]
 albedo_color = Color(1, 0, 0, 1)
@@ -12,6 +14,9 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvx7b"]
 radius = 0.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xx3sj"]
+radius = 15.0
 
 [node name="enemy_dummy" type="CharacterBody3D" unique_id=158084193]
 script = ExtResource("1_uakvn")
@@ -29,4 +34,30 @@ script = ExtResource("1_mj3t4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1501934923]
 shape = SubResource("CapsuleShape3D_kvx7b")
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1403483806]
+target_desired_distance = 2.0
+
+[node name="StateMachine" type="Node" parent="." unique_id=514797695 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_b1q82")
+initial_state = NodePath("State_Wander")
+
+[node name="State_Wander" type="Node" parent="StateMachine" unique_id=6367259]
+script = ExtResource("4_ufc1m")
+
+[node name="State_Chase" type="Node" parent="StateMachine" unique_id=1883664571]
+
+[node name="State_Attack" type="Node" parent="StateMachine" unique_id=990457882]
+
+[node name="DetectionZone" type="Area3D" parent="." unique_id=2053005162]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone" unique_id=879704910]
+shape = SubResource("SphereShape3D_xx3sj")
+debug_color = Color(0.97110707, 0, 0.45343047, 0.41960785)
+
+[node name="LineOfSight" type="RayCast3D" parent="." unique_id=1222993472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, 0, -1)
+
 [connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
