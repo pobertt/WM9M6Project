@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d0wg5d5cme8iw"]
 
+[ext_resource type="Script" uid="uid://dw6237cp8fqmg" path="res://ui/reticule.gd" id="1_rbyyf"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pv4sj"]
 bg_color = Color(1, 0, 0, 1)
 
@@ -13,11 +15,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="CenterContainer" unique_id=1406877638]
-custom_minimum_size = Vector2(4, 4)
+[node name="Reticule" type="Control" parent="CenterContainer" unique_id=875332937]
 layout_mode = 2
-mouse_filter = 2
-color = Color(0, 1, 0, 1)
+script = ExtResource("1_rbyyf")
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=1628357611]
 anchors_preset = 2
