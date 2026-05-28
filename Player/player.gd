@@ -5,6 +5,10 @@ extends CharacterBody3D
 @onready var camera = $Head/Camera3D
 @onready var movement_component = $MovementComponent
 
+@export var max_health: int = 100
+var current_health: int
+@onready var health_bar: ProgressBar = $HUD/HealthBar
+
 # Bob vars.
 const BOB_FREQ : float = 2.0
 const BOB_AMP : float = 0.08
@@ -18,8 +22,17 @@ const SENSITIVITY : float = 0.007
 # Store input to avoid polling on the event tick
 var input_dir: Vector2 = Vector2.ZERO
 
+
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	current_health = max_health
+	add_to_group("Player")
+	
+	# Set the UI bar to match our starting health
+	health_bar.max_value = max_health
+	health_bar.value = current_health
 
 func _unhandled_input(event: InputEvent) -> void:
 	# 1. Mouse Look
@@ -65,3 +78,18 @@ func headbob_pos(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+
+func take_damage(amount: int) -> void:
+	current_health -= amount
+	print("Player took ", amount, " damage! HP remaining: ", current_health)
+	
+	# Update the UI!
+	health_bar.value = current_health
+	
+	if current_health <= 0:
+		die()
+
+func die() -> void:
+	print("PLAYER DIED! Restarting level...")
+	# Instantly reload the current test gym so you can try again
+	get_tree().reload_current_scene()

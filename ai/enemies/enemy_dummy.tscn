@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_uakvn"]
 [ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_b1q82"]
 [ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_ufc1m"]
+[ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_xx3sj"]
+[ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_6v170"]
+[ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_elpx3"]
+[ext_resource type="PackedScene" uid="uid://cj0inmgbpa1xj" path="res://ai/enemies/dummy_corpse.tscn" id="8_wirq6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvx7b"]
 albedo_color = Color(1, 0, 0, 1)
@@ -45,8 +49,14 @@ initial_state = NodePath("State_Wander")
 script = ExtResource("4_ufc1m")
 
 [node name="State_Chase" type="Node" parent="StateMachine" unique_id=1883664571]
+script = ExtResource("5_xx3sj")
 
-[node name="State_Attack" type="Node" parent="StateMachine" unique_id=990457882]
+[node name="State_Attack_Ranged" type="Node" parent="StateMachine" unique_id=990457882]
+script = ExtResource("6_6v170")
+
+[node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
+script = ExtResource("7_elpx3")
+corpse_scene = ExtResource("8_wirq6")
 
 [node name="DetectionZone" type="Area3D" parent="." unique_id=2053005162]
 collision_layer = 0

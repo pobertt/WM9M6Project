@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cj0inmgbpa1xj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp6gq"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wp6gq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o223r"]
+
+[node name="DummyCorpse" type="RigidBody3D" unique_id=1915518415]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1338086634]
+material_override = SubResource("StandardMaterial3D_wp6gq")
+mesh = SubResource("CapsuleMesh_wp6gq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1369541832]
+shape = SubResource("CapsuleShape3D_o223r")

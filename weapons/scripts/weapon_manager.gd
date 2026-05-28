@@ -14,6 +14,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Tell the current weapon to fire
 	if event.is_action_pressed("shoot") and current_weapon:
 		current_weapon.fire()
+	# Check for manual reload
+	if Input.is_action_just_pressed("reload"):
+		# Call reload on whichever weapon script is currently active
+		current_weapon.reload()
 		
 	# Swap weapons with mouse wheel
 	if event.is_action_pressed("weapon_next"):

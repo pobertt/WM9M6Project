@@ -3,7 +3,7 @@ extends Node
 # --- BULLET POOL ---
 var pool_size: int = 50 
 var decal_scene: PackedScene = preload("res://assets/vfx/bullet_decal.tscn")
-var pool: Array[Node3D] = []
+var bullet_hole_pool: Array = []
 var current_index: int = 0
 
 # --- BLOOD POOL ---
@@ -18,7 +18,7 @@ func _ready() -> void:
 		var decal = decal_scene.instantiate()
 		add_child(decal)
 		decal.hide()
-		pool.append(decal)
+		bullet_hole_pool.append(decal)
 		
 	# Build the blood pool
 	for i in range(blood_pool_size):
@@ -28,8 +28,25 @@ func _ready() -> void:
 		blood_pool.append(blood)
 
 func spawn_impact(pos: Vector3, normal: Vector3) -> void:
-	# ... (Keep your existing bullet hole logic exactly the same) ...
-	pass
+	# 1. Grab a bullet hole from your pool array
+	var decal = bullet_hole_pool[current_index] 
+	
+	
+	# 2. Move it to the exact coordinate the raycast hit
+	decal.global_position = pos 
+	
+	# 3. Rotate it so it sits flat against the wall, floor, or ceiling
+	if normal != Vector3.UP and normal != Vector3.DOWN:
+		decal.look_at(pos + normal, Vector3.UP)
+	elif normal == Vector3.UP:
+		decal.rotation_degrees.x = -90
+	elif normal == Vector3.DOWN:
+		decal.rotation_degrees.x = 90
+		
+	# 4. Cycle to the next bullet hole in the pool
+	current_index = (current_index + 1) % bullet_hole_pool.size()
+	
+	decal.show()
 
 # Add this new function for the blood
 func spawn_blood(pos: Vector3, normal: Vector3) -> void:

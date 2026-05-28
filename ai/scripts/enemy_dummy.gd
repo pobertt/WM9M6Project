@@ -1,6 +1,17 @@
 class_name enemy_dummy
 extends CharacterBody3D
 
+# --- LIFTED ATTACK CONFIGURATION ---
+@export_group("Attack Settings")
+@export var is_ranged_enemy: bool = true
+@export var ranged_attack_range: float = 10.0
+
+@export var is_melee_enemy: bool = false
+@export var melee_attack_range: float = 2.0
+
+var is_in_combat: bool = false
+# -----------------------------------
+
 # Grab references to the AI tools
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var line_of_sight: RayCast3D = $LineOfSight
@@ -17,26 +28,26 @@ func _ready() -> void:
 	line_of_sight.add_exception(self)
 
 func _physics_process(_delta: float) -> void:
-	# Only do vision math if someone tripped the wire!
-	if target_player != null:
-		# 1. Point the invisible laser exactly at the player
-		# (We add Vector3(0, 1, 0) to look at their chest, not their feet)
+	# Only do vision math if someone tripped the wire AND we aren't already fighting!
+	if target_player != null and not is_in_combat:
 		var aim_target = target_player.global_position + Vector3(0, 1.0, 0)
 		line_of_sight.look_at(aim_target, Vector3.UP)
 		
-		# 2. THE MISSING CODE: Stretch the laser so it actually reaches the player!
 		var distance = global_position.distance_to(aim_target)
 		line_of_sight.target_position = Vector3(0, 0, -distance)
 		
 		line_of_sight.force_raycast_update()
 		
-		# 3. Check what the laser is hitting
 		if line_of_sight.is_colliding():
 			var hit = line_of_sight.get_collider()
 			
 			if hit.is_in_group("Player"):
 				print("I SEE YOU! Switching to Chase State!")
-				target_player = null
+				
+				# THE LOCK: Stop running this vision math forever!
+				is_in_combat = true 
+				
+				$StateMachine.on_child_transition($StateMachine.current_state, "state_chase")
 
 func _on_hurt_box_took_damage(amount: int) -> void:
 	current_health -= amount
@@ -47,8 +58,8 @@ func _on_hurt_box_took_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Dummy destroyed!")
-	# This instantly deletes the node from the game
-	queue_free()
+	# Hand the steering wheel to the Death State so it can die gracefully
+	$StateMachine.on_child_transition($StateMachine.current_state, "state_death")
 
 func _on_detection_zone_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
