@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c4lu8xdj5slmi"]
+
+[ext_resource type="PackedScene" uid="uid://clnaffdska4bk" path="res://assets/models/RetroWeaponsPack/Guns/SMG_01/Fbx_Files/SMG_01.fbx" id="1_a8huw"]
+
+[node name="smg_asset" unique_id=1236350734 instance=ExtResource("1_a8huw")]

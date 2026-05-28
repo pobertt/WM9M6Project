@@ -10,13 +10,20 @@ func _ready() -> void:
 		child.hide()
 	equip_weapon(weapon_index)
 
+func _process(_delta: float) -> void:
+	# THE FULL-AUTO TRIGGER: If the gun is automatic, fire continuously while holding the button!
+	if current_weapon and current_weapon.is_full_auto:
+		if Input.is_action_pressed("shoot"):
+			current_weapon.fire()
+
 func _unhandled_input(event: InputEvent) -> void:
-	# Tell the current weapon to fire
+	# THE SEMI-AUTO TRIGGER: Only fire exactly once per click if it is NOT automatic
 	if event.is_action_pressed("shoot") and current_weapon:
-		current_weapon.fire()
+		if not current_weapon.is_full_auto:
+			current_weapon.fire()
+			
 	# Check for manual reload
-	if Input.is_action_just_pressed("reload"):
-		# Call reload on whichever weapon script is currently active
+	if Input.is_action_just_pressed("reload") and current_weapon:
 		current_weapon.reload()
 		
 	# Swap weapons with mouse wheel

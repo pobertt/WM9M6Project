@@ -1,0 +1,26 @@
+[gd_resource type="Skin" format=3 uid="uid://ck8xbld5gu6gc"]
+
+[resource]
+resource_name = "Skin"
+bind_count = 7
+bind/0/name = &"Main"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.045578133, 0)
+bind/1/name = &"Magazine"
+bind/1/bone = -1
+bind/1/pose = Transform3D(7.5497894e-08, 1, 1.2828812e-07, -3.265553e-08, -1.2828812e-07, 1, 1, -7.54979e-08, 3.265551e-08, 5.248572e-10, 4.7683715e-09, -3.7791614e-09)
+bind/2/name = &"Trigger"
+bind/2/bone = -1
+bind/2/pose = Transform3D(1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, 1, 0, -0.040974103, 0.14407422, 2.9937268e-09)
+bind/3/name = &"Knob"
+bind/3/bone = -1
+bind/3/pose = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.06115159, -0.19901165, -1.2316062e-08)
+bind/4/name = &"Stock"
+bind/4/bone = -1
+bind/4/pose = Transform3D(0, 1, -4.371139e-08, -1.0000001, 0, 0, 0, 4.371139e-08, 1, 0.013259765, -0.11850296, -0.17428084)
+bind/5/name = &"Silencer"
+bind/5/bone = -1
+bind/5/pose = Transform3D(0, -1, 4.371139e-08, 1.0000001, 0, 0, 0, 4.371139e-08, 1, -4.4362043e-09, -0.18957704, -0.16608307)
+bind/6/name = &"EjectionCover"
+bind/6/bone = -1
+bind/6/pose = Transform3D(0, -7.54979e-08, -1, 1, 0, 0, 0, -1, 7.54979e-08, 0.18170618, 0.020365577, -0.01737716)
