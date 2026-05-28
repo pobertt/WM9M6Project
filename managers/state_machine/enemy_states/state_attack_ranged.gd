@@ -64,16 +64,25 @@ func shoot() -> void:
 	last_shot_time = Time.get_ticks_msec()
 	
 	var space_state = actor.get_world_3d().direct_space_state
-	var start_pos = actor.muzzle.global_position
+	var start_pos = actor.muzzle.global_position 
+	var target_pos = player.global_position + Vector3(0, 1.0, 0)
 	
-	# 1. ADD SPREAD: Aim at the player, but scramble the coordinates slightly!
+	# 1. CALCULATE DISTANCE: How far away is the player?
+	var distance = start_pos.distance_to(target_pos)
+	
+	# Divide distance by 10.0 to create a multiplier. 
+	# At 10 meters, spread is 100%. At 1 meter, spread is only 10%!
+	# clamp() ensures the spread never goes above your maximum weapon_spread setting.
+	var spread_multiplier = clamp(distance / 10.0, 0.0, 1.0)
+	var active_spread = weapon_spread * spread_multiplier
+	
+	# 2. ADD SPREAD: Use the scaled active_spread instead of the flat rate
 	var random_offset = Vector3(
-		randf_range(-weapon_spread, weapon_spread),
-		randf_range(-weapon_spread, weapon_spread),
-		randf_range(-weapon_spread, weapon_spread)
+		randf_range(-active_spread, active_spread),
+		randf_range(-active_spread, active_spread),
+		randf_range(-active_spread, active_spread)
 	)
 	
-	var target_pos = player.global_position + Vector3(0, 1.0, 0)
 	var end_pos = target_pos + random_offset
 	
 	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
