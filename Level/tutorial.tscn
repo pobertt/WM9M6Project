@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bopa07qa1bcls" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_0.glb" id="7_f3h0t"]
 [ext_resource type="PackedScene" uid="uid://djoe4bcs640p0" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_1.glb" id="8_kqqvm"]
 [ext_resource type="PackedScene" uid="uid://3dmua133cfok" path="res://ai/enemies/enemy_dummy.tscn" id="9_oq04h"]
+[ext_resource type="PackedScene" uid="uid://cs3v12q4cexit" path="res://ai/map_stuff/cover_point.tscn" id="10_f3h0t"]
 [ext_resource type="MeshLibrary" uid="uid://btws2816m1riv" path="res://assets/models/Modular Retro FPS/fps_kit_library.tres" id="10_yiu3q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
@@ -109,6 +110,12 @@ cell_size = Vector3(0.1, 0.1, 0.1)
 cell_center_y = false
 cell_scale = 1.25
 data = {
-"cells": PackedInt32Array(2, 65533, 1245198, 65458, 27, 1245193, 65458, 2, 1245218, 65458, 65513, 1245219, 65446, 39, 262178, 65421, 39, 262178, 65421, 65500, 262178, 65409, 27, 1507362, 65409, 65513, 1507362)
+"cells": PackedInt32Array(2, 65533, 1245198, 65458, 27, 1245193, 65458, 2, 1245218, 65458, 65513, 1245219, 65446, 39, 262178, 65421, 39, 262178, 65421, 65500, 262178, 65409, 27, 1507362, 65409, 65513, 1507362, 130725, 7, 1245218)
 }
-metadata/_editor_floor_ = Vector3(0, 0, 0)
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="CoverPoint" parent="." unique_id=1132386462 instance=ExtResource("10_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.691204, 0.23378468, -0.43868566)
+
+[node name="CoverPoint2" parent="." unique_id=1773585686 instance=ExtResource("10_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.7125, 0.46047878, 2.041718)

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_6v170"]
 [ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_elpx3"]
 [ext_resource type="PackedScene" uid="uid://cj0inmgbpa1xj" path="res://ai/enemies/dummy_corpse.tscn" id="8_wirq6"]
+[ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_1k2co"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvx7b"]
 albedo_color = Color(1, 0, 0, 1)
@@ -24,6 +25,7 @@ radius = 15.0
 
 [node name="enemy_dummy" type="CharacterBody3D" unique_id=158084193]
 script = ExtResource("1_uakvn")
+ranged_attack_range = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=999045282]
 material_override = SubResource("StandardMaterial3D_kvx7b")
@@ -57,6 +59,9 @@ script = ExtResource("6_6v170")
 [node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
 script = ExtResource("7_elpx3")
 corpse_scene = ExtResource("8_wirq6")
+
+[node name="State_Cover" type="Node" parent="StateMachine" unique_id=1193169860]
+script = ExtResource("9_1k2co")
 
 [node name="DetectionZone" type="Area3D" parent="." unique_id=2053005162]
 collision_layer = 0

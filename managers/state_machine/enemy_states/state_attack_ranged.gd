@@ -1,9 +1,13 @@
 extends State
 
 @export var fire_rate: float = 0.5 # Shoots once per second
-@export var lose_interest_range: float = 12.0 # Slightly larger than attack_range to prevent jitter
+@export var lose_interest_range: float = 17.0 # Slightly larger than attack_range to prevent jitter
 @export var attack_damage: int = 10
 @export var weapon_spread: float = 1.0 # 1.0 meters of random inaccuracy
+
+@export var strafe_speed: float = 5
+var strafe_direction: int = 1
+var next_strafe_time: int = 0
 	
 var player: Node3D
 var last_shot_time: int = 0
@@ -16,14 +20,54 @@ func physics_update(_delta: float) -> void:
 	if player == null:
 		return
 
-	# 1. Stop walking, but keep tracking the player with our eyes
-	actor.velocity = Vector3.ZERO
+	# 1. THE MOVEMENT UPGRADE: Strafing with NavAgent & Gravity!
+	var current_time = Time.get_ticks_msec()
+	var nav = actor.nav_agent
 	
+	# Randomly change direction every 1.5 to 3 seconds
+	if current_time > next_strafe_time:
+		strafe_direction = [-1, 1].pick_random() 
+		next_strafe_time = current_time + randi_range(1500, 3000)
+		
+		# Calculate a target coordinate 3 meters to the left/right
+		var to_player = actor.global_position.direction_to(player.global_position)
+		to_player.y = 0 
+		var right_vector = to_player.cross(Vector3.UP).normalized()
+		
+		# Hand the new safe coordinate to the GPS!
+		var strafe_target = actor.global_position + (right_vector * strafe_direction * 3.0)
+		nav.target_position = strafe_target
+
+	# APPLY GRAVITY so they don't float!
+	if not actor.is_on_floor():
+		actor.velocity += actor.get_gravity() * _delta
+		
+	# Move towards the strafe target if we aren't there yet
+	if not nav.is_navigation_finished():
+		var current_pos = actor.global_position
+		var next_pos = nav.get_next_path_position()
+		var direction = current_pos.direction_to(next_pos)
+		
+		direction.y = 0 
+		direction = direction.normalized()
+		
+		# ONLY overwrite X and Z so we don't kill the gravity!
+		var horizontal_vel = direction * strafe_speed
+		actor.velocity.x = horizontal_vel.x
+		actor.velocity.z = horizontal_vel.z
+	else:
+		# Stop horizontally if they reached the end of their strafe path
+		actor.velocity.x = 0
+		actor.velocity.z = 0
+
+	actor.move_and_slide()
+	
+	# Look at the player while moving
 	var aim_target = player.global_position
-	aim_target.y = actor.global_position.y # Keep the dummy standing up straight
+	aim_target.y = actor.global_position.y
 	actor.look_at(aim_target, Vector3.UP)
 
-	# 2. Did the player run away OR hide behind a wall? Go back to chasing!
+	# 2. Check Line of Sight and Distance (Keep your existing code here!)
 	var distance = actor.global_position.distance_to(player.global_position)
 	
 	# Cast a quick math-laser to check Line of Sight (LoS)
@@ -54,10 +98,10 @@ func physics_update(_delta: float) -> void:
 		return
 
 	# 3. Pull the trigger if the gun is ready (using absolute time!)
-	var current_time = Time.get_ticks_msec()
+	var gun_time = Time.get_ticks_msec()
 	
 	# Convert your fire_rate (seconds) to milliseconds for the clock
-	if current_time - last_shot_time >= (fire_rate * 1000.0):
+	if gun_time - last_shot_time >= (fire_rate * 1000.0):
 		shoot()
 
 func shoot() -> void:

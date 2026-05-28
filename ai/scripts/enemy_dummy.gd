@@ -55,8 +55,23 @@ func _on_hurt_box_took_damage(amount: int) -> void:
 	current_health -= amount
 	print("Dummy hit! Remaining HP: ", current_health)
 	
+	# THE OMNISCIENCE FIX: Instantly realize who shot us, no matter what!
+	if target_player == null:
+		target_player = get_tree().get_first_node_in_group("Player")
+	
+	# Tell the root brain we are fighting so it stops hijacking the states
+	is_in_combat = true 
+	
 	if current_health <= 0:
 		die()
+	else:
+		# 30% chance to break combat and sprint to cover when hit
+		if randf() < 0.30 and $StateMachine.current_state.name.to_lower() != "state_cover":
+			$StateMachine.on_child_transition($StateMachine.current_state, "state_cover")
+			
+		# The other 70% of the time, charge the player!
+		elif $StateMachine.current_state.name.to_lower() == "state_wander":
+			$StateMachine.on_child_transition($StateMachine.current_state, "state_chase")
 
 func die() -> void:
 	# 1. Turn off the detection box so it physically cannot see you anymore

@@ -207,6 +207,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, -1.5707964, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SMG_01_Armature/Skeleton3D/Knob_Mesh:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3f4pu"]
 _data = {
@@ -242,15 +254,15 @@ bones/1/name = "Magazine"
 bones/1/parent = 0
 bones/1/rest = Transform3D(5.9604645e-08, -3.265553e-08, 1, 1.2828812e-07, 1, 3.2655517e-08, -1, 1.2828812e-07, 5.9604645e-08, 3.779162e-09, -0.045578137, 5.248569e-10)
 bones/1/enabled = true
-bones/1/position = Vector3(3.779162e-09, -0.045578003, 5.248569e-10)
-bones/1/rotation = Quaternion(-1.1545476e-08, 0.7071067, 1.1545476e-08, 0.7071068)
+bones/1/position = Vector3(3.7802144e-09, -0.045578003, 5.2485555e-10)
+bones/1/rotation = Quaternion(-1.1547231e-08, 0.7071067, 1.1547256e-08, 0.7071068)
 bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
 bones/2/name = "Trigger"
 bones/2/parent = 0
 bones/2/rest = Transform3D(1, 0, -8.742278e-08, 0, -1, 0, -8.742278e-08, 0, -1, 0.040974103, 0.09849608, -5.8834304e-10)
 bones/2/enabled = true
 bones/2/position = Vector3(0.040974103, 0.09849607, -5.8834304e-10)
-bones/2/rotation = Quaternion(1, 1.1018635e-09, -4.3711392e-08, 1.09394186e-16)
+bones/2/rotation = Quaternion(1, 2.6764623e-24, -4.371139e-08, 6.123032e-17)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "Knob"
 bones/3/parent = 0
@@ -288,6 +300,7 @@ skin = ExtResource("3_7n806")
 skeleton = NodePath("..")
 
 [node name="Knob_Mesh" type="MeshInstance3D" parent="SMG/SMG_01_Armature/Skeleton3D" unique_id=901180214]
+transform = Transform3D(1, 3.5527137e-15, 8.4703295e-22, -7.1054274e-15, 1, 2.2777148e-22, 0, 2.2777148e-22, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_blfxq")
 mesh = SubResource("ArrayMesh_rvga0")
 skin = ExtResource("3_7n806")
@@ -318,7 +331,7 @@ skin = ExtResource("3_7n806")
 skeleton = NodePath("..")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="SMG/SMG_01_Armature/Skeleton3D" unique_id=2077167302]
-transform = Transform3D(1.7881392e-07, -3.2655535e-08, 0.9999999, 0.99999976, -1.1920928e-07, -1.788139e-07, 1.1920927e-07, 0.9999999, 3.2655507e-08, 3.779162e-09, 4.908464e-09, 1.3411045e-07)
+transform = Transform3D(1.7881392e-07, -3.2660537e-08, 0.9999999, 0.99999976, -1.1920932e-07, -1.788139e-07, 1.192093e-07, 0.9999999, 3.266051e-08, 3.7802144e-09, 4.9084656e-09, 1.3411045e-07)
 bone_name = "Magazine"
 bone_idx = 1
 

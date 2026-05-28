@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cs3v12q4cexit"]
+
+[node name="CoverPoint" type="Marker3D" unique_id=1132386462 groups=["CoverPoints"]]
