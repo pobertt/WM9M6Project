@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7lhhmdta07gd"]
 
-[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="1_n60el"]
+[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://Player/player.tscn" id="1_n60el"]
 [ext_resource type="Shader" uid="uid://bck48hnmrajtv" path="res://assets/shaders/ps1_shader.gdshader" id="2_33a3j"]
 [ext_resource type="Shader" uid="uid://ds7djltl52yak" path="res://assets/shaders/pp_psx.gdshader" id="2_kw67p"]
 [ext_resource type="PackedScene" uid="uid://der6fq8oag7nh" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/grasstro_0.glb" id="4_1klka"]
@@ -14,8 +14,8 @@
 shader = ExtResource("2_kw67p")
 shader_parameter/enabled = true
 shader_parameter/dithering = true
-shader_parameter/colors = 12
-shader_parameter/dither_size = 1
+shader_parameter/colors = 7
+shader_parameter/dither_size = 5
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vonw3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

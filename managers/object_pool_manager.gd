@@ -2,13 +2,13 @@ extends Node
 
 # --- BULLET POOL ---
 var pool_size: int = 50 
-var decal_scene: PackedScene = preload("res://weapons/bullet_decal.tscn")
+var decal_scene: PackedScene = preload("res://assets/vfx/bullet_decal.tscn")
 var pool: Array[Node3D] = []
 var current_index: int = 0
 
 # --- BLOOD POOL ---
 var blood_pool_size: int = 30 # Blood usually needs fewer decals than bullets
-var blood_scene: PackedScene = preload("res://ai/blood_decal.tscn")
+var blood_scene: PackedScene = preload("res://assets/vfx/blood_decal.tscn")
 var blood_pool: Array[Node3D] = []
 var blood_index: int = 0
 
