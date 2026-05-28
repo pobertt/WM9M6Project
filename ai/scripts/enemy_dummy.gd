@@ -16,6 +16,8 @@ var is_in_combat: bool = false
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var line_of_sight: RayCast3D = $LineOfSight
 
+@onready var muzzle: Marker3D = $Muzzle
+
 # We need a reference to the player once they are spotted
 var target_player: Node3D = null
 

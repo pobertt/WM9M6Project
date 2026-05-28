@@ -24,7 +24,7 @@ func physics_update(_delta: float) -> void:
 	# 2. Check Line of Sight (so we don't try to attack walls!)
 	var has_line_of_sight = false
 	var space_state = actor.get_world_3d().direct_space_state
-	var start_pos = actor.global_position + Vector3(0, 1.0, 0)
+	var start_pos = actor.muzzle.global_position
 	var end_pos = player.global_position + Vector3(0, 1.0, 0)
 	
 	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)

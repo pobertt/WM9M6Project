@@ -69,5 +69,7 @@ debug_color = Color(0.97110707, 0, 0.45343047, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 target_position = Vector3(0, 0, -1)
 
+[node name="Muzzle" type="Marker3D" parent="." unique_id=968261191]
+
 [connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
