@@ -11,8 +11,6 @@ func _weapon_behavior() -> void:
 		anim_player.stop()
 	anim_player.play("fire")
 	
-	# ... inside your _weapon_behavior() function ...
-	
 	raycast.force_raycast_update() 
 	
 	if raycast.is_colliding():
