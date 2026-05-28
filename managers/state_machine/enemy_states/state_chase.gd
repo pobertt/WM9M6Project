@@ -21,17 +21,30 @@ func physics_update(_delta: float) -> void:
 	var check_ranged = actor.is_ranged_enemy if "is_ranged_enemy" in actor else false
 	var ranged_range = actor.ranged_attack_range if "ranged_attack_range" in actor else 10.0
 	
-	# 2. MELEE CHECK
-	if check_melee and distance <= melee_range:
+	# 2. Check Line of Sight (so we don't try to attack walls!)
+	var has_line_of_sight = false
+	var space_state = actor.get_world_3d().direct_space_state
+	var start_pos = actor.global_position + Vector3(0, 1.0, 0)
+	var end_pos = player.global_position + Vector3(0, 1.0, 0)
+	
+	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
+	query.exclude = [actor.get_rid()] # Ignore our own physics body
+	var result = space_state.intersect_ray(query)
+	
+	if result and result.collider == player:
+		has_line_of_sight = true
+	
+	# 3. MELEE CHECK (Must be in range AND see the player)
+	if check_melee and distance <= melee_range and has_line_of_sight:
 		actor.get_node("StateMachine").on_child_transition(self, "state_attack_melee")
 		return
 		
-	# 3. RANGED CHECK
-	if check_ranged and distance <= ranged_range:
+	# 4. RANGED CHECK (Must be in range AND see the player)
+	if check_ranged and distance <= ranged_range and has_line_of_sight:
 		actor.get_node("StateMachine").on_child_transition(self, "state_attack_ranged")
 		return 
 		
-	# 4. If we aren't close enough to attack, keep running!
+	# 5. If we aren't close enough to attack (or a wall is blocking us), keep running!
 	var nav = actor.nav_agent
 	nav.target_position = player.global_position
 	
