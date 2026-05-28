@@ -3,7 +3,9 @@ extends Weapon
 @onready var raycast: RayCast3D = $RayCast3D
 @onready var mesh: Node3D = $SMG
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
-@onready var muzzle_light: OmniLight3D = $MuzzleLight # Grab the light
+@onready var muzzle_light: SpotLight3D = $MuzzleLight
+
+var flash_tween: Tween
 
 func _weapon_behavior() -> void:
 	# 1. VISUALS
@@ -11,10 +13,14 @@ func _weapon_behavior() -> void:
 		anim_player.stop()
 	anim_player.play("fire")
 	
-	# Flash the environment light!
-	muzzle_light.light_energy = 3.0
-	var tween = create_tween()
-	tween.tween_property(muzzle_light, "light_energy", 0.0, 0.1) # Fade out in 0.1 seconds
+	# THE FIX: If an old fade is still running, brutally execute it!
+	if flash_tween and flash_tween.is_running():
+		flash_tween.kill()
+	
+	# Now start a fresh, clean flash
+	muzzle_light.light_energy = 10.0
+	flash_tween = create_tween()
+	flash_tween.tween_property(muzzle_light, "light_energy", 0.0, 0.1)
 	
 	raycast.force_raycast_update() 
 	

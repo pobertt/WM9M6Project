@@ -242,8 +242,8 @@ bones/1/name = "Magazine"
 bones/1/parent = 0
 bones/1/rest = Transform3D(5.9604645e-08, -3.265553e-08, 1, 1.2828812e-07, 1, 3.2655517e-08, -1, 1.2828812e-07, 5.9604645e-08, 3.779162e-09, -0.045578137, 5.248569e-10)
 bones/1/enabled = true
-bones/1/position = Vector3(-1.9476975e-06, -0.045585178, 1.0180344e-07)
-bones/1/rotation = Quaternion(1.905995e-05, 0.7071029, -2.0408654e-05, 0.70711064)
+bones/1/position = Vector3(3.7802144e-09, -0.045578003, 5.2485555e-10)
+bones/1/rotation = Quaternion(-1.1547231e-08, 0.7071067, 1.1547256e-08, 0.7071068)
 bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
 bones/2/name = "Trigger"
 bones/2/parent = 0
@@ -256,7 +256,7 @@ bones/3/name = "Knob"
 bones/3/parent = 0
 bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06115159, 0.15343352, 1.2316062e-08)
 bones/3/enabled = true
-bones/3/position = Vector3(-0.001690466, 0.15343365, 1.2316062e-08)
+bones/3/position = Vector3(0.06115159, 0.15343365, 1.2316062e-08)
 bones/3/rotation = Quaternion(0, 0, 0, 1)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Stock"
@@ -318,7 +318,7 @@ skin = ExtResource("3_7n806")
 skeleton = NodePath("..")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="SMG/SMG_01_Armature/Skeleton3D" unique_id=2077167302]
-transform = Transform3D(1.0967254e-05, 5.5817043e-05, 0.9999999, 0.99999976, 1.7878408e-06, -1.0967246e-05, -1.7884518e-06, 0.9999999, -5.581701e-05, -1.9476975e-06, -9.636925e-08, -7.0407987e-06)
+transform = Transform3D(1.7881392e-07, -3.2660537e-08, 0.9999999, 0.99999976, -1.1920932e-07, -1.788139e-07, 1.192093e-07, 0.9999999, 3.266051e-08, 3.7802144e-09, 4.9084656e-09, 1.3411045e-07)
 bone_name = "Magazine"
 bone_idx = 1
 
@@ -337,9 +337,11 @@ collide_with_areas = true
 root_node = NodePath("../SMG")
 libraries/ = SubResource("AnimationLibrary_3f4pu")
 
-[node name="MuzzleLight" type="OmniLight3D" parent="." unique_id=2137077848]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.13803232, 1.3869408)
+[node name="MuzzleLight" type="SpotLight3D" parent="." unique_id=1060528771]
+transform = Transform3D(1, 0, 0, 0, 0.9931809, 0.11658408, 0, -0.11658408, 0.9931809, -0.49063256, -0.117962256, 1.6424639)
 light_color = Color(1, 0.49705142, 0.15180832, 1)
-light_energy = 0.0
+light_bake_mode = 0
 shadow_enabled = true
-omni_range = 0.75
+spot_range = 0.42
+spot_attenuation = 3.2
+spot_angle = 13.8

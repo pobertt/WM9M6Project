@@ -59,11 +59,20 @@ func _on_hurt_box_took_damage(amount: int) -> void:
 		die()
 
 func die() -> void:
-	print("Dummy destroyed!")
-	# Hand the steering wheel to the Death State so it can die gracefully
+	# 1. Turn off the detection box so it physically cannot see you anymore
+	# We use set_deferred because Godot gets mad if you disable physics shapes in the middle of a frame
+	$DetectionZone/CollisionShape3D.set_deferred("disabled", true)
+	
+	# 2. (Optional) Turn off the main hit box so you can't shoot the corpse
+	$CollisionShape3D.set_deferred("disabled", true)
+	
+	# 3. Hand the steering wheel to the Death State so it can die gracefully
 	$StateMachine.on_child_transition($StateMachine.current_state, "state_death")
 
 func _on_detection_zone_body_entered(body: Node3D) -> void:
+	if current_health <= 0:
+		return
+		
 	if body.name == "Player":
 		target_player = body
 		print("player entered")
