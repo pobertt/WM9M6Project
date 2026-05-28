@@ -137,3 +137,10 @@ collide_with_areas = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1321508806]
 libraries/ = SubResource("AnimationLibrary_3f4pu")
+
+[node name="MuzzleLight" type="OmniLight3D" parent="." unique_id=2137077848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.3, 1.55)
+light_color = Color(1, 0.49705142, 0.15180832, 1)
+light_energy = 0.0
+shadow_enabled = true
+omni_range = 0.75

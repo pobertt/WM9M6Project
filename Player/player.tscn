@@ -26,6 +26,13 @@ script = ExtResource("2_yw30f")
 
 [node name="USP-S" parent="Head/Camera3D/WeaponManager" unique_id=1772087004 instance=ExtResource("3_yw30f")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+damage = null
+max_mag_ammo = null
+max_reserve_ammo = null
+weapon_kickback = null
+weapon_pitch = null
+fov_punch = null
+recovery_speed = null
 
 [node name="MovementComponent" type="Node" parent="." unique_id=628733723]
 script = ExtResource("2_btcbx")

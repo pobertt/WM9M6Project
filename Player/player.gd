@@ -9,6 +9,8 @@ extends CharacterBody3D
 var current_health: int
 @onready var health_bar: ProgressBar = $HUD/HealthBar
 
+@onready var damage_overlay: ColorRect = $HUD/DamageOverlay
+
 # Bob vars.
 const BOB_FREQ : float = 2.0
 const BOB_AMP : float = 0.08
@@ -86,8 +88,18 @@ func take_damage(amount: int) -> void:
 	# Update the UI!
 	health_bar.value = current_health
 	
+	# THE JUICE: Screen Flash Tween
+	var tween = create_tween()
+	
+	# Instantly snap the red screen to 40% opacity
+	damage_overlay.color.a = 0.4 
+	
+	# Smoothly fade it back to 0.0 (transparent) over 0.3 seconds
+	tween.tween_property(damage_overlay, "color:a", 0.0, 0.3)
+	
 	if current_health <= 0:
 		die()
+
 
 func die() -> void:
 	print("PLAYER DIED! Restarting level...")

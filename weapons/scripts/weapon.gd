@@ -3,7 +3,7 @@ extends Node3D
 
 @export var damage: int = 10
 @export var fire_rate: float = 0.25
-var can_shoot: bool = true
+var last_shot_time: int = 0
 
 @export_group("Ammo Settings")
 @export var max_mag_ammo: int = 12       # Capacity of one magazine
@@ -47,44 +47,49 @@ func _process(delta: float) -> void:
 	if cam:
 		cam.fov = lerp(cam.fov, default_fov, recovery_speed * delta)
 
-# The manager will call this, but the specific gun decides what actually happens
 func fire() -> void:
-	if is_reloading or not can_shoot:
+	if is_reloading:
 		return
+		
+	# Calculate fire rate using the system clock!
+	var current_time = Time.get_ticks_msec()
+	if current_time - last_shot_time < (fire_rate * 1000.0):
+		return # The gun is still cooling down, ignore the click!
 	
 	if current_mag_ammo <= 0:
 		print("CLICK! Out of ammo. Press R to reload!")
 		return
 		
-	can_shoot = false
+	# Lock the gun's cooldown
+	last_shot_time = current_time
 	
-	# 1. Spend the bullet instantly so the UI feels snappy
 	current_mag_ammo -= 1
 	update_ammo_ui()
 	
-	# 2. SHOOT FIRST: Run the raycast and spawn bullet holes while the gun is perfectly straight!
 	_weapon_behavior() 
 	
-	# 3. THE JUICE AFTERWARD: Now that the bullet has left, apply the recoil.
-	# (Note: we use -= for pitch so the barrel kicks UP toward the ceiling, not down)
+	# THE JUICE
 	position.z += weapon_kickback
 	rotation.x -= weapon_pitch 
 	
 	if cam:
 		cam.fov += fov_punch
-	
-	# 4. Cooldown handling
-	await get_tree().create_timer(fire_rate).timeout
-	can_shoot = true
 
 func reload() -> void:
 	if is_reloading or current_mag_ammo == max_mag_ammo or current_reserve_ammo <= 0:
 		return
 		
 	is_reloading = true
-	print("Reloading... (Brain is sleeping, off event tick!)")
+	print("Reloading...")
 	
 	await get_tree().create_timer(1.8).timeout
+	
+	# SAFETY CHECK: Did the player swap weapons while we were waiting?
+	# If this weapon is hidden, cancel the reload completely!
+	if not is_visible_in_tree():
+		is_reloading = false
+		print("Reload canceled! Weapon was stowed.")
+		return
 	
 	var ammo_needed = max_mag_ammo - current_mag_ammo
 	var ammo_to_transfer = min(ammo_needed, current_reserve_ammo)
