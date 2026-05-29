@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dols2hnxd4b1"
-path="res://.godot/imported/Punching.fbx-73fb301e4f91826d68cc90fa06d4ad68.scn"
+uid="uid://c2j6bmye1js7r"
+path="res://.godot/imported/Rifle Walk.fbx-c73cb62c139967e318453328c98b1d02.scn"
 
 [deps]
 
-source_file="res://ai/visuals/animations/fbx/Punching.fbx"
-dest_files=["res://.godot/imported/Punching.fbx-73fb301e4f91826d68cc90fa06d4ad68.scn"]
+source_file="res://ai/visuals/animations/fbx/old_animations/Rifle Walk.fbx"
+dest_files=["res://.godot/imported/Rifle Walk.fbx-c73cb62c139967e318453328c98b1d02.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://ai/visuals/animations/res/punching.res",
+"save_to_file/fallback_path": "res://ai/visuals/animations/res/rifle_walk.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bqucna1tt8cna",
+"save_to_file/path": "uid://dx7imd7grv5da",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

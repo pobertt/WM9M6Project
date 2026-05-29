@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2hlc0vevsy87"
-path="res://.godot/imported/Unarmed Idle.fbx-b900e896b5b87cb5b30f0015260b4251.scn"
+uid="uid://8nisapue6m78"
+path="res://.godot/imported/Running.fbx-314dd2a07f4ba67df1655ffdaaa1f358.scn"
 
 [deps]
 
-source_file="res://ai/visuals/animations/fbx/Unarmed Idle.fbx"
-dest_files=["res://.godot/imported/Unarmed Idle.fbx-b900e896b5b87cb5b30f0015260b4251.scn"]
+source_file="res://ai/visuals/animations/fbx/old_animations/Running.fbx"
+dest_files=["res://.godot/imported/Running.fbx-314dd2a07f4ba67df1655ffdaaa1f358.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://ai/visuals/animations/res/unarmed_idle.res",
+"save_to_file/fallback_path": "res://ai/visuals/animations/res/running.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://ccrbrvcvd7cup",
+"save_to_file/path": "uid://c3m2vfbharae1",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

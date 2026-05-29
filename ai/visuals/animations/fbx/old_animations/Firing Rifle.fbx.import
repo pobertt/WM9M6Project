@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dbi76sr6qlvr5"
-path="res://.godot/imported/Rifle Idle.fbx-a6565c3d87aa0245f5a8853567442388.scn"
+uid="uid://h66a781if6de"
+path="res://.godot/imported/Firing Rifle.fbx-8e8c8bf8012681d6a37520c12070eb0d.scn"
 
 [deps]
 
-source_file="res://ai/visuals/animations/fbx/Rifle Idle.fbx"
-dest_files=["res://.godot/imported/Rifle Idle.fbx-a6565c3d87aa0245f5a8853567442388.scn"]
+source_file="res://ai/visuals/animations/fbx/old_animations/Firing Rifle.fbx"
+dest_files=["res://.godot/imported/Firing Rifle.fbx-8e8c8bf8012681d6a37520c12070eb0d.scn"]
 
 [params]
 
@@ -41,9 +41,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://ai/visuals/animations/res/rifle_idle.res",
+"save_to_file/fallback_path": "res://ai/visuals/animations/res/firing_rifle.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://duhsungsqbely",
+"save_to_file/path": "uid://cofutq5sy4jf5",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
