@@ -76,3 +76,25 @@ func die() -> void:
 func _on_detection_zone_body_entered(body: Node3D) -> void:
 	if current_health > 0 and body.name == "Player":
 		target_player = body
+
+# The animation timeline will trigger this exactly when the weapon hits
+func deal_melee_damage() -> void:
+	if target_player == null or current_health <= 0:
+		return
+		
+	var distance = global_position.distance_to(target_player.global_position)
+	
+	# Check if the player is still in range (with a tiny 0.5m leniency for fairness)
+	if distance <= get("melee_attack_range") + 0.5:
+		if target_player.has_method("take_damage"):
+			target_player.take_damage(10) # Replace 10 with your actual damage variable
+			print("Player hit!")
+
+# The animation timeline will trigger this on its very last frame
+func end_melee_swing() -> void:
+	print("Brain received the end swing signal!") # <-- Add this to prove it fired!
+	
+	var state_machine = get_node_or_null("StateMachine")
+	if state_machine and "is_swinging" in state_machine.current_state:
+		state_machine.current_state.is_swinging = false
+		print("Unlocked movement!")

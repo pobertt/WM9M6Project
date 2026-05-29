@@ -132,10 +132,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, 4.6973925)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, -1.9259405)
 
 [node name="enemy_melee" parent="." unique_id=1053482800 instance=ExtResource("11_f3h0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6284404, 0.011896724, 5.892686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.451052, 0.011896724, 7.1136613)
 
 [node name="enemy_melee2" parent="." unique_id=2090824097 instance=ExtResource("11_f3h0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2895923, 0.011897678, 1.2003449)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.112204, 0.011897678, 2.4213204)
 
 [node name="enemy_melee3" parent="." unique_id=109222111 instance=ExtResource("11_f3h0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.128989, 0.011897678, 4.155297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.951601, 0.011897678, 5.376272)
