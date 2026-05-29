@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_sv1mx"]
 [ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_88w68"]
 [ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_kwfcl"]
-[ext_resource type="PackedScene" uid="uid://boxkrtsa7sk0x" path="res://ai/enemies/corpse/bag_guy_melee_corpse.tscn" id="8_1y1oj"]
 [ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_d3jru"]
 [ext_resource type="Script" uid="uid://b4b1ebosvoi" path="res://managers/state_machine/enemy_states/state_attack_melee.gd" id="10_1y1oj"]
 [ext_resource type="PackedScene" uid="uid://dy5n2jw5tfx3" path="res://ai/visuals/bad_guy_melee_visual.tscn" id="10_7n631"]
@@ -57,7 +56,6 @@ script = ExtResource("10_1y1oj")
 
 [node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
 script = ExtResource("7_kwfcl")
-corpse_scene = ExtResource("8_1y1oj")
 
 [node name="State_Cover" type="Node" parent="StateMachine" unique_id=1193169860]
 script = ExtResource("9_d3jru")
@@ -76,8 +74,62 @@ target_position = Vector3(0, 0, -1)
 
 [node name="BadGuy" parent="." unique_id=919554489 instance=ExtResource("10_7n631")]
 
-[node name="Hood" parent="BadGuy/Rig/Skeleton3D" parent_id_path=PackedInt32Array(919554489, 1626928792) index="2" unique_id=168485227]
-visible = false
+[node name="Skeleton3D" parent="BadGuy/enemy_melee2/Armature" parent_id_path=PackedInt32Array(919554489, 1169574250) index="0" unique_id=86329105]
+bones/0/position = Vector3(0.045870595, -0.43313134, -110.54211)
+bones/0/rotation = Quaternion(-0.6957248, -0.078829765, 0.06170445, 0.7112985)
+bones/1/rotation = Quaternion(0.026815332, 0.017249765, 0.0080123115, 0.9994595)
+bones/2/rotation = Quaternion(0.012121579, 0.035043653, 0.012230027, 0.9992374)
+bones/3/rotation = Quaternion(-0.09108544, 0.032822352, 0.016298043, 0.9951686)
+bones/4/rotation = Quaternion(0.11608357, 0.023063963, -0.063050546, 0.99096787)
+bones/5/rotation = Quaternion(0.042643573, -0.010776605, 0.07611196, 0.9961288)
+bones/7/rotation = Quaternion(-0.51888114, -0.46438816, 0.5645834, -0.44311586)
+bones/8/position = Vector3(3.546661e-07, 13.046206, 3.8016824e-06)
+bones/8/rotation = Quaternion(0.54239756, -0.05118708, -0.14595416, 0.8257616)
+bones/9/position = Vector3(6.5593895e-07, 30.600231, 1.6031117e-06)
+bones/9/rotation = Quaternion(0.028919384, 0.07228826, 0.15064207, 0.9855177)
+bones/10/position = Vector3(6.6689734e-07, 26.014088, -2.3209177e-06)
+bones/10/rotation = Quaternion(0.069491684, 0.26347485, 0.0074470174, 0.9621313)
+bones/11/position = Vector3(-3.2436004, 2.7034914, -3.994868e-06)
+bones/11/rotation = Quaternion(-0.021719279, 0.17049666, 0.3406058, 0.9243629)
+bones/12/rotation = Quaternion(0.13223858, -0.092251524, -0.18039638, 0.9702886)
+bones/13/position = Vector3(-0.19700715, 3.3389986, -1.7847142e-06)
+bones/13/rotation = Quaternion(0.023454193, -0.003953741, -0.0038431906, 0.9997097)
+bones/14/position = Vector3(-0.040094852, 2.8232908, -7.987021e-06)
+bones/15/position = Vector3(6.058001e-06, 5.588701, 0.07718824)
+bones/15/rotation = Quaternion(0.0760519, -7.0357295e-05, 0.06711731, 0.9948424)
+bones/16/position = Vector3(-0.019302636, 5.554798, -6.6955477e-06)
+bones/16/rotation = Quaternion(0.18955731, 0.0015992975, 0.08639952, 0.97805965)
+bones/17/rotation = Quaternion(0.11522844, -1.2973932e-05, 0.043723125, 0.9923764)
+bones/18/position = Vector3(-0.01369527, 2.8868985, -7.3153496e-06)
+bones/19/rotation = Quaternion(0.5241838, -0.46265233, 0.5402748, 0.46828124)
+bones/20/rotation = Quaternion(0.51289666, -0.009194535, 0.10978323, 0.8513519)
+bones/21/position = Vector3(-1.9946401e-06, 30.623505, -4.1891917e-06)
+bones/21/rotation = Quaternion(0.034550887, -0.019359658, -0.19033633, 0.9809198)
+bones/22/position = Vector3(-2.3889097e-06, 26.007004, 5.7099433e-06)
+bones/22/rotation = Quaternion(0.0006035052, -0.30186203, -0.03937595, 0.95253795)
+bones/23/position = Vector3(2.446371, 2.5783749, 2.4914742e-05)
+bones/23/rotation = Quaternion(-0.014033923, -0.1577601, -0.3945642, 0.90511537)
+bones/24/position = Vector3(-0.5404965, 2.8438053, 1.2014159e-05)
+bones/24/rotation = Quaternion(0.13160053, 0.095490955, 0.27939594, 0.94630903)
+bones/25/position = Vector3(0.5675714, 3.7132347, -1.3649464e-05)
+bones/25/rotation = Quaternion(0.023934713, 0.008678856, -0.051769834, 0.99833447)
+bones/26/position = Vector3(-0.118483305, 3.5533404, -1.4305115e-06)
+bones/27/rotation = Quaternion(0.07977567, 0.007676197, -0.06133566, 0.9948945)
+bones/28/position = Vector3(0.109900795, 6.027609, 9.6435215e-06)
+bones/28/rotation = Quaternion(0.18826094, 0.004620265, -0.12398194, 0.974251)
+bones/29/rotation = Quaternion(0.114672266, 7.673632e-06, 0.01426719, 0.993301)
+bones/30/position = Vector3(0.18155289, 2.7986002, 1.3947487e-05)
+bones/31/rotation = Quaternion(0.124039, 0.13556191, 0.9782683, -0.096065044)
+bones/32/rotation = Quaternion(-0.21160161, -0.039667055, 0.029376563, 0.9761088)
+bones/33/rotation = Quaternion(0.5296072, -0.033190235, -0.08322481, 0.84349775)
+bones/34/rotation = Quaternion(0.3028694, 0.03673127, -0.037777632, 0.95157444)
+bones/36/rotation = Quaternion(-0.08318114, 0.08237684, 0.9921923, 0.043004755)
+bones/37/rotation = Quaternion(-0.21553212, 0.049463008, -0.025754202, 0.97490317)
+bones/38/rotation = Quaternion(0.58136666, -0.01900701, 0.08584316, 0.80887735)
+bones/39/rotation = Quaternion(0.3271738, -0.035984043, 0.034591727, 0.943645)
+
+[node name="BoneAttachment3D" parent="BadGuy/enemy_melee2/Armature/Skeleton3D" index="5" unique_id=907347315]
+transform = Transform3D(0.52611387, -0.23477651, 0.8173641, 0.83002645, 0.35095736, -0.43345666, -0.18509446, 0.9064815, 0.37951443, -34.790684, 3.2459111, -105.124374)
 
 [connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]

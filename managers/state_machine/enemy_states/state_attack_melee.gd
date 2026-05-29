@@ -52,13 +52,23 @@ func physics_update(delta: float) -> void:
 
 func execute_melee_strike() -> void:
 	print("SWINGING!")
-	
 	is_swinging = true
 	last_attack_time = Time.get_ticks_msec()
 	
-	# (Optional) If you have an AnimationPlayer on the dummy, trigger the punch here!
-	# if actor.has_node("AnimationPlayer"): actor.get_node("AnimationPlayer").play("punch")
+	# 1. Put the exact names of your AnimationTree nodes into an Array
+	var attack_animations = [
+		"standing_melee_attack_horizontal_anim",
+		"standing_melee_attack_downward_anim",
+		"standing_melee_punching_anim"
+	]
 	
+	# 2. Pick one at random
+	var chosen_attack = attack_animations.pick_random()
+	
+	# 3. Tell the tree to play the randomly chosen attack
+	if actor.anim_state_machine:
+		actor.anim_state_machine.travel(chosen_attack)
+		
 	# Wait for the "windup" (e.g., the arm swinging forward) before dealing damage
 	await get_tree().create_timer(attack_windup).timeout
 	

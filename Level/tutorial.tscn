@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://djoe4bcs640p0" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_1.glb" id="8_kqqvm"]
 [ext_resource type="PackedScene" uid="uid://cs3v12q4cexit" path="res://ai/map_stuff/cover_point.tscn" id="10_f3h0t"]
 [ext_resource type="MeshLibrary" uid="uid://btws2816m1riv" path="res://assets/models/Modular Retro FPS/fps_kit_library.tres" id="10_yiu3q"]
+[ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="11_f3h0t"]
 [ext_resource type="PackedScene" uid="uid://dw5a48wn25pyl" path="res://ai/enemies/enemy_ranged.tscn" id="12_6fx4s"]
 [ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="12_kqqvm"]
 
@@ -129,3 +130,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, 4.6973925)
 
 [node name="enemy_ranged8" parent="." unique_id=428475304 instance=ExtResource("12_6fx4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, -1.9259405)
+
+[node name="enemy_melee" parent="." unique_id=1053482800 instance=ExtResource("11_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6284404, 0.011896724, 5.892686)
+
+[node name="enemy_melee2" parent="." unique_id=2090824097 instance=ExtResource("11_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2895923, 0.011897678, 1.2003449)
+
+[node name="enemy_melee3" parent="." unique_id=109222111 instance=ExtResource("11_f3h0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.128989, 0.011897678, 4.155297)
