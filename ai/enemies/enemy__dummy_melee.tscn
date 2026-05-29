@@ -1,17 +1,18 @@
-[gd_scene format=3 uid="uid://3dmua133cfok"]
+[gd_scene format=3 uid="uid://c0yd4uxqf8flt"]
 
-[ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="1_mj3t4"]
-[ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_uakvn"]
-[ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_b1q82"]
-[ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_ufc1m"]
-[ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_xx3sj"]
-[ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_6v170"]
-[ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_elpx3"]
-[ext_resource type="PackedScene" uid="uid://cj0inmgbpa1xj" path="res://ai/enemies/dummy_corpse.tscn" id="8_wirq6"]
-[ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_1k2co"]
+[ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_lhryx"]
+[ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="2_1y1oj"]
+[ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_7n631"]
+[ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_sv1mx"]
+[ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_88w68"]
+[ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_pva4t"]
+[ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_kwfcl"]
+[ext_resource type="PackedScene" uid="uid://cj0inmgbpa1xj" path="res://ai/enemies/corpse/dummy_corpse.tscn" id="8_vg4ua"]
+[ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_d3jru"]
+[ext_resource type="Script" uid="uid://b4b1ebosvoi" path="res://managers/state_machine/enemy_states/state_attack_melee.gd" id="10_1y1oj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvx7b"]
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(0, 0, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kvx7b"]
 
@@ -24,8 +25,11 @@ radius = 0.6
 radius = 15.0
 
 [node name="enemy_dummy" type="CharacterBody3D" unique_id=158084193]
-script = ExtResource("1_uakvn")
+script = ExtResource("1_lhryx")
+is_ranged_enemy = false
 ranged_attack_range = 15.0
+is_melee_enemy = true
+max_health = 60
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=999045282]
 material_override = SubResource("StandardMaterial3D_kvx7b")
@@ -35,7 +39,7 @@ mesh = SubResource("CapsuleMesh_kvx7b")
 shape = SubResource("CapsuleShape3D_mj3t4")
 
 [node name="HurtBox" type="Area3D" parent="." unique_id=1541307442]
-script = ExtResource("1_mj3t4")
+script = ExtResource("2_1y1oj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1501934923]
 shape = SubResource("CapsuleShape3D_kvx7b")
@@ -44,24 +48,27 @@ shape = SubResource("CapsuleShape3D_kvx7b")
 target_desired_distance = 2.0
 
 [node name="StateMachine" type="Node" parent="." unique_id=514797695 node_paths=PackedStringArray("initial_state")]
-script = ExtResource("3_b1q82")
+script = ExtResource("3_7n631")
 initial_state = NodePath("State_Wander")
 
 [node name="State_Wander" type="Node" parent="StateMachine" unique_id=6367259]
-script = ExtResource("4_ufc1m")
+script = ExtResource("4_sv1mx")
 
 [node name="State_Chase" type="Node" parent="StateMachine" unique_id=1883664571]
-script = ExtResource("5_xx3sj")
+script = ExtResource("5_88w68")
 
 [node name="State_Attack_Ranged" type="Node" parent="StateMachine" unique_id=990457882]
-script = ExtResource("6_6v170")
+script = ExtResource("6_pva4t")
 
 [node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
-script = ExtResource("7_elpx3")
-corpse_scene = ExtResource("8_wirq6")
+script = ExtResource("7_kwfcl")
+corpse_scene = ExtResource("8_vg4ua")
 
 [node name="State_Cover" type="Node" parent="StateMachine" unique_id=1193169860]
-script = ExtResource("9_1k2co")
+script = ExtResource("9_d3jru")
+
+[node name="State_Attack_Melee" type="Node" parent="StateMachine" unique_id=150362833]
+script = ExtResource("10_1y1oj")
 
 [node name="DetectionZone" type="Area3D" parent="." unique_id=2053005162]
 collision_layer = 0

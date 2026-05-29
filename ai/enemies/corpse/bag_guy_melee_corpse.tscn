@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://boxkrtsa7sk0x"]
+
+[ext_resource type="PackedScene" uid="uid://dy5n2jw5tfx3" path="res://ai/visuals/bad_guy_melee_visual.tscn" id="1_u5l5a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41hp5"]
+radius = 0.4
+height = 1.8
+
+[node name="bag_guy_melee_corpse" type="RigidBody3D" unique_id=922032076]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1689203543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_41hp5")
+
+[node name="BadGuyMelee" parent="." unique_id=919554489 instance=ExtResource("1_u5l5a")]

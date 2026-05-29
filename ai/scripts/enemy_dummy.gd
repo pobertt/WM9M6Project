@@ -14,7 +14,7 @@ var target_player: Node3D = null
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var line_of_sight: RayCast3D = $LineOfSight
-@onready var muzzle: Marker3D = $Muzzle
+@onready var muzzle: Marker3D = find_child("Muzzle", true, false)
 
 func _ready() -> void:
 	current_health = max_health

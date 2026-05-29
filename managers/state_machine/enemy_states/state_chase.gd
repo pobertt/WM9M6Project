@@ -27,7 +27,7 @@ func physics_update(_delta: float) -> void:
 	query.exclude = [actor.get_rid()]
 	var result = space_state.intersect_ray(query)
 	var has_los = result and result.collider == player
-	
+
 	# Attack transitions
 	if check_melee and distance <= melee_range and has_los:
 		actor.get_node("StateMachine").on_child_transition(self, "state_attack_melee")

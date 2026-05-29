@@ -7,9 +7,9 @@ func enter() -> void:
 	actor.get_node("CollisionShape3D").set_deferred("disabled", true)
 	actor.get_node("HurtBox/CollisionShape3D").set_deferred("disabled", true)
 	
-	var mesh = actor.get_node_or_null("MeshInstance3D")
-	if mesh == null:
-		mesh = actor.get_node_or_null("CSGBox3D")
+	var mesh = actor.get_node_or_null("BadGuy")
+	if mesh != null:
+		mesh.hide()
 		
 	if mesh != null:
 		mesh.hide()

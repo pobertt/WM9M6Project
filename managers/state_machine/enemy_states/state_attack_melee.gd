@@ -51,6 +51,8 @@ func physics_update(delta: float) -> void:
 		execute_melee_strike()
 
 func execute_melee_strike() -> void:
+	print("SWINGING!")
+	
 	is_swinging = true
 	last_attack_time = Time.get_ticks_msec()
 	

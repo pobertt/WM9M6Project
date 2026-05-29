@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cdvkthy8clp6h"]
+
+[ext_resource type="PackedScene" uid="uid://ej2rgknbhvuy" path="res://ai/visuals/bad_guy_ranged_visual.tscn" id="1_gneki"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41hp5"]
+radius = 0.4
+height = 1.8
+
+[node name="bag_guy_ranged_corpse" type="RigidBody3D" unique_id=922032076]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1689203543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_41hp5")
+
+[node name="BadGuyRanged" parent="." unique_id=1492012931 instance=ExtResource("1_gneki")]

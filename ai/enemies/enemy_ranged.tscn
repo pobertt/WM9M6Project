@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dw5a48wn25pyl"]
+
+[ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_vcn27"]
+[ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="2_gynje"]
+[ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_r7736"]
+[ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_wjxv8"]
+[ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_fwhid"]
+[ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_o65cf"]
+[ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_nl50d"]
+[ext_resource type="PackedScene" uid="uid://cdvkthy8clp6h" path="res://ai/enemies/corpse/bag_guy_ranged_corpse.tscn" id="8_gynje"]
+[ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_3w2gq"]
+[ext_resource type="PackedScene" uid="uid://ej2rgknbhvuy" path="res://ai/visuals/bad_guy_ranged_visual.tscn" id="10_gynje"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mj3t4"]
+radius = 0.25
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvx7b"]
+radius = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xx3sj"]
+radius = 15.0
+
+[node name="enemy_ranged" type="CharacterBody3D" unique_id=158084193]
+script = ExtResource("1_vcn27")
+ranged_attack_range = 15.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=629176959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_mj3t4")
+
+[node name="HurtBox" type="Area3D" parent="." unique_id=1541307442]
+script = ExtResource("2_gynje")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1501934923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_kvx7b")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1403483806]
+target_desired_distance = 2.0
+
+[node name="StateMachine" type="Node" parent="." unique_id=514797695 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_r7736")
+initial_state = NodePath("State_Wander")
+
+[node name="State_Wander" type="Node" parent="StateMachine" unique_id=6367259]
+script = ExtResource("4_wjxv8")
+
+[node name="State_Chase" type="Node" parent="StateMachine" unique_id=1883664571]
+script = ExtResource("5_fwhid")
+
+[node name="State_Attack_Ranged" type="Node" parent="StateMachine" unique_id=990457882]
+script = ExtResource("6_o65cf")
+
+[node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
+script = ExtResource("7_nl50d")
+corpse_scene = ExtResource("8_gynje")
+
+[node name="State_Cover" type="Node" parent="StateMachine" unique_id=1193169860]
+script = ExtResource("9_3w2gq")
+
+[node name="DetectionZone" type="Area3D" parent="." unique_id=2053005162]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone" unique_id=879704910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_xx3sj")
+debug_color = Color(0.97110707, 0, 0.45343047, 0.41960785)
+
+[node name="LineOfSight" type="RayCast3D" parent="." unique_id=1222993472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, 0, -1)
+
+[node name="BadGuy" parent="." unique_id=1492012931 instance=ExtResource("10_gynje")]
+
+[connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
+
+[editable path="BadGuy"]
