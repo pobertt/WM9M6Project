@@ -5,12 +5,7 @@ var player: Node3D
 
 func enter() -> void:
 	player = actor.target_player
-	
-	if actor.anim_state_machine:
-		print("Attempting to travel to run animation!")
-		actor.anim_state_machine.travel("rifle_run_anim")
-	else:
-		print("ERROR: State machine variable is missing!")
+	actor.anim_state_machine.travel("Movement")
 
 func physics_update(_delta: float) -> void:
 	if player == null:

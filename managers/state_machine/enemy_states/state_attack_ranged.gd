@@ -13,8 +13,7 @@ var last_shot_time: int = 0
 
 func enter() -> void:
 	player = actor.target_player
-	
-	actor.anim_state_machine.travel("shoot_rifle_still_anim")
+	actor.anim_state_machine.travel("Shooting")
 
 func physics_update(_delta: float) -> void:
 	if player == null:
@@ -66,7 +65,8 @@ func physics_update(_delta: float) -> void:
 	var has_los = result and result.collider == player
 		
 	# Lose interest if too far or line of sight is broken
-	if actor.global_position.distance_to(player.global_position) > lose_interest_range or not has_los:
+	# NEW
+	if actor.global_position.distance_to(player.global_position) > lose_interest_range:
 		actor.get_node("StateMachine").on_child_transition(self, "state_chase")
 		return
 

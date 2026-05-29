@@ -110,7 +110,22 @@ script = ExtResource("12_kqqvm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, 0, 7.6051264)
 
 [node name="enemy_ranged2" parent="." unique_id=1981921141 instance=ExtResource("12_6fx4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.082245, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.788986, 0, 4)
 
 [node name="enemy_ranged3" parent="." unique_id=1177189907 instance=ExtResource("12_6fx4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1839, 0, -4.7627077)
+
+[node name="enemy_ranged4" parent="." unique_id=225577750 instance=ExtResource("12_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, 0, 0.271451)
+
+[node name="enemy_ranged5" parent="." unique_id=533118388 instance=ExtResource("12_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.498474, 0, 7.6051264)
+
+[node name="enemy_ranged6" parent="." unique_id=1605193487 instance=ExtResource("12_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.61572, 0, -1.3790045)
+
+[node name="enemy_ranged7" parent="." unique_id=1080951596 instance=ExtResource("12_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, 4.6973925)
+
+[node name="enemy_ranged8" parent="." unique_id=428475304 instance=ExtResource("12_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223852, 0, -1.9259405)
