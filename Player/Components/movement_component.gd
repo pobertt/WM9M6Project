@@ -13,16 +13,13 @@ func calculate_velocity(current_velocity: Vector3, direction: Vector3, is_on_flo
 	var new_velocity = current_velocity
 	
 	if is_on_floor:
-		# Apply friction when no keys are pressed
 		if direction == Vector3.ZERO:
 			new_velocity.x = move_toward(new_velocity.x, 0, ground_friction * delta * max_speed)
 			new_velocity.z = move_toward(new_velocity.z, 0, ground_friction * delta * max_speed)
-		# Apply rapid ground acceleration
 		else:
 			new_velocity.x = lerp(new_velocity.x, direction.x * max_speed, ground_acceleration * delta)
 			new_velocity.z = lerp(new_velocity.z, direction.z * max_speed, ground_acceleration * delta)
 	else:
-		# Apply gravity and floaty air acceleration
 		new_velocity.y -= gravity * delta
 		new_velocity.x = lerp(new_velocity.x, direction.x * max_speed, air_acceleration * delta)
 		new_velocity.z = lerp(new_velocity.z, direction.z * max_speed, air_acceleration * delta)

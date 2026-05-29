@@ -10,25 +10,19 @@ var reached_cover: bool = false
 var is_peeking: bool = false
 
 func enter() -> void:
-	print("Entering Cover State!")
-	
-	# Try to grab the player from the actor's memory first
 	player = actor.target_player
 	
-	# THE FIX: If we were shot from outside our detection zone, find the player manually!
+	# Fallback if damaged outside detection zone
 	if player == null:
 		player = get_tree().get_first_node_in_group("Player")
-		# Update the enemy's brain so they remember the player for the other states
 		actor.target_player = player
 		
 	reached_cover = false
 	is_peeking = false
 	
-	# Final safety lock: Only run the cover math if the player actually exists
 	if player != null:
 		find_best_cover()
 	else:
-		# If the player was deleted or doesn't exist, just go back to wandering
 		actor.get_node("StateMachine").on_child_transition(self, "state_wander")
 
 func physics_update(_delta: float) -> void:
@@ -37,19 +31,14 @@ func physics_update(_delta: float) -> void:
 		
 	var nav = actor.nav_agent
 	
-	# 1. Navigating to the chosen safe wall
 	if not reached_cover:
 		if target_cover_position == Vector3.ZERO:
-			print("COVER FAILED: No safe walls nearby! Charging instead!")
 			actor.get_node("StateMachine").on_child_transition(self, "state_chase")
 			return
 			
 		nav.target_position = target_cover_position
 		
-		var current_pos = actor.global_position
-		var next_pos = nav.get_next_path_position()
-		var direction = current_pos.direction_to(next_pos)
-		
+		var direction = actor.global_position.direction_to(nav.get_next_path_position())
 		direction.y = 0
 		direction = direction.normalized()
 		
@@ -57,59 +46,72 @@ func physics_update(_delta: float) -> void:
 		actor.move_and_slide()
 		
 		if direction != Vector3.ZERO:
-			actor.look_at(current_pos + direction, Vector3.UP)
+			actor.look_at(actor.global_position + direction, Vector3.UP)
 			
 		if nav.is_navigation_finished():
 			reached_cover = true
 			execute_cover_loop()
 
 func find_best_cover() -> void:
-	var cover_nodes = get_tree().get_nodes_in_group("CoverPoints")
 	var best_point: Vector3 = Vector3.ZERO
 	var closest_distance: float = max_search_radius
-	
 	var space_state = actor.get_world_3d().direct_space_state
 	
-	for node in cover_nodes:
+	for node in get_tree().get_nodes_in_group("CoverPoints"):
 		if not node is Marker3D: continue
 		
-		var point_pos = node.global_position
-		var dist_to_enemy = actor.global_position.distance_to(point_pos)
+		var dist_to_enemy = actor.global_position.distance_to(node.global_position)
 		
-		# Only evaluate nodes within a reasonable sprinting distance
 		if dist_to_enemy < closest_distance:
-			# Verify if this position actually blocks the player's vision
-			var start_pos = point_pos + Vector3(0, 1.0, 0) # Chest height
-			var end_pos = player.global_position + Vector3(0, 1.0, 0)
-			
-			var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
+			var query = PhysicsRayQueryParameters3D.create(node.global_position + Vector3(0, 1.0, 0), player.global_position + Vector3(0, 1.0, 0))
 			query.exclude = [actor.get_rid()]
 			var result = space_state.intersect_ray(query)
 			
-			# If the raycast hits something BEFORE reaching the player, it's a solid wall!
 			if result and result.collider != player:
 				closest_distance = dist_to_enemy
-				best_point = point_pos
+				best_point = node.global_position
 				
 	target_cover_position = best_point
 
 func execute_cover_loop() -> void:
-	# Stop moving once nested safely behind the geometry
+	# 1. Stop and hide
 	actor.velocity = Vector3.ZERO
-	
-	# Wait behind cover out of sight
 	await get_tree().create_timer(wait_in_cover_time).timeout
 	
+	# Safety check in case they died while hiding
 	if not is_inside_tree() or actor.current_health <= 0: return
 	
-	# Step 3: The Peek and Shoot routine
 	is_peeking = true
-	print("Peeking out from cover!")
 	
-	# Turn to face the player before stepping out
-	var look_target = player.global_position
-	look_target.y = actor.global_position.y
-	actor.look_at(look_target, Vector3.UP)
+	# 2. CALCULATE THE PEEK
+	# Find our left and right sides relative to the player
+	var to_player = actor.global_position.direction_to(player.global_position)
+	to_player.y = 0
+	var right_vector = to_player.cross(Vector3.UP).normalized()
 	
-	# Transition back to attack state to fire from this new position
-	actor.get_node("StateMachine").on_child_transition(self, "state_attack_ranged")
+	# Randomly pick left or right, and set a target 1.5 meters out
+	var peek_dir = right_vector * [-1, 1].pick_random()
+	var peek_target = actor.global_position + (peek_dir * 1.5)
+	actor.nav_agent.target_position = peek_target
+	
+	# 3. STEP OUT
+	# A mini-loop to walk sideways until they reach the peek spot
+	while not actor.nav_agent.is_navigation_finished() and is_inside_tree() and actor.current_health > 0:
+		var current_pos = actor.global_position
+		var next_pos = actor.nav_agent.get_next_path_position()
+		var dir = current_pos.direction_to(next_pos)
+		
+		dir.y = 0
+		actor.velocity = dir.normalized() * movement_speed
+		actor.move_and_slide()
+		
+		# Keep eyes on the player while stepping out
+		var look_target = player.global_position
+		look_target.y = actor.global_position.y
+		actor.look_at(look_target, Vector3.UP)
+		
+		await get_tree().physics_frame 
+		
+	# 4. OPEN FIRE
+	if is_inside_tree() and actor.current_health > 0:
+		actor.get_node("StateMachine").on_child_transition(self, "state_attack_ranged")

@@ -3,7 +3,6 @@ extends Node
 
 signal transitioned(state: State, new_state_name: String)
 
-# We pass the enemy body in so the state can control its movement
 var actor: CharacterBody3D
 
 func enter() -> void:
