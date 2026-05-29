@@ -13,6 +13,8 @@ var last_shot_time: int = 0
 
 func enter() -> void:
 	player = actor.target_player
+	
+	actor.anim_state_machine.travel("shoot_rifle_still_anim")
 
 func physics_update(_delta: float) -> void:
 	if player == null:

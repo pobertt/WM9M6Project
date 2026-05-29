@@ -1,57 +1,12 @@
 [gd_scene format=3 uid="uid://dnjxri2xfs6kq"]
 
 [ext_resource type="PackedScene" uid="uid://qiodubv0jywg" path="res://assets/models/PSX Bad Guys/BadGuys.glb" id="1_fmeb5"]
-[ext_resource type="Animation" uid="uid://cofutq5sy4jf5" path="res://ai/visuals/animations/res/old animations/firing_rifle.res" id="2_rnci3"]
-[ext_resource type="Animation" uid="uid://bqucna1tt8cna" path="res://ai/visuals/animations/res/old animations/punching.res" id="3_faxvt"]
-[ext_resource type="Animation" uid="uid://duhsungsqbely" path="res://ai/visuals/animations/res/old animations/rifle_idle.res" id="4_wc12v"]
-[ext_resource type="Animation" uid="uid://df44vo6hxihx7" path="res://ai/visuals/animations/res/old animations/rifle_run.res" id="5_cehw4"]
-[ext_resource type="Animation" uid="uid://dx7imd7grv5da" path="res://ai/visuals/animations/res/old animations/rifle_walk.res" id="6_2qcia"]
-[ext_resource type="Animation" uid="uid://c3m2vfbharae1" path="res://ai/visuals/animations/res/old animations/running.res" id="7_gd4ux"]
-[ext_resource type="Animation" uid="uid://ccrbrvcvd7cup" path="res://ai/visuals/animations/res/old animations/unarmed_idle.res" id="8_3vpgw"]
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oskoo"]
-_data = {
-&"firing_rifle": ExtResource("2_rnci3"),
-&"punching": ExtResource("3_faxvt"),
-&"rifle_idle": ExtResource("4_wc12v"),
-&"rifle_run": ExtResource("5_cehw4"),
-&"rifle_walk": ExtResource("6_2qcia"),
-&"running": ExtResource("7_gd4ux"),
-&"unarmed_idle": ExtResource("8_3vpgw")
-}
+[ext_resource type="ArrayMesh" uid="uid://brm1y6kr710ti" path="res://assets/models/PSX Bad Guys/mesh/ak.tres" id="2_fwmu4"]
 
 [node name="BadGuys" unique_id=790799278 instance=ExtResource("1_fmeb5")]
 
-[node name="Rig" parent="." index="0" unique_id=835859223]
-transform = Transform3D(0.76650393, 0.6298528, 0.1255277, 0.026246937, -0.22601098, 0.9737711, 0.64170295, -0.7431047, -0.18977003, -0.12078186, -0.028294086, 0.19054173)
+[node name="Rig" parent="." index="0" unique_id=1375344046]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="GeneralSkeleton" parent="Rig" index="0" unique_id=239429112]
-bones/10/rotation = Quaternion(0.06968291, 2.7426882e-05, -0.0022211652, 0.9975668)
-bones/11/rotation = Quaternion(0.14274924, -0.000116653246, -0.006594145, 0.9897369)
-bones/12/rotation = Quaternion(0.14275336, -0.00073197356, -0.0064633316, 0.989737)
-bones/13/rotation = Quaternion(0.0036762604, 0.06521194, 0.007502479, 0.99783653)
-bones/15/rotation = Quaternion(0.60306805, 0.6648647, 0.3162153, -0.3070369)
-bones/16/rotation = Quaternion(0.23095667, 0.8121936, -0.45959568, 0.27526778)
-bones/17/rotation = Quaternion(0.37912798, -0.5968769, 0.37912792, 0.5968768)
-bones/18/rotation = Quaternion(-0.26539138, -0.17337696, -0.12796377, 0.9397516)
-bones/19/rotation = Quaternion(0.24373204, -0.5392465, -0.20222943, 0.78032774)
-bones/21/rotation = Quaternion(-0.1690989, 0.72388256, 0.14654724, 0.6526282)
-bones/22/rotation = Quaternion(-0.02391871, 0.17371516, 0.045114465, 0.9834713)
-bones/22/scale = Vector3(1.0003892, 0.99961454, 0.9999959)
-bones/24/rotation = Quaternion(0.66066444, -0.6149117, -0.21698417, -0.3719195)
-bones/25/rotation = Quaternion(-0.5519476, 0.65935045, -0.495314, 0.1235922)
-bones/26/rotation = Quaternion(0.53544945, 0.46183747, -0.53544945, 0.4618374)
-bones/27/rotation = Quaternion(-0.28315076, -0.343607, 0.056736305, 0.8936112)
-bones/28/rotation = Quaternion(0.098424464, 0.55950433, 0.04746469, 0.82159287)
-bones/30/rotation = Quaternion(-0.10208455, -0.7055075, -0.25621122, 0.65283513)
-bones/31/rotation = Quaternion(0.123646595, -0.27583376, 0.030497968, 0.9527315)
-bones/31/scale = Vector3(1.0003892, 0.99961454, 0.9999959)
-bones/33/rotation = Quaternion(0.39547566, 0.073722966, 0.9037849, -0.14607136)
-bones/34/rotation = Quaternion(0.0039156103, 0.98104316, -0.19359218, 0.007818506)
-bones/35/rotation = Quaternion(-0.006038167, 0.7215108, -0.69203836, 0.02164879)
-bones/38/rotation = Quaternion(0.046685882, -0.039572317, 0.9969269, 0.04890172)
-bones/39/rotation = Quaternion(-0.008421904, 0.96433187, -0.2645185, -0.0048096995)
-bones/40/rotation = Quaternion(-0.055348046, 0.555189, -0.81694376, -0.14596143)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1392048616]
-libraries/ = SubResource("AnimationLibrary_oskoo")
+[node name="Ak" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="0" unique_id=1082770192]
+mesh = ExtResource("2_fwmu4")

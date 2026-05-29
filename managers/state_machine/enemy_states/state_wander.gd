@@ -9,6 +9,10 @@ var is_waiting: bool = false
 func enter() -> void:
 	start_position = actor.global_position
 	pick_new_target()
+	actor.anim_state_machine.travel("rifle_idle_anim")
+	actor.anim_state_machine.travel("rifle_run_anim")
+	return
+
 
 func physics_update(_delta: float) -> void:
 	if is_waiting:

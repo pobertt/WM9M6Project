@@ -35,6 +35,8 @@ func on_child_transition(state: State, new_state_name: String) -> void:
 	if not new_state:
 		return
 		
+	print("Enemy transitioned to: ", new_state_name)
+		
 	if current_state:
 		current_state.exit()
 		
