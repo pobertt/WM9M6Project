@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_fwhid"]
 [ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_o65cf"]
 [ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_nl50d"]
-[ext_resource type="PackedScene" uid="uid://cdvkthy8clp6h" path="res://ai/enemies/corpse/bag_guy_ranged_corpse.tscn" id="8_gynje"]
 [ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_3w2gq"]
 [ext_resource type="PackedScene" uid="uid://ej2rgknbhvuy" path="res://ai/visuals/bad_guy_ranged_visual.tscn" id="10_gynje"]
 
@@ -50,10 +49,11 @@ script = ExtResource("5_fwhid")
 
 [node name="State_Attack_Ranged" type="Node" parent="StateMachine" unique_id=990457882]
 script = ExtResource("6_o65cf")
+fire_rate = 0.25
+attack_damage = 5
 
 [node name="State_Death" type="Node" parent="StateMachine" unique_id=471287533]
 script = ExtResource("7_nl50d")
-corpse_scene = ExtResource("8_gynje")
 
 [node name="State_Cover" type="Node" parent="StateMachine" unique_id=1193169860]
 script = ExtResource("9_3w2gq")
@@ -71,6 +71,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 target_position = Vector3(0, 0, -1)
 
 [node name="BadGuy" parent="." unique_id=1492012931 instance=ExtResource("10_gynje")]
+
+[node name="Skeleton3D" parent="BadGuy/enemy_ranged/Armature" parent_id_path=PackedInt32Array(1492012931, 972838549) index="0" unique_id=1352030129]
+bones/0/position = Vector3(0.6468806, -0.6761339, -103.96407)
+bones/0/rotation = Quaternion(-0.7501952, -0.005437357, 0.04461878, 0.659687)
+bones/1/rotation = Quaternion(0.0029112734, 0.019688653, -0.018043289, 0.9996391)
+bones/2/rotation = Quaternion(0.012963648, 0.0060220137, -0.0050246804, 0.99988526)
+bones/4/rotation = Quaternion(0.06537599, 0.047188804, 0.017848358, 0.99658453)
+bones/5/rotation = Quaternion(0.031642098, -0.09174678, 0.009948028, 0.9952298)
+bones/7/rotation = Quaternion(-0.6660079, -0.32586032, 0.5225048, -0.42099565)
+bones/8/rotation = Quaternion(0.27860865, 0.036907487, 0.03070603, 0.959204)
+bones/9/rotation = Quaternion(0.09834534, 0.0053679007, 0.62192565, 0.77685773)
+bones/10/rotation = Quaternion(-0.086821444, -0.7201346, -0.08315811, 0.68333954)
+bones/20/rotation = Quaternion(0.3208263, -0.1259317, -0.11420254, 0.9317562)
+bones/21/rotation = Quaternion(0.11705901, -0.004534161, -0.7426083, 0.6594009)
+bones/22/rotation = Quaternion(0.2457372, 0.09433629, 0.088213146, 0.9606937)
+bones/31/rotation = Quaternion(0.10398303, 0.09613784, 0.9895435, -0.027364288)
+bones/32/rotation = Quaternion(-0.17915834, -0.06733189, 0.032022014, 0.98099107)
+bones/33/rotation = Quaternion(0.49166846, 0.052031104, -0.087043785, 0.8648575)
+bones/34/rotation = Quaternion(0.2635953, -0.06482362, 0.017741164, 0.96228933)
+bones/36/rotation = Quaternion(-0.13256447, -0.0031267582, 0.98967147, 0.05447228)
+bones/37/rotation = Quaternion(-0.24312396, 0.076708354, -0.05478372, 0.9654043)
+bones/38/rotation = Quaternion(0.6343186, -0.015204925, 0.07906604, 0.7688676)
+bones/39/rotation = Quaternion(0.2817912, 0.0637871, -0.018095085, 0.9571821)
+
+[node name="BoneAttachment3D" parent="BadGuy/enemy_ranged/Armature/Skeleton3D" index="9" unique_id=1205195988]
+transform = Transform3D(0.37519225, 0.89315224, 0.24801025, -0.07921453, 0.29747143, -0.9514381, -0.92355543, 0.33732674, 0.18235976, -13.539396, 24.493858, -131.14641)
 
 [connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]

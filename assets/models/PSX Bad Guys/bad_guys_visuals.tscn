@@ -9,4 +9,32 @@
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Ak" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="0" unique_id=1082770192]
+visible = false
 mesh = ExtResource("2_fwmu4")
+
+[node name="Ammo Sash 1" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="1" unique_id=1210643648]
+visible = false
+
+[node name="Ammo Sash 1 Mirrored" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="2" unique_id=1319904356]
+visible = false
+
+[node name="Ammo Sash 2" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="3" unique_id=1968724048]
+visible = false
+
+[node name="Bad Guy 1" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="4" unique_id=1464093732]
+visible = false
+
+[node name="Bad Guy 3" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="6" unique_id=425877703]
+visible = false
+
+[node name="Face Cover" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="7" unique_id=1745395090]
+visible = false
+
+[node name="Hat" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="8" unique_id=251053497]
+visible = false
+
+[node name="Helmet" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="9" unique_id=243181579]
+visible = false
+
+[node name="Holdster" parent="Rig/GeneralSkeleton" parent_id_path=PackedInt32Array(566211677) index="10" unique_id=1142607118]
+visible = false
