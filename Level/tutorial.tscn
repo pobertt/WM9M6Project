@@ -163,10 +163,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.57518, 0.010000706, 3.9634
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.909477, 0.010000232, 6.1238337)
 
 [node name="CoverPoint" parent="Environment" unique_id=1132386462 instance=ExtResource("10_f3h0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.579746, 0.7432829, -20.27829)
-
-[node name="CoverPoint2" parent="Environment" unique_id=1773585686 instance=ExtResource("10_f3h0t")]
-transform = Transform3D(0.9998152, -0.01619412, -0.010352578, 0.015938796, 0.99957794, -0.024286794, 0.010741513, 0.0241173, 0.99965143, -13.43375, 0.46047878, -17.42224)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1995945, 0.7432829, -14.255197)
 
 [node name="ceiling_lamp_fps_12" parent="Environment" unique_id=744403219 instance=ExtResource("10_kqqvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49, -1)
@@ -192,6 +189,6 @@ spot_angle = 67.83
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3715315, 1.3827953, -3.8500013)
 
 [node name="InteractableDoor" parent="Environment" unique_id=920926322 node_paths=PackedStringArray("button_to_listen_to") instance=ExtResource("12_4u0ye")]
-transform = Transform3D(-1.9749213, 0, 8.742277e-08, 0, 1, 0, -1.7265312e-07, 0, -0.99999994, -0.9686863, 0.01, -3.9847796)
+transform = Transform3D(-1.9749213, 0, 1.5099579e-07, 0, 1, 0, -2.9820484e-07, 0, -0.99999994, -0.9686863, 0.01, -3.9847796)
 requires_button = true
 button_to_listen_to = NodePath("../InteractableButton")
