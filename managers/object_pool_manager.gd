@@ -38,8 +38,23 @@ func spawn_impact(pos: Vector3, normal: Vector3) -> void:
 	current_index = (current_index + 1) % bullet_hole_pool.size()
 	decal.show()
 
-func spawn_blood(pos: Vector3, normal: Vector3) -> void:
+func spawn_blood(pos: Vector3, normal: Vector3, target: Node3D = null) -> void:
 	var blood = blood_pool[blood_index]
+	
+	# FIX: If the blood was destroyed (because the scene reloaded or the enemy was deleted),
+	# we just instantiate a fresh replacement to heal the pool!
+	if not is_instance_valid(blood):
+		blood = blood_scene.instantiate()
+		add_child(blood) # Add it to the tree first so reparenting works
+		blood_pool[blood_index] = blood
+	
+	# Pin the blood to the target so it moves with them
+	if target != null:
+		blood.reparent(target)
+	else:
+		blood.reparent(self) # Pin it back to the manager if we hit a wall
+		
+	# The clean alignment math
 	blood.global_position = pos + (normal * 0.01)
 	
 	if normal != Vector3.UP and normal != Vector3.DOWN:

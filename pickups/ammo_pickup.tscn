@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://b3so2yqc2gdm0" path="res://pickups/pickup.tscn" id="1_gr1x7"]
 [ext_resource type="Script" uid="uid://cxpr7swvi7y2k" path="res://pickups/scripts/ammo_pickup.gd" id="2_hefsj"]
 [ext_resource type="ArrayMesh" uid="uid://dywy7r7x0ptw6" path="res://assets/models/PSX Mega Pack II/Models/tres/baking_soda_1.tres" id="3_dgdu5"]
+[ext_resource type="AudioStream" uid="uid://cebbqwr81hqrd" path="res://assets/sfx/crate break.wav" id="3_kubai"]
 
 [node name="AmmoPickup" unique_id=793811414 instance=ExtResource("1_gr1x7")]
 script = ExtResource("2_hefsj")
+pickup_sound = ExtResource("3_kubai")
 
 [node name="Visuals" parent="CollisionShape3D" parent_id_path=PackedInt32Array(1392997217) index="0" unique_id=1431432701]
 mesh = ExtResource("3_dgdu5")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cebbqwr81hqrd"
+path="res://.godot/imported/crate break.wav-407dd21374e05ffae853b95ab2d0e4e6.sample"
+
+[deps]
+
+source_file="res://assets/sfx/crate break.wav"
+dest_files=["res://.godot/imported/crate break.wav-407dd21374e05ffae853b95ab2d0e4e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

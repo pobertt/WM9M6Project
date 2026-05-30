@@ -20,6 +20,12 @@ const SENSITIVITY : float = 0.007
 
 var input_dir: Vector2 = Vector2.ZERO
 
+@export_group("Audio")
+@export var footstep_sounds: Array[AudioStream]
+@export var footstep_rate: float = 6.0
+
+var last_step_cycle: int = 0
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	current_health = max_health
@@ -61,6 +67,26 @@ func headbobbing(delta: float):
 	
 	var velocity_clamped = clamp(velocity.length(), 0.5, movement_component.max_speed * 2)
 	camera.fov = lerp(camera.fov, BASE_FOV + FOV_CHANGE * velocity_clamped, delta * 8.0)
+	
+	# --- THE UPDATED FOOTSTEP MATH ---
+	# We swapped PI for your custom footstep_rate dial.
+	var current_step_cycle = int((t_bob * BOB_FREQ) / footstep_rate)
+	
+	if current_step_cycle != last_step_cycle:
+		last_step_cycle = current_step_cycle
+		play_footstep_sound()
+
+func play_footstep_sound() -> void:
+	# Don't crash if we forgot to load sounds in the editor
+	if footstep_sounds.is_empty():
+		return
+		
+	# Pick a random sound from the array so it doesn't sound like a robot
+	var random_step = footstep_sounds.pick_random()
+	
+	# We pass in global_position just in case you ever switch the AudioManager back to 3D later!
+	# The -15.0 drops the volume slightly so footsteps don't overpower your gunshots.
+	AudioManager.play_sound_3d(random_step, global_position, -15.0)
 
 func take_damage(amount: int) -> void:
 	current_health -= amount

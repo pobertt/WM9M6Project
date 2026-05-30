@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bf3lgx41drflh"]
 
-[ext_resource type="Texture2D" uid="uid://c8xyavxy1o4vh" path="res://icon.svg" id="1_6jk8i"]
+[ext_resource type="Texture2D" uid="uid://rjwuy6ew3svj" path="res://assets/vfx/blood_splatter_1.png" id="1_riisq"]
 [ext_resource type="Shader" uid="uid://bck48hnmrajtv" path="res://assets/shaders/ps1_shader.gdshader" id="2_iaudf"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6jk8i"]
@@ -29,12 +29,13 @@ shader_parameter/alpha_scissor = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_2ojmn"]
 material = SubResource("ShaderMaterial_2ojmn")
-size = Vector2(0.04, 0.04)
+size = Vector2(0.025, 0.025)
 
 [node name="BloodSplatter" type="Node3D" unique_id=491108993]
 
 [node name="Decal" type="Decal" parent="." unique_id=2053319036]
-texture_albedo = ExtResource("1_6jk8i")
+size = Vector3(1, 1, 1)
+texture_albedo = ExtResource("1_riisq")
 modulate = Color(0.40390328, 8.4228816e-07, 9.62615e-08, 1)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1290410308]

@@ -20,6 +20,8 @@ var is_reloading: bool = false
 @export var weapon_pitch: float = 0.15      
 @export var fov_punch: float = 2.0          
 @export var recovery_speed: float = 15.0    
+@export var fire_sound: Array[AudioStream] 
+@export var reload_sound: AudioStream
 
 @export_group("Weapon Sway")
 @export var sway_amount: float = 0.002    

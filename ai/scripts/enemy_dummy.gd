@@ -47,8 +47,12 @@ func _physics_process(_delta: float) -> void:
 		var anim_tree = find_child("AnimationTree", true, false)
 		anim_tree.set("parameters/Movement/blend_position", blend_value)
 		anim_tree.set("parameters/Shooting/blend_position", blend_value)
-	
 
+# The gun looks for this exact name!
+func take_damage(amount: int) -> void:
+	# Pass the damage straight into your existing health logic
+	_on_hurt_box_took_damage(amount)
+	
 func _on_hurt_box_took_damage(amount: int) -> void:
 	current_health -= amount
 	
@@ -71,6 +75,19 @@ func die() -> void:
 	
 	if GameManager.instance:
 		GameManager.instance.on_enemy_killed()
+		
+	# NEW: Hide the chest decals so they don't float in the air
+	for child in get_children():
+		if child is Node3D and "blood" in child.name.to_lower():
+			child.hide()
+			
+	# NEW: Spawn a nice blood pool on the floor exactly where they died!
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(global_position, global_position + Vector3(0, -3.0, 0))
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		ObjectPoolManager.spawn_blood(result.position, result.normal)
 		
 	$StateMachine.on_child_transition($StateMachine.current_state, "state_death")
 

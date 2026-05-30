@@ -22,6 +22,11 @@ func _weapon_behavior() -> void:
 	flash_tween = create_tween()
 	flash_tween.tween_property(muzzle_light, "light_energy", 0.0, 0.1)
 	
+	var random_fire_sound = fire_sound.pick_random()
+	
+	if fire_sound != null:
+		AudioManager.play_sound_3d(random_fire_sound, muzzle_light.global_position, -10.0)
+	
 	var final_spread: float = 0.0 
 	
 	if (Time.get_ticks_msec() - last_spread_time) / 1000.0 < spread_recovery_time:
@@ -35,6 +40,7 @@ func _weapon_behavior() -> void:
 	raycast.rotation_degrees.y = randf_range(-final_spread, final_spread)
 	raycast.force_raycast_update() 
 	
+	# 3. COLLISION
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		var hit_point = raycast.get_collision_point()
@@ -42,7 +48,8 @@ func _weapon_behavior() -> void:
 		
 		if target.has_method("take_damage"):
 			target.take_damage(damage)
-			ObjectPoolManager.spawn_blood(hit_point, hit_normal)
+			# FIX: We now pass the 'target' so the blood sticks to them!
+			ObjectPoolManager.spawn_blood(hit_point, hit_normal, target)
 		else:
 			ObjectPoolManager.spawn_impact(hit_point, hit_normal)
 			
@@ -51,4 +58,8 @@ func _weapon_behavior() -> void:
 
 func _weapon_reload_behavior() -> void:
 	if anim_player.is_playing(): anim_player.stop()
+	
+	if reload_sound != null:
+		AudioManager.play_sound_3d(reload_sound, muzzle_light.global_position, 2.0)
+		
 	anim_player.play("reload")
