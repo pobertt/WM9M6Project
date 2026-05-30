@@ -24,4 +24,4 @@ func trigger_end() -> void:
 func play_footstep() -> void:
 	# Assuming you have an array called enemy_footsteps exported at the top!
 	if "enemy_footsteps" in self and not enemy_footsteps.is_empty():
-		AudioManager.play_sound_3d(enemy_footsteps.pick_random(), global_position, -25.0)
+		AudioManager.play_sound_3d(enemy_footsteps.pick_random(), global_position, -20.0, 1.0, 50.0)

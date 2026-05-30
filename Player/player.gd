@@ -26,6 +26,8 @@ var input_dir: Vector2 = Vector2.ZERO
 
 var last_step_cycle: int = 0
 
+@onready var interaction_ray: RayCast3D = $Head/Camera3D/InteractionRay
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	current_health = max_health
@@ -41,6 +43,17 @@ func _ready() -> void:
 	var ears = camera.get_node_or_null("AudioListener3D")
 	if ears:
 		ears.make_current()
+
+func _input(event: InputEvent) -> void:
+	# Assuming you have an input action mapped to "E" or a controller face button
+	if event.is_action_pressed("interact"):
+		if interaction_ray.is_colliding():
+			var hit_object = interaction_ray.get_collider()
+			
+			# Check if the object we are looking at inherits from our Interactable class!
+			if hit_object is Interactable:
+				# Pass the player node into the function so the object knows who pressed it
+				hit_object.interact(self)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -94,7 +107,7 @@ func play_footstep_sound() -> void:
 	
 	# We pass in global_position just in case you ever switch the AudioManager back to 3D later!
 	# The -15.0 drops the volume slightly so footsteps don't overpower your gunshots.
-	AudioManager.play_sound_2d(random_step, -15.0)
+	AudioManager.play_sound_2d(random_step, -30.0)
 	
 func take_damage(amount: int) -> void:
 	current_health -= amount

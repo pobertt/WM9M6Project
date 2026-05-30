@@ -75,18 +75,10 @@ func physics_update(_delta: float) -> void:
 func shoot(start_pos: Vector3, target_pos: Vector3, space_state: PhysicsDirectSpaceState3D) -> void:
 	last_shot_time = Time.get_ticks_msec()
 	
-	# --- THE DEBUG BLOCK ---
-	print("\n--- SHOOT AUDIO DEBUG ---")
 	if "shoot_sounds" in actor:
-		print("Variable found! Array size: ", actor.shoot_sounds.size())
 		if not actor.shoot_sounds.is_empty():
-			print("Playing sound at: ", start_pos)
 			AudioManager.play_sound_3d(actor.shoot_sounds.pick_random(), start_pos, -20.0)
-		else:
-			print("FAILED: The array is empty!")
-	else:
-		print("FAILED: The 'actor' doesn't have the shoot_sounds variable!")
-	print("-------------------------\n")
+
 	
 	# Calculate spread based on distance
 	var active_spread = weapon_spread * clamp(start_pos.distance_to(target_pos) / 10.0, 0.0, 1.0)
@@ -118,7 +110,7 @@ func spawn_tracer(start: Vector3, end: Vector3) -> void:
 	var tracer = MeshInstance3D.new()
 	var box = BoxMesh.new()
 	
-	box.size = Vector3(0.05, 0.05, start.distance_to(end))
+	box.size = Vector3(0.01, 0.01, start.distance_to(end))
 	tracer.mesh = box
 	
 	var mat = StandardMaterial3D.new()

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dkvi6x6d1aq2x"]
+
+[ext_resource type="Script" uid="uid://dy0q1jaby64is" path="res://interactables/scripts/interactable_button.gd" id="1_384tx"]
+[ext_resource type="ArrayMesh" uid="uid://clo083xo31p6b" path="res://assets/models/PSX Mega Pack II/Models/tres/button_off.tres" id="2_384tx"]
+[ext_resource type="ArrayMesh" uid="uid://ca5mw5fgixu7s" path="res://assets/models/PSX Mega Pack II/Models/tres/button_on.tres" id="3_384tx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0jqa"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="InteractableButton" type="StaticBody3D" unique_id=712741736]
+script = ExtResource("1_384tx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2036263382]
+shape = SubResource("BoxShape3D_m0jqa")
+
+[node name="ButtonOff" type="MeshInstance3D" parent="." unique_id=1021538860]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855692e-08, -0.49999997, 0, 0.49999997, -2.1855692e-08, 0, 0, 0)
+mesh = ExtResource("2_384tx")
+
+[node name="ButtonOn" type="MeshInstance3D" parent="." unique_id=392518454]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855692e-08, -0.49999997, 0, 0.49999997, -2.1855692e-08, 0, 0, 0)
+mesh = ExtResource("3_384tx")

@@ -1,0 +1,42 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://c12s4mqusb30p"]
+
+[ext_resource type="Texture2D" uid="uid://xcncdqac3edg" path="res://assets/models/PSX Mega Pack II/Models/GLB/Doors & Gates/door_hr_14_door_hr_14.png" id="1_gg4nv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg4nv"]
+resource_name = "door_hr_14"
+cull_mode = 2
+albedo_texture = ExtResource("1_gg4nv")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ngi55"]
+_surfaces = [{
+"aabb": AABB(-1, -9.313226e-09, 0, 1, 2.1000001, 0.049999997),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "door_hr_14",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "door_hr_14_door_hr_14"
+_surfaces = [{
+"aabb": AABB(-1, -9.313226e-09, 0, 1, 2.1000001, 0.049999997),
+"attribute_data": PackedByteArray("kvH//zH+AACS8QAAMf7//yrs//8AAAAAKuwAAAAA//8x/v//kvEAADH+AACS8f//Kuz//wAAAAAq7AAAAAD//5Lx8fkx/v9/kvH/fzH+8fmS8YQGMf52gJLxdoAx/oQG"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_gg4nv"),
+"name": "door_hr_14",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP+//////////7//////AAD/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAACqKv//AAD//6oq//8AAAAAqioAAAAA//+qKv////8AAFTVAAD/////VNUAAP//AABU1f///////1TV/z//f/8//3//P/9//z//f/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3///6oqVNWqKlTVqipU1aoqVNWqqqqqqqqqqqqqqqqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ngi55")

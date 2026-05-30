@@ -20,6 +20,7 @@ func trigger_end() -> void:
 		node = node.get_parent()
 
 func play_footstep() -> void:
-	# Assuming you have an array called enemy_footsteps exported at the top!
 	if "enemy_footsteps" in self and not enemy_footsteps.is_empty():
-		AudioManager.play_sound_3d(enemy_footsteps.pick_random(), global_position, -25.0)
+		# Parameters are now: (Stream, Position, Volume, Pitch, Max_Distance)
+		# We set Max_Distance to 15.0 meters so it fades out very quickly!
+		AudioManager.play_sound_3d(enemy_footsteps.pick_random(), global_position, -30.0, 1.0, 15.0)

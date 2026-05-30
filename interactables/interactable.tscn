@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://caep3ahjkdda1"]
+
+[ext_resource type="Script" uid="uid://ca8q73jo3hh5j" path="res://interactables/scripts/interactable.gd" id="1_kdhm5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtoeu"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vtoeu"]
+
+[node name="Interactable" type="StaticBody3D" unique_id=1527711312]
+script = ExtResource("1_kdhm5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1233650951]
+shape = SubResource("BoxShape3D_vtoeu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1202200312]
+mesh = SubResource("SphereMesh_vtoeu")

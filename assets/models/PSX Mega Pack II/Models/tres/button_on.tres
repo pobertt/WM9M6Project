@@ -1,0 +1,41 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://chdy0s0p7c2ky"]
+
+[ext_resource type="Texture2D" uid="uid://b5fscweh7km28" path="res://assets/models/Modular Retro FPS/GLB/button_on_button_on.png" id="1_s3ery"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ery"]
+resource_name = "button_on"
+cull_mode = 2
+albedo_texture = ExtResource("1_s3ery")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kuqct"]
+_surfaces = [{
+"aabb": AABB(-0.33333528, -1.0430813e-07, -0.50000036, 0.66666675, 0.06666666, 1.0000001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEAAgAFAAMAAgABAAUAAAADAAYABAAAAAYABgADAAUAAQAEAAcABAAGAAcAAQAHAAUABgAFAAcA"),
+"name": "button_on",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD/////AAAAAP///////wAA//8AAP//AAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "button_on_button_on"
+_surfaces = [{
+"aabb": AABB(-0.33333528, -1.0430813e-07, -0.50000036, 0.66666675, 0.06666666, 1.0000001),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAAAA/////wAAAAAAAP////8AAP/v/////wAA///////v/+cAAP///////wAA/+f////n/////wAA///////nAAD////vAAD///////8AAP/v"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_s3ery"),
+"name": "button_on",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//////7//////AAD/v/////////+/AAD//wAA/78AAAAA////P///AAAAAP8/AAAAAAAA/z///wAA////PwAA/////wCA//8AAP//AIAAAAAA//8AgP///////wCA////////qir//wAAAACqKv//AAD//6oq/////wAAqioAAP//AABU1QAAAAD//1TVAAAAAAAAVNUAAP////9U1f////8AAAAAAAAAAAAAAAD//wAAAAAAAAAA//8AAAAA////f////3////9/////fwAA/38AAP9/AAD/fwAA/3//f////3////9/////f///qqpUVaqqVFWqqlRVqqpUVVRVqqpUVaqqVFWqqlRVqqr///9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kuqct")
