@@ -4,6 +4,7 @@ extends Node3D
 @export var enemy_footsteps: Array[AudioStream]
 
 func trigger_hit() -> void:
+	#was for melee
 	var node = self
 	while node != null:
 		if node.has_method("deal_melee_damage"):
@@ -12,6 +13,7 @@ func trigger_hit() -> void:
 		node = node.get_parent()
 
 func trigger_end() -> void:
+	#was for melee
 	var node = self
 	while node != null:
 		if node.has_method("end_melee_swing"):

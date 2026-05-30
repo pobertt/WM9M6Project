@@ -33,6 +33,14 @@ func _ready() -> void:
 	
 	health_bar.max_value = max_health
 	health_bar.value = current_health
+	
+	# Force this exact camera to be the master camera
+	camera.make_current()
+	
+	# Force the ears to turn on
+	var ears = camera.get_node_or_null("AudioListener3D")
+	if ears:
+		ears.make_current()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -86,8 +94,8 @@ func play_footstep_sound() -> void:
 	
 	# We pass in global_position just in case you ever switch the AudioManager back to 3D later!
 	# The -15.0 drops the volume slightly so footsteps don't overpower your gunshots.
-	AudioManager.play_sound_3d(random_step, global_position, -15.0)
-
+	AudioManager.play_sound_2d(random_step, -15.0)
+	
 func take_damage(amount: int) -> void:
 	current_health -= amount
 	health_bar.value = current_health

@@ -25,7 +25,7 @@ func _weapon_behavior() -> void:
 	var random_fire_sound = fire_sound.pick_random()
 	
 	if fire_sound != null:
-		AudioManager.play_sound_3d(random_fire_sound, muzzle_light.global_position, -10.0)
+		AudioManager.play_sound_2d(random_fire_sound, -10.0)
 	
 	var final_spread: float = 0.0 
 	
@@ -60,6 +60,6 @@ func _weapon_reload_behavior() -> void:
 	if anim_player.is_playing(): anim_player.stop()
 	
 	if reload_sound != null:
-		AudioManager.play_sound_3d(reload_sound, muzzle_light.global_position, 2.0)
+		AudioManager.play_sound_2d(reload_sound, 2.0)
 		
 	anim_player.play("reload")

@@ -1,6 +1,9 @@
 extends State
 
 func enter() -> void:
+	if "death_sounds" in actor and not actor.death_sounds.is_empty():
+		AudioManager.play_sound_3d(actor.death_sounds.pick_random(), actor.global_position, 0.0)
+		
 	# 1. Stop all movement
 	actor.velocity = Vector3.ZERO
 	

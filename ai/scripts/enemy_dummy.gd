@@ -17,6 +17,13 @@ var target_player: Node3D = null
 @onready var muzzle: Marker3D = find_child("Muzzle", true, false)
 @onready var anim_state_machine = find_child("AnimationTree", true, false).get("parameters/playback")
 
+@export_group("Audio")
+@export var hurt_sounds: Array[AudioStream]
+@export var death_sounds: Array[AudioStream]
+@export var melee_swing_sound: AudioStream
+@export var melee_hit_sound: AudioStream
+@export var shoot_sounds: Array[AudioStream]
+
 
 func _ready() -> void:
 	current_health = max_health
@@ -56,6 +63,9 @@ func take_damage(amount: int) -> void:
 func _on_hurt_box_took_damage(amount: int) -> void:
 	current_health -= amount
 	
+	if current_health > 0 and not hurt_sounds.is_empty():
+		AudioManager.play_sound_3d(hurt_sounds.pick_random(), global_position)
+	
 	if target_player == null:
 		target_player = get_tree().get_first_node_in_group("Player")
 	
@@ -76,18 +86,18 @@ func die() -> void:
 	if GameManager.instance:
 		GameManager.instance.on_enemy_killed()
 		
-	# NEW: Hide the chest decals so they don't float in the air
 	for child in get_children():
 		if child is Node3D and "blood" in child.name.to_lower():
 			child.hide()
 			
-	# NEW: Spawn a nice blood pool on the floor exactly where they died!
 	var space_state = get_world_3d().direct_space_state
 	var query = PhysicsRayQueryParameters3D.create(global_position, global_position + Vector3(0, -3.0, 0))
 	var result = space_state.intersect_ray(query)
 	
 	if result:
 		ObjectPoolManager.spawn_blood(result.position, result.normal)
+		
+
 		
 	$StateMachine.on_child_transition($StateMachine.current_state, "state_death")
 
@@ -96,23 +106,14 @@ func _on_detection_zone_body_entered(body: Node3D) -> void:
 		target_player = body
 
 # The animation timeline will trigger this exactly when the weapon hits
+# The animation timeline hits this, and we pass it down to the active state!
 func deal_melee_damage() -> void:
-	if target_player == null or current_health <= 0:
-		return
-		
-	var distance = global_position.distance_to(target_player.global_position)
-	
-	# Check if the player is still in range (with a tiny 0.5m leniency for fairness)
-	if distance <= get("melee_attack_range") + 0.5:
-		if target_player.has_method("take_damage"):
-			target_player.take_damage(10) # Replace 10 with your actual damage variable
-			print("Player hit!")
+	var current_state = $StateMachine.current_state
+	if current_state.has_method("execute_melee_hit"):
+		current_state.execute_melee_hit()
 
 # The animation timeline will trigger this on its very last frame
 func end_melee_swing() -> void:
-	print("Brain received the end swing signal!") # <-- Add this to prove it fired!
-	
 	var state_machine = get_node_or_null("StateMachine")
 	if state_machine and "is_swinging" in state_machine.current_state:
 		state_machine.current_state.is_swinging = false
-		print("Unlocked movement!")
