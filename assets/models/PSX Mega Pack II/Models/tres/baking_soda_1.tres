@@ -1,0 +1,42 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dywy7r7x0ptw6"]
+
+[ext_resource type="Texture2D" uid="uid://oai4ulmo82yq" path="res://assets/models/PSX Mega Pack II/Models/GLB/Props/baking_soda_1_baking_soda_1.png" id="1_5tnkj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etpht"]
+resource_name = "baking_soda_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_5tnkj")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y0ufr"]
+_surfaces = [{
+"aabb": AABB(-0.06075001, -2.7519036e-09, -0.036450006, 0.121500015, 0.19710001, 0.07290003),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAADAAEAAAAEAAEAAgADAAUABQAAAAIABAAGAAMABgAFAAMAAAAGAAQABgAHAAUABQAHAAAAAAAHAAYA"),
+"name": "baking_soda_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD///7/AAD/////AAAAAAAAAAD+/wAA/v//////AAD+/wAA/v8AAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "baking_soda_1_baking_soda_1"
+_surfaces = [{
+"aabb": AABB(-0.06075001, -2.7519036e-09, -0.036450006, 0.121500015, 0.19710001, 0.07290003),
+"attribute_data": PackedByteArray("AAD//1x00UVcdP//AADRRVx0//8tutFFLbr//1x00UX//9FFXHQAAP//AABcdNFFAADRRVx0AABcdNFFAAAAAFx00UUAAP//AADRRVx0////////LbrRRf//0UUtuv//"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_etpht"),
+"name": "baking_soda_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAAAA//8AAP//AAD//wAAAAAAAP///////wAA//8AAAAAAAD/vwAA///+//+/AAAAAP7//78AAP//AAD/vwAAAAD+//////8AAAAA//8AAAAAAAD///7/AAD+/////////wAA//8AAP///v///wAA//8AAP///v/////////+//////8AgAAAAAD+/wCAAAD///7/AID+/wAA/v8AgP//AAAAAP+//v///////7//////AAD/v/7/AAD+//+//3////9/////f////3////9/////f////3////9/////v////7////+/////v////3//v/9//7//f/+//3//v/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y0ufr")

@@ -75,3 +75,12 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	get_tree().reload_current_scene()
+
+func heal(amount: int) -> void:
+	current_health += amount
+	if current_health > max_health:
+		current_health = max_health
+		
+	health_bar.value = current_health
+	
+	# add green flash overlay here

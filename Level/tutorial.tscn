@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cpka08gmmtl8s" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/plantflr_2.glb" id="6_yiu3q"]
 [ext_resource type="PackedScene" uid="uid://bopa07qa1bcls" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_0.glb" id="7_f3h0t"]
 [ext_resource type="PackedScene" uid="uid://djoe4bcs640p0" path="res://assets/models/psx-wilderness-RA/GLTF/bushes/sbushtro_1.glb" id="8_kqqvm"]
+[ext_resource type="PackedScene" uid="uid://0atj1ykprui1" path="res://pickups/health_pickup.tscn" id="9_6fx4s"]
+[ext_resource type="PackedScene" uid="uid://biqjyt4rxny4o" path="res://pickups/ammo_pickup.tscn" id="10_4u0ye"]
 [ext_resource type="PackedScene" uid="uid://cs3v12q4cexit" path="res://ai/map_stuff/cover_point.tscn" id="10_f3h0t"]
 [ext_resource type="MeshLibrary" uid="uid://btws2816m1riv" path="res://assets/models/Modular Retro FPS/fps_kit_library.tres" id="10_yiu3q"]
 [ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="11_f3h0t"]
@@ -97,6 +99,12 @@ data = {
 "cells": PackedInt32Array(2, 65533, 1245198, 65458, 27, 1245193, 65458, 2, 1245218, 65458, 65513, 1245219, 65446, 39, 262178, 65421, 39, 262178, 65421, 65500, 262178, 65409, 27, 1507362, 65409, 65513, 1507362, 130725, 7, 1245218, 130725, 28, 1507362)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="HealthPickup" parent="SubViewportContainer/SubViewport" unique_id=793811414 instance=ExtResource("9_6fx4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.57518, 0.010000706, 3.963498)
+
+[node name="AmmoPickup" parent="SubViewportContainer/SubViewport" unique_id=2108404521 instance=ExtResource("10_4u0ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.909477, 0.010000232, 6.1238337)
 
 [node name="CoverPoint" parent="." unique_id=1132386462 instance=ExtResource("10_f3h0t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.08951, 0.7432829, 0.34750342)

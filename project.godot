@@ -26,6 +26,7 @@ folder_colors={
 "res://assets/": "orange",
 "res://level/": "purple",
 "res://managers/": "gray",
+"res://pickups/": "yellow",
 "res://player/": "green",
 "res://ui/": "pink",
 "res://weapons/": "red"

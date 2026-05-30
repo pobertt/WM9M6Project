@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://0atj1ykprui1"]
+
+[ext_resource type="PackedScene" uid="uid://b3so2yqc2gdm0" path="res://pickups/pickup.tscn" id="1_qxxix"]
+[ext_resource type="Script" uid="uid://c36nj10cs208b" path="res://pickups/scripts/health_pickup.gd" id="2_s6bk4"]
+[ext_resource type="ArrayMesh" uid="uid://c067gxtkcuxyj" path="res://assets/models/PSX Mega Pack II/Models/tres/first_aid_kit_1.tres" id="3_t1nvj"]
+
+[node name="HealthPickup" unique_id=793811414 instance=ExtResource("1_qxxix")]
+script = ExtResource("2_s6bk4")
+
+[node name="Visuals" parent="CollisionShape3D" parent_id_path=PackedInt32Array(1392997217) index="0" unique_id=1431432701]
+mesh = ExtResource("3_t1nvj")

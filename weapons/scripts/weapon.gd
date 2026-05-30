@@ -112,3 +112,10 @@ func update_ammo_ui() -> void:
 
 func _weapon_behavior() -> void: pass
 func _weapon_reload_behavior() -> void: pass
+
+func add_ammo(amount: int) -> void:
+	current_reserve_ammo += amount
+	if current_reserve_ammo > max_reserve_ammo:
+		current_reserve_ammo = max_reserve_ammo
+		
+	update_ammo_ui()

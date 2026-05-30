@@ -1,0 +1,42 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://c067gxtkcuxyj"]
+
+[ext_resource type="Texture2D" uid="uid://dc43m1x3iqc5y" path="res://assets/models/PSX Mega Pack II/Models/GLB/Props/first_aid_kit_hr_1_first_aid_kit_hr_1.png" id="1_v8q0q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnrom"]
+resource_name = "first_aid_kit_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_v8q0q")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jwwi5"]
+_surfaces = [{
+"aabb": AABB(-0.19999664, 0, -0.10999734, 0.39999974, 0.08000003, 0.2199999),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"name": "first_aid_kit_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAA////////AAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "first_aid_kit_hr_1_first_aid_kit_hr_1"
+_surfaces = [{
+"aabb": AABB(-0.19999664, 0, -0.10999734, 0.39999974, 0.08000003, 0.2199999),
+"attribute_data": PackedByteArray("B9bitwAAAAAH1gAAAADitwAA4rcH1gAAB9bitwAAAAD//+K3B9YAAP//AAAH1uK3//8AAAfW4rf//+K3B9YAAAfW//8AAOK3AAD//wfW4rcAAP//B9bitwfW//8AAOK3"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_mnrom"),
+"name": "first_aid_kit_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///////wAAAAD//wAAAAAAAP////8AAP////8AAP//////v/////8AAP+//////////78AAP//AAD/v///AAD//1TV/////wAAVNX//wAAAABU1f///////1TVAAAAAAAAqioAAP////+qKgAAAAD//6oqAAD//wAAqir//wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAAAAAAD//wCA////////AID//wAA//8AgAAA/////wCA/3//P/9//z//f/8//3//P////3////9/////f////3+qqlRVqqpUVaqqVFWqqlRVVFWqqlRVqqpUVaqqVFWqqv///3////9/////f////3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jwwi5")

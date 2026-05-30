@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b3so2yqc2gdm0"]
+
+[ext_resource type="Script" uid="uid://rs646mx1xc14" path="res://pickups/scripts/pickup.gd" id="1_ra232"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0ketk"]
+
+[node name="Pickup" type="Area3D" unique_id=793811414]
+script = ExtResource("1_ra232")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392997217]
+shape = SubResource("SphereShape3D_0ketk")
+
+[node name="Visuals" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1431432701]

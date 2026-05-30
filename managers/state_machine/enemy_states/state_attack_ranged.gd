@@ -61,9 +61,7 @@ func physics_update(_delta: float) -> void:
 	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
 	query.exclude = [actor.get_rid()]
 	var result = space_state.intersect_ray(query)
-	
-	var has_los = result and result.collider == player
-		
+
 	# Lose interest if too far or line of sight is broken
 	# NEW
 	if actor.global_position.distance_to(player.global_position) > lose_interest_range:
