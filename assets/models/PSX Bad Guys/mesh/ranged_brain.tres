@@ -1,0 +1,66 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://cjf2uo3jeap8b"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jami8"]
+animation = &"rifle_idle_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5xggx"]
+animation = &"rifle_walk_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ta4xh"]
+animation = &"rifle_run_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ta4xh"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jami8")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_5xggx")
+blend_point_1/pos = 0.5
+blend_point_2/node = SubResource("AnimationNodeAnimation_ta4xh")
+blend_point_2/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dk384"]
+animation = &"shoot_rifle_still_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g7g1j"]
+animation = &"shoot_rifle_move_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_dk384"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_dk384")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_g7g1j")
+blend_point_1/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2n1oo"]
+animation = &"melee_death_right_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0yp35"]
+animation = &"melee_headshot_death_anim"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dk384"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e7b2w"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i5le5"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j86rs"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jami8"]
+advance_mode = 0
+
+[resource]
+states/End/position = Vector2(1106, 79)
+states/Movement/node = SubResource("AnimationNodeBlendSpace1D_ta4xh")
+states/Movement/position = Vector2(370, 67)
+states/Shooting/node = SubResource("AnimationNodeBlendSpace1D_dk384")
+states/Shooting/position = Vector2(640, 77)
+states/Start/position = Vector2(176, 73)
+states/melee_death_right_anim/node = SubResource("AnimationNodeAnimation_2n1oo")
+states/melee_death_right_anim/position = Vector2(891, 55)
+states/melee_headshot_death_anim/node = SubResource("AnimationNodeAnimation_0yp35")
+states/melee_headshot_death_anim/position = Vector2(855, 118)
+transitions = ["Start", "Movement", SubResource("AnimationNodeStateMachineTransition_dk384"), "Movement", "Shooting", SubResource("AnimationNodeStateMachineTransition_e7b2w"), "Shooting", "melee_death_right_anim", SubResource("AnimationNodeStateMachineTransition_i5le5"), "Shooting", "melee_headshot_death_anim", SubResource("AnimationNodeStateMachineTransition_j86rs"), "Shooting", "Movement", SubResource("AnimationNodeStateMachineTransition_jami8")]

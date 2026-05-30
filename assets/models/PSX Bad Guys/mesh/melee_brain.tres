@@ -1,0 +1,91 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://br04kia5nxvrm"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jami8"]
+animation = &"unarmed_idle_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5xggx"]
+animation = &"unarmed_walk_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ta4xh"]
+animation = &"unarmed_run_anim"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ta4xh"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jami8")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_5xggx")
+blend_point_1/pos = 0.5
+blend_point_2/node = SubResource("AnimationNodeAnimation_ta4xh")
+blend_point_2/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2v0ip"]
+animation = &"melee_death_right_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4f4fj"]
+animation = &"melee_headshot_death_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tfm35"]
+animation = &"standing_melee_attack_downward_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7q7bi"]
+animation = &"standing_melee_attack_horizontal_anim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dewxi"]
+animation = &"standing_melee_punching_anim"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dk384"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xtnop"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4vrcb"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jruq6"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l7rgx"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tfm35"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7q7bi"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dewxi"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xyjii"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ft1hy"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2v0ip"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4f4fj"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_57var"]
+advance_mode = 0
+
+[resource]
+states/End/position = Vector2(1701, 103)
+states/Movement/node = SubResource("AnimationNodeBlendSpace1D_ta4xh")
+states/Movement/position = Vector2(370, 67)
+states/Start/position = Vector2(176, 73)
+states/melee_death_right_anim/node = SubResource("AnimationNodeAnimation_2v0ip")
+states/melee_death_right_anim/position = Vector2(1501, 67)
+states/melee_headshot_death_anim/node = SubResource("AnimationNodeAnimation_4f4fj")
+states/melee_headshot_death_anim/position = Vector2(1519, 136)
+states/standing_melee_attack_downward_anim/node = SubResource("AnimationNodeAnimation_tfm35")
+states/standing_melee_attack_downward_anim/position = Vector2(903, 99)
+states/standing_melee_attack_horizontal_anim/node = SubResource("AnimationNodeAnimation_7q7bi")
+states/standing_melee_attack_horizontal_anim/position = Vector2(888, 39)
+states/standing_melee_punching_anim/node = SubResource("AnimationNodeAnimation_dewxi")
+states/standing_melee_punching_anim/position = Vector2(903, 154)
+transitions = ["Start", "Movement", SubResource("AnimationNodeStateMachineTransition_dk384"), "Movement", "standing_melee_attack_horizontal_anim", SubResource("AnimationNodeStateMachineTransition_xtnop"), "Movement", "standing_melee_attack_downward_anim", SubResource("AnimationNodeStateMachineTransition_4vrcb"), "Movement", "standing_melee_punching_anim", SubResource("AnimationNodeStateMachineTransition_jruq6"), "standing_melee_attack_horizontal_anim", "melee_death_right_anim", SubResource("AnimationNodeStateMachineTransition_l7rgx"), "standing_melee_attack_horizontal_anim", "melee_headshot_death_anim", SubResource("AnimationNodeStateMachineTransition_tfm35"), "standing_melee_attack_downward_anim", "melee_death_right_anim", SubResource("AnimationNodeStateMachineTransition_7q7bi"), "standing_melee_attack_downward_anim", "melee_headshot_death_anim", SubResource("AnimationNodeStateMachineTransition_dewxi"), "standing_melee_punching_anim", "melee_death_right_anim", SubResource("AnimationNodeStateMachineTransition_xyjii"), "standing_melee_punching_anim", "melee_headshot_death_anim", SubResource("AnimationNodeStateMachineTransition_ft1hy"), "standing_melee_attack_horizontal_anim", "Movement", SubResource("AnimationNodeStateMachineTransition_2v0ip"), "standing_melee_attack_downward_anim", "Movement", SubResource("AnimationNodeStateMachineTransition_4f4fj"), "standing_melee_punching_anim", "Movement", SubResource("AnimationNodeStateMachineTransition_57var")]
+graph_offset = Vector2(59, -28)

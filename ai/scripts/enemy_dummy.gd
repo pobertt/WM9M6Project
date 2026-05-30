@@ -47,6 +47,7 @@ func _physics_process(_delta: float) -> void:
 		var anim_tree = find_child("AnimationTree", true, false)
 		anim_tree.set("parameters/Movement/blend_position", blend_value)
 		anim_tree.set("parameters/Shooting/blend_position", blend_value)
+	
 
 func _on_hurt_box_took_damage(amount: int) -> void:
 	current_health -= amount
