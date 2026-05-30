@@ -60,6 +60,8 @@ func physics_update(_delta: float) -> void:
 	
 	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
 	query.exclude = [actor.get_rid()]
+	query.hit_back_faces = true
+	
 	var result = space_state.intersect_ray(query)
 
 	# Lose interest if too far or line of sight is broken
@@ -92,6 +94,8 @@ func shoot(start_pos: Vector3, target_pos: Vector3, space_state: PhysicsDirectSp
 	var end_pos = target_pos + random_offset
 	var query = PhysicsRayQueryParameters3D.create(start_pos, end_pos)
 	query.exclude = [actor.get_rid()]
+	query.hit_back_faces = true
+	
 	var result = space_state.intersect_ray(query)
 	
 	var hit_pos = end_pos 
