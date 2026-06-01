@@ -20,13 +20,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("reload") and current_weapon:
 		current_weapon.reload()
 		
-	if event.is_action_pressed("weapon_next"): equip_weapon(weapon_index + 1)
-	elif event.is_action_pressed("weapon_prev"): equip_weapon(weapon_index - 1)
-	elif event.is_action_pressed("weapon_1"): equip_weapon(0)
-	elif event.is_action_pressed("weapon_2"): equip_weapon(1)
+	if event.is_action_pressed("weapon_next"): 
+		equip_weapon(weapon_index + 1)
+	elif event.is_action_pressed("weapon_prev"): 
+		equip_weapon(weapon_index - 1)
+	elif event.is_action_pressed("weapon_1"): 
+		equip_weapon(0)
+	elif event.is_action_pressed("weapon_2"): 
+		equip_weapon(1)
 
 func equip_weapon(index: int) -> void:
-	if get_child_count() == 0: return
+	if get_child_count() == 0: 
+		return
 	
 	weapon_index = wrapi(index, 0, get_child_count())
 	
@@ -37,3 +42,10 @@ func equip_weapon(index: int) -> void:
 	current_weapon = get_child(weapon_index) as Weapon
 	current_weapon.show()
 	current_weapon.update_ammo_ui()
+
+func play_animation(anim_name: String) -> void:
+	# Pass the animation command down to the active weapon
+	if current_weapon and current_weapon.has_node("AnimationPlayer"):
+		var anim_player = current_weapon.get_node("AnimationPlayer")
+		if anim_player.has_animation(anim_name):
+			anim_player.play(anim_name)
