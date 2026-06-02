@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="2_n6f2s"]
 [ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="3_ulkxl"]
 [ext_resource type="MeshLibrary" uid="uid://bj6jcuw3ikeo7" path="res://assets/models/PSX Mega Pack II/tres/modular_structures_library.tres" id="4_gd1gh"]
+[ext_resource type="MeshLibrary" uid="uid://bp8r7m8d2435x" path="res://assets/models/PSX Mega Pack II/tres/buildings.tres" id="5_a1r6t"]
 [ext_resource type="PackedScene" uid="uid://r6vv7aoc1qsc" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/platform_cx_1.glb" id="5_afkyo"]
+[ext_resource type="MeshLibrary" uid="uid://denbwfb53usgq" path="res://assets/models/PSX Mega Pack II/tres/modular_props.tres" id="6_pkqcj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
 shader = ExtResource("1_qae1c")
@@ -62,42 +64,42 @@ script = ExtResource("3_ulkxl")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Environment" unique_id=1123269493]
 navigation_mesh = SubResource("NavigationMesh_jycr0")
 
-[node name="Room1" type="Node3D" parent="Environment" unique_id=634811697]
+[node name="Room1" type="Node3D" parent="Environment/NavigationRegion3D" unique_id=634811697]
 
-[node name="GridMapFloor" type="GridMap" parent="Environment/Room1" unique_id=1579885283]
+[node name="GridMapFloor" type="GridMap" parent="Environment/NavigationRegion3D/Room1" unique_id=1579885283]
 mesh_library = ExtResource("4_gd1gh")
-cell_size = Vector3(0.5, 0.4, 0.5)
+cell_size = Vector3(0.5, 0.9, 0.5)
 cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
 "cells": PackedInt32Array(5, 4, 1441826, 65533, 4, 1441826, 65533, 65532, 1441826, 5, 65532, 1441826, 13, 65532, 1441826, 65533, 65524, 1441826, 5, 65524, 1441826, 65533, 65516, 1441826, 5, 65516, 1441826, 13, 65524, 1441826, 13, 65516, 1441826, 21, 65524, 1441826, 21, 65516, 1441826, 29, 65516, 1441826, 29, 65524, 1441826)
 }
-metadata/_editor_floor_ = Vector3(0, 0, 0)
+metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="GridMapWalls" type="GridMap" parent="Environment/Room1" unique_id=1502440604]
+[node name="GridMapWalls" type="GridMap" parent="Environment/NavigationRegion3D/Room1" unique_id=1502440604]
 mesh_library = ExtResource("4_gd1gh")
 cell_size = Vector3(0.5, 0.4, 0.5)
 cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(131065, 65518, 1441955, 65567, 65524, 1441849, 65566, 65524, 1441853, 524325, 65518, 1048687, 524333, 65518, 1048687, 131065, 65526, 1048731, 131065, 65534, 1048730, 65549, 65532, 159, 131069, 6, 1048735, 65541, 8, 655379, 65545, 4, 1048729, 131065, 65510, 1048729, 131069, 65512, 655513, 65541, 65512, 655513, 65549, 65512, 655513, 65557, 65512, 655513, 65565, 65512, 655513, 65565, 65528, 655513, 65557, 65528, 655520)
+"cells": PackedInt32Array(131065, 65518, 1441955, 65567, 65524, 1441849, 65566, 65524, 1441853, 131065, 65526, 1048731, 131065, 65534, 1048730, 65549, 65532, 159, 131069, 6, 1048735, 65541, 8, 655379, 65545, 4, 1048729, 131065, 65510, 1048729, 131069, 65512, 655513, 65541, 65512, 655513, 65549, 65512, 655513, 65557, 65512, 655513, 65565, 65512, 655513, 65565, 65528, 655513, 65557, 65528, 655520)
 }
-metadata/_editor_floor_ = Vector3(1, 1, 0)
+metadata/_editor_floor_ = Vector3(1, 8, 0)
 
-[node name="GridMapExtras" type="GridMap" parent="Environment/Room1" unique_id=2044128980]
+[node name="GridMapExtras" type="GridMap" parent="Environment/NavigationRegion3D/Room1" unique_id=2044128980]
 mesh_library = ExtResource("4_gd1gh")
 cell_size = Vector3(0.5, 0.4, 0.5)
 cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(589821, 65518, 1441903, 524293, 65518, 1441903, 524301, 65518, 1441903, 589820, 65520, 1441905, 524292, 65520, 1441905, 524300, 65520, 1441905, 589821, 65516, 1441905, 524293, 65516, 1441905, 524301, 65516, 1441905, 65553, 65517, 75, -65533, 65518, 77, 524317, 65518, 1048687, 524325, 65518, 1048687, 524333, 65518, 1048687, 458746, 65530, 458849, 65552, 65528, 1441882, 65545, 0, 655450)
+"cells": PackedInt32Array(589821, 65518, 1441903, 524293, 65518, 1441903, 524301, 65518, 1441903, 589820, 65520, 1441905, 524292, 65520, 1441905, 524300, 65520, 1441905, 589821, 65516, 1441905, 524293, 65516, 1441905, 524301, 65516, 1441905, 65553, 65517, 75, -65533, 65518, 77, 458746, 65530, 458849, 65552, 65528, 1441882, 65545, 0, 655450)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 8, 0)
 
-[node name="GridMapUpperSingleWalls" type="GridMap" parent="Environment/Room1" unique_id=1868027165]
+[node name="GridMapUpperSingleWalls" type="GridMap" parent="Environment/NavigationRegion3D/Room1" unique_id=1868027165]
 mesh_library = ExtResource("4_gd1gh")
 cell_size = Vector3(0.5, 1.133, 0.5)
 cell_center_x = false
@@ -107,6 +109,48 @@ data = {
 "cells": PackedInt32Array(262141, 6, 1048735, 196613, 8, 163, 196621, 65532, 159, 262137, 65534, 1441955, 262137, 65526, 1441955, 262137, 65518, 1441811, 196639, 65525, 1441998)
 }
 metadata/_editor_floor_ = Vector3(0, 3, 0)
+
+[node name="Room2" type="Node3D" parent="Environment/NavigationRegion3D" unique_id=178764351]
+
+[node name="GridMapFloor" type="GridMap" parent="Environment/NavigationRegion3D/Room2" unique_id=1922131893]
+mesh_library = ExtResource("4_gd1gh")
+cell_size = Vector3(0.5, 0.3, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(-196571, 65524, 655403, -196571, 65516, 655403, -393172, 65524, 655403, -393172, 65516, 655403, -327628, 65516, 1048614, -327628, 65524, 1048614, -327620, 65516, 1048614, -327628, 65508, 1048614, -327620, 65524, 1048614, -327612, 65524, 1441830, -327604, 65524, 1441830, -327604, 65516, 1441830)
+}
+metadata/_editor_floor_ = Vector3(0, -5, 0)
+
+[node name="GridMapWalls" type="GridMap" parent="Environment/NavigationRegion3D/Room2" unique_id=1715648454]
+mesh_library = ExtResource("4_gd1gh")
+cell_size = Vector3(0.5, 0.4, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(-262107, 65528, 179, -262107, 65512, 179, -262099, 65512, 179, -262099, 65528, 179, -262091, 65528, 179, -262083, 65528, 179, -262096, 65508, 1441971, -262080, 65516, 1441971, -262080, 65524, 1441819, -262068, 65520, 655387, -262076, 65528, 655584, -262068, 65528, 655551, -262076, 65520, 655551, -262072, 65516, 1048753, -262064, 65516, 1048753, -262092, 65504, 188, -262053, 65524, 1441805, -262046, 65524, 1048587, -262076, 65512, 179, -262088, 65500, 1441971, -262064, 65524, 1441973)
+}
+metadata/_editor_floor_ = Vector3(0, -4, 0)
+
+[node name="GridMapBuildings" type="GridMap" parent="Environment/NavigationRegion3D" unique_id=1805386975]
+mesh_library = ExtResource("5_a1r6t")
+cell_size = Vector3(0.5, 0.9, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(-130994, 65492, 1441792, -131018, 65491, 1048583)
+}
+metadata/_editor_floor_ = Vector3(0, -2, 0)
+
+[node name="GridMapProps" type="GridMap" parent="Environment/NavigationRegion3D" unique_id=1362921754]
+mesh_library = ExtResource("6_pkqcj")
+cell_size = Vector3(0.5, 0.9, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
 
 [node name="platform_cx_12" parent="." unique_id=995247220 instance=ExtResource("5_afkyo")]
 transform = Transform3D(-0.011456276, 0.54184026, -0.84040356, 0.007385612, 0.84048164, 0.5417899, 0.9999072, -7.281877e-10, -0.013630609, 10.130564, 2.179731, -9.970517)

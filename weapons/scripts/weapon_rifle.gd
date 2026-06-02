@@ -1,7 +1,7 @@
 extends Weapon
 
 @onready var raycast: RayCast3D = $RayCast3D
-@onready var mesh: Node3D = $"Rifle"
+@onready var mesh: Node3D = $"Rifle_01_Armature"
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var muzzle_light: SpotLight3D = $MuzzleLight
 

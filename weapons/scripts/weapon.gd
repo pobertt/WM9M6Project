@@ -24,7 +24,7 @@ var is_reloading: bool = false
 @export var reload_sound: AudioStream
 
 @export_group("Weapon Sway")
-@export var sway_amount: float = 0.002    
+@export var sway_amount: float = 0.00002    
 @export var sway_speed: float = 5.0       
 
 var current_recoil_pos: Vector3 = Vector3.ZERO

@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dj6ka7skmkgme" path="res://assets/sfx/morganpurkis/380185__morganpurkis__silenced-gunshot-2.wav" id="7_yllr7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ebec5"]
+radius = 0.4
 
 [node name="Player" type="CharacterBody3D" unique_id=838304920]
 script = ExtResource("1_4ntmi")
@@ -35,11 +36,11 @@ script = ExtResource("2_yw30f")
 
 [node name="Rifle" parent="Head/Camera3D/WeaponManager" unique_id=1762601991 instance=ExtResource("6_yllr7")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
 fire_rate = 0.15
 
 [node name="SMG" parent="Head/Camera3D/WeaponManager" unique_id=743925542 instance=ExtResource("4_g6k8r")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.089548826, -0.052334547)
-visible = false
 fire_sound = Array[AudioStream]([ExtResource("7_yllr7")])
 reload_sound = ExtResource("5_rgyib")
 
