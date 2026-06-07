@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://b8tvyejfyvew3"]
+
+[ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_wpwb0"]
+[ext_resource type="Resource" uid="uid://cwoon8xnppvax" path="res://trenchbroom/fps_settings.tres" id="2_42ymn"]
+[ext_resource type="Material" uid="uid://b1lft8hxm8h07" path="res://trenchbroom/textures/concrete_wall_mx_1.tres" id="3_4p1j5"]
+[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="4_gfbgd"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wiww5"]
+_surfaces = [{
+"aabb": AABB(-7, -0.5, -2, 13.5, 0.5, 18),
+"attribute_data": PackedByteArray("AACAvgAAgL0AAIA+AACAvQAAgD4AAIA9AACAvgAAgD0AAIA+AACAPQAAgL4AAIA9AACAvgAAgL0AAIA+AACAvQAAgL4AAIA+AACAvgAAgL4AAIA+AACAvgAAgD4AAIA+AACAPgAAgD4AAIC+AACAPgAAgL4AAIC+AACAPgAAgL4AAIC+AACAvQAAgD4AAIC9AACAPgAAgD0AAIC+AACAPQAAgD4AAIA9AACAvgAAgD0AAIC+AACAvQAAgD4AAIC9"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("3_4p1j5"),
+"name": "concrete_wall_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AADQQAAAAAAAAADAAADgwAAAAAAAAADAAADgwAAAAL8AAADAAADQQAAAAL8AAADAAADgwAAAAL8AAIBBAADgwAAAAL8AAADAAADgwAAAAAAAAADAAADgwAAAAAAAAIBBAADgwAAAAL8AAIBBAADQQAAAAL8AAIBBAADQQAAAAL8AAADAAADgwAAAAL8AAADAAADgwAAAAAAAAIBBAADgwAAAAAAAAADAAADQQAAAAAAAAADAAADQQAAAAAAAAIBBAADQQAAAAAAAAIBBAADQQAAAAAAAAADAAADQQAAAAL8AAADAAADQQAAAAL8AAIBBAADQQAAAAL8AAIBBAADgwAAAAL8AAIBBAADgwAAAAAAAAIBBAADQQAAAAAAAAIBB/////wAA/7//////AAD/v/////8AAP+//////wAA/78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD//////38AAP//////fwAA//////9/AAD//////3////9//7//f////3//v/9/////f/+//3////9//7////9//////////3//////////f/////////9///////9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cfqpj"]
+points = PackedVector3Array(6.5, 0, 16, 6.5, -0.5, 16, -7, 0, 16, -7, -0.5, 16, 6.5, 0, -2, 6.5, -0.5, -2, -7, 0, -2, -7, -0.5, -2)
+
+[node name="TrenchBroomPrototype" type="Node3D" unique_id=1010843647]
+
+[node name="FuncGodotMap" type="Node3D" parent="." unique_id=971476769]
+script = ExtResource("1_wpwb0")
+local_map_file = "uid://botmre75v6lt2"
+map_settings = ExtResource("2_42ymn")
+metadata/_custom_type_script = "uid://cwu5cf7a0awcd"
+
+[node name="entity_0_worldspawn" type="StaticBody3D" parent="FuncGodotMap" unique_id=112098882]
+collision_mask = 0
+
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_0_worldspawn" unique_id=718253533]
+mesh = SubResource("ArrayMesh_wiww5")
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn" unique_id=1328582460]
+shape = SubResource("ConvexPolygonShape3D_cfqpj")
+
+[node name="Player" parent="." unique_id=838304920 instance=ExtResource("4_gfbgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14419174, 0.82779944, 3.1522655)

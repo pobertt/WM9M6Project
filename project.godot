@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 ObjectPoolManager="*uid://diy4o2mru1isx"
 AudioManager="*uid://b8g7a7v3m6hxl"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
