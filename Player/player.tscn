@@ -59,6 +59,10 @@ target_position = Vector3(0, -2.5, 0)
 
 [node name="MovementComponent" type="Node" parent="." unique_id=628733723]
 script = ExtResource("2_btcbx")
+walk_speed = 6.0
+sprint_speed = 9.0
+slide_boost = 12.0
+slope_slide_boost = 8.0
 
 [node name="HUD" parent="." unique_id=61136937 instance=ExtResource("5_qjkh3")]
 

@@ -19579,7 +19579,6 @@ shape = SubResource("ConcavePolygonShape3D_jha06")
 
 [node name="asphalt_hr_1_large2" type="Node3D" parent="." unique_id=132174978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="asphalt_hr_1_large" type="MeshInstance3D" parent="asphalt_hr_1_large2" unique_id=1450469202]
 mesh = SubResource("ArrayMesh_3f2m7")
@@ -19591,7 +19590,6 @@ shape = SubResource("ConcavePolygonShape3D_scjh5")
 
 [node name="asphalt_hr_22" type="Node3D" parent="." unique_id=526914323]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="asphalt_hr_2" type="MeshInstance3D" parent="asphalt_hr_22" unique_id=1817597732]
 mesh = SubResource("ArrayMesh_pnh5h")
@@ -19603,7 +19601,6 @@ shape = SubResource("ConcavePolygonShape3D_xm42p")
 
 [node name="asphalt_hr_32" type="Node3D" parent="." unique_id=1795669163]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="asphalt_hr_3" type="MeshInstance3D" parent="asphalt_hr_32" unique_id=498880625]
 mesh = SubResource("ArrayMesh_dt13o")
@@ -19615,7 +19612,6 @@ shape = SubResource("ConcavePolygonShape3D_b81bb")
 
 [node name="beam_hc_horizonatal_12" type="Node3D" parent="." unique_id=428826467]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_hc_horizonatal_1" type="MeshInstance3D" parent="beam_hc_horizonatal_12" unique_id=803531908]
 mesh = SubResource("ArrayMesh_apuw5")
@@ -19627,7 +19623,6 @@ shape = SubResource("ConcavePolygonShape3D_xyme4")
 
 [node name="beam_hc_horizonatal_22" type="Node3D" parent="." unique_id=173749283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_hc_horizonatal_2" type="MeshInstance3D" parent="beam_hc_horizonatal_22" unique_id=1933600966]
 mesh = SubResource("ArrayMesh_n8nmg")
@@ -19639,7 +19634,6 @@ shape = SubResource("ConcavePolygonShape3D_lsh5h")
 
 [node name="beam_hc_vertical_12" type="Node3D" parent="." unique_id=1649275476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_hc_vertical_1" type="MeshInstance3D" parent="beam_hc_vertical_12" unique_id=1914677801]
 mesh = SubResource("ArrayMesh_mnmqc")
@@ -19651,7 +19645,6 @@ shape = SubResource("ConcavePolygonShape3D_qaqm0")
 
 [node name="beam_hc_vertical_22" type="Node3D" parent="." unique_id=475924257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_hc_vertical_2" type="MeshInstance3D" parent="beam_hc_vertical_22" unique_id=80786419]
 mesh = SubResource("ArrayMesh_p2fy6")
@@ -19663,7 +19656,6 @@ shape = SubResource("ConcavePolygonShape3D_d8sio")
 
 [node name="beam_hl_12" type="Node3D" parent="." unique_id=1182015332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_hl_1" type="MeshInstance3D" parent="beam_hl_12" unique_id=1719053307]
 mesh = SubResource("ArrayMesh_jbamv")
@@ -19675,7 +19667,6 @@ shape = SubResource("ConcavePolygonShape3D_1fx6d")
 
 [node name="beam_rtx_12" type="Node3D" parent="." unique_id=1195377578]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_rtx_1" type="MeshInstance3D" parent="beam_rtx_12" unique_id=378353889]
 mesh = SubResource("ArrayMesh_s68es")
@@ -19687,7 +19678,6 @@ shape = SubResource("ConcavePolygonShape3D_87f6u")
 
 [node name="beam_rtx_2_pipes2" type="Node3D" parent="." unique_id=255465436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="beam_rtx_2_pipes" type="MeshInstance3D" parent="beam_rtx_2_pipes2" unique_id=165147027]
 mesh = SubResource("ArrayMesh_7qx55")
@@ -19699,7 +19689,6 @@ shape = SubResource("ConcavePolygonShape3D_cefks")
 
 [node name="concrete_pipe_hm_1_end2" type="Node3D" parent="." unique_id=1714976890]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="concrete_pipe_hm_1_end" type="MeshInstance3D" parent="concrete_pipe_hm_1_end2" unique_id=1244913351]
 mesh = SubResource("ArrayMesh_m1oas")
@@ -19711,7 +19700,6 @@ shape = SubResource("ConcavePolygonShape3D_fr35y")
 
 [node name="concrete_pipe_hm_1_end_bars_12" type="Node3D" parent="." unique_id=825333236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="concrete_pipe_hm_1_end_bars_1" type="MeshInstance3D" parent="concrete_pipe_hm_1_end_bars_12" unique_id=405931593]
 mesh = SubResource("ArrayMesh_00aj3")
@@ -19723,7 +19711,6 @@ shape = SubResource("ConcavePolygonShape3D_2wnqa")
 
 [node name="concrete_pipe_hm_1_middle2" type="Node3D" parent="." unique_id=1049916308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="concrete_pipe_hm_1_middle" type="MeshInstance3D" parent="concrete_pipe_hm_1_middle2" unique_id=1557537638]
 mesh = SubResource("ArrayMesh_4m4yn")
@@ -19735,7 +19722,6 @@ shape = SubResource("ConcavePolygonShape3D_3sq1n")
 
 [node name="doorway_hr_12" type="Node3D" parent="." unique_id=1464125511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hr_1" type="MeshInstance3D" parent="doorway_hr_12" unique_id=2005558221]
 mesh = SubResource("ArrayMesh_h757o")
@@ -19756,7 +19742,6 @@ shape = SubResource("ConcavePolygonShape3D_lk0gs")
 
 [node name="doorway_hr_1_wide2" type="Node3D" parent="." unique_id=2029985597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hr_1_wide" type="MeshInstance3D" parent="doorway_hr_1_wide2" unique_id=1080986733]
 mesh = SubResource("ArrayMesh_bvhpg")
@@ -19786,7 +19771,6 @@ shape = SubResource("ConcavePolygonShape3D_3o6vm")
 
 [node name="doorway_hr_2_regular2" type="Node3D" parent="." unique_id=1596680563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hr_2_regular" type="MeshInstance3D" parent="doorway_hr_2_regular2" unique_id=1965586907]
 mesh = SubResource("ArrayMesh_voa3t")
@@ -19798,7 +19782,6 @@ shape = SubResource("ConcavePolygonShape3D_hc70s")
 
 [node name="doorway_hr_2_wide2" type="Node3D" parent="." unique_id=493210600]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hr_2_wide" type="MeshInstance3D" parent="doorway_hr_2_wide2" unique_id=1775261199]
 mesh = SubResource("ArrayMesh_ikb7g")
@@ -19810,7 +19793,6 @@ shape = SubResource("ConcavePolygonShape3D_vw64q")
 
 [node name="doorway_hr_3_regular2" type="Node3D" parent="." unique_id=1843389485]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hr_3_regular" type="MeshInstance3D" parent="doorway_hr_3_regular2" unique_id=1191631326]
 mesh = SubResource("ArrayMesh_cqhou")
@@ -19822,7 +19804,6 @@ shape = SubResource("ConcavePolygonShape3D_fp6jg")
 
 [node name="doorway_hs_1_regular2" type="Node3D" parent="." unique_id=1961470716]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hs_1_regular" type="MeshInstance3D" parent="doorway_hs_1_regular2" unique_id=183760493]
 mesh = SubResource("ArrayMesh_h1u6v")
@@ -19834,7 +19815,6 @@ shape = SubResource("ConcavePolygonShape3D_rlwo3")
 
 [node name="doorway_hs_1_wide2" type="Node3D" parent="." unique_id=1590530743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_hs_1_wide" type="MeshInstance3D" parent="doorway_hs_1_wide2" unique_id=897529756]
 mesh = SubResource("ArrayMesh_05nd4")
@@ -19846,7 +19826,6 @@ shape = SubResource("ConcavePolygonShape3D_hdsg3")
 
 [node name="doorway_rg_1_regular2" type="Node3D" parent="." unique_id=1988908560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_rg_1_regular" type="MeshInstance3D" parent="doorway_rg_1_regular2" unique_id=548652782]
 mesh = SubResource("ArrayMesh_std28")
@@ -19867,7 +19846,6 @@ shape = SubResource("ConcavePolygonShape3D_dc3ni")
 
 [node name="doorway_rg_1_wide2" type="Node3D" parent="." unique_id=287801644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_rg_1_wide" type="MeshInstance3D" parent="doorway_rg_1_wide2" unique_id=254154114]
 mesh = SubResource("ArrayMesh_xafw2")
@@ -19879,7 +19857,6 @@ shape = SubResource("ConcavePolygonShape3D_j82ng")
 
 [node name="doorway_rg_2_wide2" type="Node3D" parent="." unique_id=583223354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_rg_2_wide" type="MeshInstance3D" parent="doorway_rg_2_wide2" unique_id=119308503]
 mesh = SubResource("ArrayMesh_ob7lq")
@@ -19900,7 +19877,6 @@ shape = SubResource("ConcavePolygonShape3D_dn2cf")
 
 [node name="doorway_rtx_1_wide2" type="Node3D" parent="." unique_id=1081860022]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_rtx_1_wide" type="MeshInstance3D" parent="doorway_rtx_1_wide2" unique_id=778279554]
 mesh = SubResource("ArrayMesh_r2vi5")
@@ -19930,7 +19906,6 @@ shape = SubResource("ConcavePolygonShape3D_j1shw")
 
 [node name="doorway_rx_12" type="Node3D" parent="." unique_id=1974839579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="doorway_rx_1" type="MeshInstance3D" parent="doorway_rx_12" unique_id=1912158463]
 mesh = SubResource("ArrayMesh_gugkj")
@@ -19951,7 +19926,6 @@ shape = SubResource("ConcavePolygonShape3D_1ru8v")
 
 [node name="floor_ceiling_hr_12" type="Node3D" parent="." unique_id=1231686806]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_1" type="MeshInstance3D" parent="floor_ceiling_hr_12" unique_id=1050568100]
 mesh = SubResource("ArrayMesh_iimr2")
@@ -19963,7 +19937,6 @@ shape = SubResource("ConcavePolygonShape3D_jwira")
 
 [node name="floor_ceiling_hr_2_hole2" type="Node3D" parent="." unique_id=315881837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_2_hole" type="MeshInstance3D" parent="floor_ceiling_hr_2_hole2" unique_id=1067267105]
 mesh = SubResource("ArrayMesh_wbask")
@@ -19975,7 +19948,6 @@ shape = SubResource("ConcavePolygonShape3D_amahc")
 
 [node name="floor_ceiling_hr_32" type="Node3D" parent="." unique_id=118850821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_3" type="MeshInstance3D" parent="floor_ceiling_hr_32" unique_id=1322857252]
 mesh = SubResource("ArrayMesh_nkexc")
@@ -19987,7 +19959,6 @@ shape = SubResource("ConcavePolygonShape3D_psajv")
 
 [node name="floor_ceiling_hr_42" type="Node3D" parent="." unique_id=2056806573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_4" type="MeshInstance3D" parent="floor_ceiling_hr_42" unique_id=1074721459]
 mesh = SubResource("ArrayMesh_bnkpg")
@@ -19999,7 +19970,6 @@ shape = SubResource("ConcavePolygonShape3D_itrk0")
 
 [node name="floor_ceiling_hr_52" type="Node3D" parent="." unique_id=2023788103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_5" type="MeshInstance3D" parent="floor_ceiling_hr_52" unique_id=1355722696]
 mesh = SubResource("ArrayMesh_57tib")
@@ -20011,7 +19981,6 @@ shape = SubResource("ConcavePolygonShape3D_4na8e")
 
 [node name="floor_ceiling_hr_5_m1a_12" type="Node3D" parent="." unique_id=884197802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_5_m1a_1" type="MeshInstance3D" parent="floor_ceiling_hr_5_m1a_12" unique_id=823596455]
 mesh = SubResource("ArrayMesh_w7s6t")
@@ -20023,7 +19992,6 @@ shape = SubResource("ConcavePolygonShape3D_sqfkp")
 
 [node name="floor_ceiling_hr_5_m2a_12" type="Node3D" parent="." unique_id=638324916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_5_m2a_1" type="MeshInstance3D" parent="floor_ceiling_hr_5_m2a_12" unique_id=251552622]
 mesh = SubResource("ArrayMesh_eokp4")
@@ -20035,7 +20003,6 @@ shape = SubResource("ConcavePolygonShape3D_268de")
 
 [node name="floor_ceiling_hr_62" type="Node3D" parent="." unique_id=1673336090]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hr_6" type="MeshInstance3D" parent="floor_ceiling_hr_62" unique_id=456380633]
 mesh = SubResource("ArrayMesh_l75ny")
@@ -20047,7 +20014,6 @@ shape = SubResource("ConcavePolygonShape3D_riq7g")
 
 [node name="floor_ceiling_hs_1_slope2" type="Node3D" parent="." unique_id=1602675624]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hs_1_slope" type="MeshInstance3D" parent="floor_ceiling_hs_1_slope2" unique_id=131828974]
 mesh = SubResource("ArrayMesh_bbmlm")
@@ -20059,7 +20025,6 @@ shape = SubResource("ConcavePolygonShape3D_4pnh6")
 
 [node name="floor_ceiling_hs_2_slope2" type="Node3D" parent="." unique_id=37810565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hs_2_slope" type="MeshInstance3D" parent="floor_ceiling_hs_2_slope2" unique_id=1249528749]
 mesh = SubResource("ArrayMesh_k5nn2")
@@ -20071,7 +20036,6 @@ shape = SubResource("ConcavePolygonShape3D_bhwgc")
 
 [node name="floor_ceiling_hs_3_slope2" type="Node3D" parent="." unique_id=1405689088]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hs_3_slope" type="MeshInstance3D" parent="floor_ceiling_hs_3_slope2" unique_id=978436756]
 mesh = SubResource("ArrayMesh_537nx")
@@ -20083,7 +20047,6 @@ shape = SubResource("ConcavePolygonShape3D_xu2f7")
 
 [node name="floor_ceiling_hs_4_slope2" type="Node3D" parent="." unique_id=838956108]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hs_4_slope" type="MeshInstance3D" parent="floor_ceiling_hs_4_slope2" unique_id=1690821626]
 mesh = SubResource("ArrayMesh_q0kag")
@@ -20095,7 +20058,6 @@ shape = SubResource("ConcavePolygonShape3D_siwxm")
 
 [node name="floor_ceiling_hy_12" type="Node3D" parent="." unique_id=1076928416]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_hy_1" type="MeshInstance3D" parent="floor_ceiling_hy_12" unique_id=848500242]
 mesh = SubResource("ArrayMesh_6ppg4")
@@ -20107,7 +20069,6 @@ shape = SubResource("ConcavePolygonShape3D_1oruu")
 
 [node name="floor_ceiling_rtx_12" type="Node3D" parent="." unique_id=280730422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_rtx_1" type="MeshInstance3D" parent="floor_ceiling_rtx_12" unique_id=2063031072]
 mesh = SubResource("ArrayMesh_74f74")
@@ -20119,7 +20080,6 @@ shape = SubResource("ConcavePolygonShape3D_ojou7")
 
 [node name="floor_ceiling_rtx_1_corner2" type="Node3D" parent="." unique_id=1415454928]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_rtx_1_corner" type="MeshInstance3D" parent="floor_ceiling_rtx_1_corner2" unique_id=1054557870]
 mesh = SubResource("ArrayMesh_h6vlu")
@@ -20131,7 +20091,6 @@ shape = SubResource("ConcavePolygonShape3D_7npsj")
 
 [node name="floor_ceiling_rtx_22" type="Node3D" parent="." unique_id=1989944693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_rtx_2" type="MeshInstance3D" parent="floor_ceiling_rtx_22" unique_id=1799545677]
 mesh = SubResource("ArrayMesh_6v712")
@@ -20151,7 +20110,6 @@ shape = SubResource("ConcavePolygonShape3D_hrwqu")
 
 [node name="floor_ceiling_rtx_32" type="Node3D" parent="." unique_id=347274567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_rtx_3" type="MeshInstance3D" parent="floor_ceiling_rtx_32" unique_id=1295793197]
 mesh = SubResource("ArrayMesh_1gp8b")
@@ -20172,7 +20130,6 @@ shape = SubResource("ConcavePolygonShape3D_1b3tb")
 
 [node name="floor_ceiling_rx_12" type="Node3D" parent="." unique_id=479877799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="floor_ceiling_rx_1" type="MeshInstance3D" parent="floor_ceiling_rx_12" unique_id=1694245946]
 mesh = SubResource("ArrayMesh_16qrt")
@@ -20184,7 +20141,6 @@ shape = SubResource("ConcavePolygonShape3D_s61mp")
 
 [node name="garage_door_frame_hr_12" type="Node3D" parent="." unique_id=1757542589]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_hr_1" type="MeshInstance3D" parent="garage_door_frame_hr_12" unique_id=1201240027]
 mesh = SubResource("ArrayMesh_0r60t")
@@ -20214,7 +20170,6 @@ shape = SubResource("ConcavePolygonShape3D_5tsfd")
 
 [node name="garage_door_frame_hr_22" type="Node3D" parent="." unique_id=543590004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_hr_2" type="MeshInstance3D" parent="garage_door_frame_hr_22" unique_id=1725824847]
 mesh = SubResource("ArrayMesh_72283")
@@ -20234,7 +20189,6 @@ shape = SubResource("ConcavePolygonShape3D_5m1lt")
 
 [node name="garage_door_frame_hs_12" type="Node3D" parent="." unique_id=1239257861]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_hs_1" type="MeshInstance3D" parent="garage_door_frame_hs_12" unique_id=1707926200]
 mesh = SubResource("ArrayMesh_5iylm")
@@ -20246,7 +20200,6 @@ shape = SubResource("ConcavePolygonShape3D_h1r70")
 
 [node name="garage_door_frame_hs_22" type="Node3D" parent="." unique_id=1973991489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_hs_2" type="MeshInstance3D" parent="garage_door_frame_hs_22" unique_id=2077060471]
 mesh = SubResource("ArrayMesh_bj05k")
@@ -20266,7 +20219,6 @@ shape = SubResource("ConcavePolygonShape3D_fi7rh")
 
 [node name="garage_door_frame_rg_12" type="Node3D" parent="." unique_id=1833465398]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_rg_1" type="MeshInstance3D" parent="garage_door_frame_rg_12" unique_id=899129072]
 mesh = SubResource("ArrayMesh_bikgj")
@@ -20287,7 +20239,6 @@ shape = SubResource("ConcavePolygonShape3D_51erk")
 
 [node name="garage_door_frame_rg_22" type="Node3D" parent="." unique_id=1392908811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="garage_door_frame_rg_2" type="MeshInstance3D" parent="garage_door_frame_rg_22" unique_id=526801144]
 mesh = SubResource("ArrayMesh_wqubw")
@@ -20307,7 +20258,6 @@ shape = SubResource("ConcavePolygonShape3D_4xcbl")
 
 [node name="pillar_ac_32" type="Node3D" parent="." unique_id=377013743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_ac_3" type="MeshInstance3D" parent="pillar_ac_32" unique_id=2033966317]
 mesh = SubResource("ArrayMesh_7g3ju")
@@ -20319,7 +20269,6 @@ shape = SubResource("ConcavePolygonShape3D_yefci")
 
 [node name="pillar_ax_32" type="Node3D" parent="." unique_id=1262466816]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_ax_3" type="MeshInstance3D" parent="pillar_ax_32" unique_id=287421092]
 mesh = SubResource("ArrayMesh_csa2f")
@@ -20331,7 +20280,6 @@ shape = SubResource("ConcavePolygonShape3D_ta2wh")
 
 [node name="pillar_ay_22" type="Node3D" parent="." unique_id=668305458]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_ay_2" type="MeshInstance3D" parent="pillar_ay_22" unique_id=1004325977]
 mesh = SubResource("ArrayMesh_kmcs2")
@@ -20343,7 +20291,6 @@ shape = SubResource("ConcavePolygonShape3D_5sx3w")
 
 [node name="pillar_hr_1_broken2" type="Node3D" parent="." unique_id=1007072369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_1_broken" type="MeshInstance3D" parent="pillar_hr_1_broken2" unique_id=1397261393]
 mesh = SubResource("ArrayMesh_571rb")
@@ -20355,7 +20302,6 @@ shape = SubResource("ConcavePolygonShape3D_aixcf")
 
 [node name="pillar_hr_22" type="Node3D" parent="." unique_id=2000823405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_2" type="MeshInstance3D" parent="pillar_hr_22" unique_id=506619037]
 mesh = SubResource("ArrayMesh_yvv8e")
@@ -20367,7 +20313,6 @@ shape = SubResource("ConcavePolygonShape3D_ctbdj")
 
 [node name="pillar_hr_42" type="Node3D" parent="." unique_id=502371500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_4" type="MeshInstance3D" parent="pillar_hr_42" unique_id=1214449740]
 mesh = SubResource("ArrayMesh_5q2y3")
@@ -20379,7 +20324,6 @@ shape = SubResource("ConcavePolygonShape3D_dtl45")
 
 [node name="pillar_hr_52" type="Node3D" parent="." unique_id=2088546713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_5" type="MeshInstance3D" parent="pillar_hr_52" unique_id=574834139]
 mesh = SubResource("ArrayMesh_i1cfp")
@@ -20391,7 +20335,6 @@ shape = SubResource("ConcavePolygonShape3D_rabr2")
 
 [node name="pillar_hr_62" type="Node3D" parent="." unique_id=1867238293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_6" type="MeshInstance3D" parent="pillar_hr_62" unique_id=1929566852]
 mesh = SubResource("ArrayMesh_vctws")
@@ -20403,7 +20346,6 @@ shape = SubResource("ConcavePolygonShape3D_ts3h3")
 
 [node name="pillar_hr_82" type="Node3D" parent="." unique_id=943488251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hr_8" type="MeshInstance3D" parent="pillar_hr_82" unique_id=1681791324]
 mesh = SubResource("ArrayMesh_yblxj")
@@ -20415,7 +20357,6 @@ shape = SubResource("ConcavePolygonShape3D_lew42")
 
 [node name="pillar_hs_1_broken2" type="Node3D" parent="." unique_id=426915775]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_1_broken" type="MeshInstance3D" parent="pillar_hs_1_broken2" unique_id=1206269230]
 mesh = SubResource("ArrayMesh_8ui6y")
@@ -20427,7 +20368,6 @@ shape = SubResource("ConcavePolygonShape3D_o2vvc")
 
 [node name="pillar_hs_22" type="Node3D" parent="." unique_id=1136988323]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_2" type="MeshInstance3D" parent="pillar_hs_22" unique_id=2071865124]
 mesh = SubResource("ArrayMesh_qahuf")
@@ -20439,7 +20379,6 @@ shape = SubResource("ConcavePolygonShape3D_ieiss")
 
 [node name="pillar_hs_42" type="Node3D" parent="." unique_id=41433063]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_4" type="MeshInstance3D" parent="pillar_hs_42" unique_id=1107003037]
 mesh = SubResource("ArrayMesh_bhntg")
@@ -20451,7 +20390,6 @@ shape = SubResource("ConcavePolygonShape3D_3ei0b")
 
 [node name="pillar_hs_52" type="Node3D" parent="." unique_id=1867233510]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_5" type="MeshInstance3D" parent="pillar_hs_52" unique_id=782149881]
 mesh = SubResource("ArrayMesh_jd12n")
@@ -20463,7 +20401,6 @@ shape = SubResource("ConcavePolygonShape3D_jcmvw")
 
 [node name="pillar_hs_62" type="Node3D" parent="." unique_id=1557613106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_6" type="MeshInstance3D" parent="pillar_hs_62" unique_id=1141889848]
 mesh = SubResource("ArrayMesh_rnpx3")
@@ -20475,7 +20412,6 @@ shape = SubResource("ConcavePolygonShape3D_hub0y")
 
 [node name="pillar_hs_72" type="Node3D" parent="." unique_id=1086847574]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_7" type="MeshInstance3D" parent="pillar_hs_72" unique_id=1764124693]
 mesh = SubResource("ArrayMesh_r8aay")
@@ -20487,7 +20423,6 @@ shape = SubResource("ConcavePolygonShape3D_b1sie")
 
 [node name="pillar_hs_82" type="Node3D" parent="." unique_id=936002614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_hs_8" type="MeshInstance3D" parent="pillar_hs_82" unique_id=492382115]
 mesh = SubResource("ArrayMesh_q2p8c")
@@ -20499,7 +20434,6 @@ shape = SubResource("ConcavePolygonShape3D_oc6y1")
 
 [node name="pillar_rgx_12" type="Node3D" parent="." unique_id=1292542560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rgx_1" type="MeshInstance3D" parent="pillar_rgx_12" unique_id=1482700132]
 mesh = SubResource("ArrayMesh_p00t1")
@@ -20511,7 +20445,6 @@ shape = SubResource("ConcavePolygonShape3D_g0ycb")
 
 [node name="pillar_rgx_22" type="Node3D" parent="." unique_id=1110587774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rgx_2" type="MeshInstance3D" parent="pillar_rgx_22" unique_id=1962486962]
 mesh = SubResource("ArrayMesh_nowkp")
@@ -20523,7 +20456,6 @@ shape = SubResource("ConcavePolygonShape3D_l7kiw")
 
 [node name="pillar_rgx_32" type="Node3D" parent="." unique_id=691483907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rgx_3" type="MeshInstance3D" parent="pillar_rgx_32" unique_id=1271557080]
 mesh = SubResource("ArrayMesh_g0774")
@@ -20535,7 +20467,6 @@ shape = SubResource("ConcavePolygonShape3D_oapdc")
 
 [node name="pillar_rg_1_broken2" type="Node3D" parent="." unique_id=600483003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_1_broken" type="MeshInstance3D" parent="pillar_rg_1_broken2" unique_id=728125689]
 mesh = SubResource("ArrayMesh_ntp10")
@@ -20547,7 +20478,6 @@ shape = SubResource("ConcavePolygonShape3D_7sgwq")
 
 [node name="pillar_rg_22" type="Node3D" parent="." unique_id=406970157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_2" type="MeshInstance3D" parent="pillar_rg_22" unique_id=2123672641]
 mesh = SubResource("ArrayMesh_m3vbn")
@@ -20559,7 +20489,6 @@ shape = SubResource("ConcavePolygonShape3D_dsv0a")
 
 [node name="pillar_rg_42" type="Node3D" parent="." unique_id=1102553109]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_4" type="MeshInstance3D" parent="pillar_rg_42" unique_id=233521377]
 mesh = SubResource("ArrayMesh_w6obc")
@@ -20571,7 +20500,6 @@ shape = SubResource("ConcavePolygonShape3D_u3gp3")
 
 [node name="pillar_rg_52" type="Node3D" parent="." unique_id=552555242]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_5" type="MeshInstance3D" parent="pillar_rg_52" unique_id=1714162840]
 mesh = SubResource("ArrayMesh_hutct")
@@ -20583,7 +20511,6 @@ shape = SubResource("ConcavePolygonShape3D_w8u8m")
 
 [node name="pillar_rg_62" type="Node3D" parent="." unique_id=1915010377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_6" type="MeshInstance3D" parent="pillar_rg_62" unique_id=1686836286]
 mesh = SubResource("ArrayMesh_klm2r")
@@ -20595,7 +20522,6 @@ shape = SubResource("ConcavePolygonShape3D_v1a05")
 
 [node name="pillar_rg_72" type="Node3D" parent="." unique_id=1128677330]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_7" type="MeshInstance3D" parent="pillar_rg_72" unique_id=254042389]
 mesh = SubResource("ArrayMesh_ei2cm")
@@ -20607,7 +20533,6 @@ shape = SubResource("ConcavePolygonShape3D_00h8b")
 
 [node name="pillar_rg_82" type="Node3D" parent="." unique_id=1887108437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_8" type="MeshInstance3D" parent="pillar_rg_82" unique_id=293069080]
 mesh = SubResource("ArrayMesh_ruh36")
@@ -20619,7 +20544,6 @@ shape = SubResource("ConcavePolygonShape3D_occ3b")
 
 [node name="pillar_rg_92" type="Node3D" parent="." unique_id=1292252858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_9" type="MeshInstance3D" parent="pillar_rg_92" unique_id=265668370]
 mesh = SubResource("ArrayMesh_m16gx")
@@ -20631,7 +20555,6 @@ shape = SubResource("ConcavePolygonShape3D_0fiy1")
 
 [node name="pillar_rg_102" type="Node3D" parent="." unique_id=1348117678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rg_10" type="MeshInstance3D" parent="pillar_rg_102" unique_id=1201788461]
 mesh = SubResource("ArrayMesh_0op8d")
@@ -20643,7 +20566,6 @@ shape = SubResource("ConcavePolygonShape3D_ahdnb")
 
 [node name="pillar_rtx_12" type="Node3D" parent="." unique_id=1739861151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rtx_1" type="MeshInstance3D" parent="pillar_rtx_12" unique_id=536636362]
 mesh = SubResource("ArrayMesh_0wpp2")
@@ -20655,7 +20577,6 @@ shape = SubResource("ConcavePolygonShape3D_jw6yl")
 
 [node name="pillar_rtx_22" type="Node3D" parent="." unique_id=2039595884]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rtx_2" type="MeshInstance3D" parent="pillar_rtx_22" unique_id=1571628399]
 mesh = SubResource("ArrayMesh_anhn4")
@@ -20667,7 +20588,6 @@ shape = SubResource("ConcavePolygonShape3D_2uimo")
 
 [node name="pillar_rx_82" type="Node3D" parent="." unique_id=540540667]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pillar_rx_8" type="MeshInstance3D" parent="pillar_rx_82" unique_id=255350945]
 mesh = SubResource("ArrayMesh_4s2bv")
@@ -20679,7 +20599,6 @@ shape = SubResource("ConcavePolygonShape3D_wvsxd")
 
 [node name="pipes_hr_5_middle2" type="Node3D" parent="." unique_id=525016970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipes_hr_5_middle" type="MeshInstance3D" parent="pipes_hr_5_middle2" unique_id=135222380]
 mesh = SubResource("ArrayMesh_4nif4")
@@ -20691,7 +20610,6 @@ shape = SubResource("ConcavePolygonShape3D_v623w")
 
 [node name="pipe_bx_12" type="Node3D" parent="." unique_id=1341809832]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_bx_1" type="MeshInstance3D" parent="pipe_bx_12" unique_id=1912256368]
 mesh = SubResource("ArrayMesh_4rvab")
@@ -20703,7 +20621,6 @@ shape = SubResource("ConcavePolygonShape3D_tfjo8")
 
 [node name="pipe_bx_22" type="Node3D" parent="." unique_id=1971824764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_bx_2" type="MeshInstance3D" parent="pipe_bx_22" unique_id=551801251]
 mesh = SubResource("ArrayMesh_22mnx")
@@ -20715,7 +20632,6 @@ shape = SubResource("ConcavePolygonShape3D_dgakj")
 
 [node name="pipe_bx_32" type="Node3D" parent="." unique_id=964469906]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_bx_3" type="MeshInstance3D" parent="pipe_bx_32" unique_id=51710372]
 mesh = SubResource("ArrayMesh_rb1qf")
@@ -20727,7 +20643,6 @@ shape = SubResource("ConcavePolygonShape3D_0csqn")
 
 [node name="pipe_bx_42" type="Node3D" parent="." unique_id=1072643865]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_bx_4" type="MeshInstance3D" parent="pipe_bx_42" unique_id=900569791]
 mesh = SubResource("ArrayMesh_w7f4u")
@@ -20739,7 +20654,6 @@ shape = SubResource("ConcavePolygonShape3D_panrg")
 
 [node name="pipe_cx_12" type="Node3D" parent="." unique_id=982129939]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_cx_1" type="MeshInstance3D" parent="pipe_cx_12" unique_id=791933574]
 mesh = SubResource("ArrayMesh_x3yoh")
@@ -20751,7 +20665,6 @@ shape = SubResource("ConcavePolygonShape3D_undpc")
 
 [node name="pipe_cx_22" type="Node3D" parent="." unique_id=571198231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_cx_2" type="MeshInstance3D" parent="pipe_cx_22" unique_id=1397307620]
 mesh = SubResource("ArrayMesh_h850k")
@@ -20763,7 +20676,6 @@ shape = SubResource("ConcavePolygonShape3D_yfxuw")
 
 [node name="pipe_cx_32" type="Node3D" parent="." unique_id=2086489825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_cx_3" type="MeshInstance3D" parent="pipe_cx_32" unique_id=813193272]
 mesh = SubResource("ArrayMesh_qgjet")
@@ -20775,7 +20687,6 @@ shape = SubResource("ConcavePolygonShape3D_lcuht")
 
 [node name="pipe_cx_42" type="Node3D" parent="." unique_id=834806144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_cx_4" type="MeshInstance3D" parent="pipe_cx_42" unique_id=1176387007]
 mesh = SubResource("ArrayMesh_gw163")
@@ -20787,7 +20698,6 @@ shape = SubResource("ConcavePolygonShape3D_yewp3")
 
 [node name="pipe_cx_52" type="Node3D" parent="." unique_id=962338275]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_cx_5" type="MeshInstance3D" parent="pipe_cx_52" unique_id=1612039811]
 mesh = SubResource("ArrayMesh_6k277")
@@ -20799,7 +20709,6 @@ shape = SubResource("ConcavePolygonShape3D_1d7og")
 
 [node name="pipe_dx_12" type="Node3D" parent="." unique_id=764076377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_dx_1" type="MeshInstance3D" parent="pipe_dx_12" unique_id=580584053]
 mesh = SubResource("ArrayMesh_vw37m")
@@ -20811,7 +20720,6 @@ shape = SubResource("ConcavePolygonShape3D_cgaje")
 
 [node name="pipe_dx_22" type="Node3D" parent="." unique_id=840141630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="pipe_dx_2" type="MeshInstance3D" parent="pipe_dx_22" unique_id=968295689]
 mesh = SubResource("ArrayMesh_5elho")
@@ -20823,7 +20731,6 @@ shape = SubResource("ConcavePolygonShape3D_8bis8")
 
 [node name="platform_ax_12" type="Node3D" parent="." unique_id=1391988531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_ax_1" type="MeshInstance3D" parent="platform_ax_12" unique_id=67178084]
 mesh = SubResource("ArrayMesh_qkli6")
@@ -20835,7 +20742,6 @@ shape = SubResource("ConcavePolygonShape3D_fak70")
 
 [node name="platform_ax_22" type="Node3D" parent="." unique_id=817096546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_ax_2" type="MeshInstance3D" parent="platform_ax_22" unique_id=413208671]
 mesh = SubResource("ArrayMesh_inlpj")
@@ -20847,7 +20753,6 @@ shape = SubResource("ConcavePolygonShape3D_eox2v")
 
 [node name="platform_bx_12" type="Node3D" parent="." unique_id=1657292608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_bx_1" type="MeshInstance3D" parent="platform_bx_12" unique_id=222627320]
 mesh = SubResource("ArrayMesh_nqrkm")
@@ -20859,7 +20764,6 @@ shape = SubResource("ConcavePolygonShape3D_c27f3")
 
 [node name="platform_bx_22" type="Node3D" parent="." unique_id=584004207]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_bx_2" type="MeshInstance3D" parent="platform_bx_22" unique_id=962129968]
 mesh = SubResource("ArrayMesh_7kr6h")
@@ -20871,7 +20775,6 @@ shape = SubResource("ConcavePolygonShape3D_hg466")
 
 [node name="platform_b_handrail_12" type="Node3D" parent="." unique_id=1566545366]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_b_handrail_1" type="MeshInstance3D" parent="platform_b_handrail_12" unique_id=88118402]
 mesh = SubResource("ArrayMesh_s1w6f")
@@ -20883,7 +20786,6 @@ shape = SubResource("ConcavePolygonShape3D_5bv85")
 
 [node name="platform_b_handrail_1_12" type="Node3D" parent="." unique_id=827131003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_b_handrail_1_1" type="MeshInstance3D" parent="platform_b_handrail_1_12" unique_id=457445045]
 mesh = SubResource("ArrayMesh_vydlm")
@@ -20895,7 +20797,6 @@ shape = SubResource("ConcavePolygonShape3D_mcb27")
 
 [node name="platform_b_handrail_22" type="Node3D" parent="." unique_id=1862513039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_b_handrail_2" type="MeshInstance3D" parent="platform_b_handrail_22" unique_id=223033343]
 mesh = SubResource("ArrayMesh_jwr2a")
@@ -20907,7 +20808,6 @@ shape = SubResource("ConcavePolygonShape3D_fr8xf")
 
 [node name="platform_cx_12" type="Node3D" parent="." unique_id=2141602064]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_cx_1" type="MeshInstance3D" parent="platform_cx_12" unique_id=1063684594]
 mesh = SubResource("ArrayMesh_gtcgx")
@@ -20919,7 +20819,6 @@ shape = SubResource("ConcavePolygonShape3D_mgwul")
 
 [node name="platform_large_mx_12" type="Node3D" parent="." unique_id=1995896586]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_large_mx_1" type="MeshInstance3D" parent="platform_large_mx_12" unique_id=1523185722]
 mesh = SubResource("ArrayMesh_g2ra4")
@@ -20931,7 +20830,6 @@ shape = SubResource("ConcavePolygonShape3D_x1p13")
 
 [node name="platform_small_mx_12" type="Node3D" parent="." unique_id=935087862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="platform_small_mx_1" type="MeshInstance3D" parent="platform_small_mx_12" unique_id=1292653514]
 mesh = SubResource("ArrayMesh_25s24")
@@ -20943,7 +20841,6 @@ shape = SubResource("ConcavePolygonShape3D_cyabk")
 
 [node name="ramp_platform_slim_mx_12" type="Node3D" parent="." unique_id=434614027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="ramp_platform_slim_mx_1" type="MeshInstance3D" parent="ramp_platform_slim_mx_12" unique_id=1186934917]
 mesh = SubResource("ArrayMesh_w6c30")
@@ -20955,7 +20852,6 @@ shape = SubResource("ConcavePolygonShape3D_hnnrp")
 
 [node name="ramp_platform_wide_mx_12" type="Node3D" parent="." unique_id=1002249357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="ramp_platform_wide_mx_1" type="MeshInstance3D" parent="ramp_platform_wide_mx_12" unique_id=1020349465]
 mesh = SubResource("ArrayMesh_8wi4y")
@@ -20967,6 +20863,7 @@ shape = SubResource("ConcavePolygonShape3D_7bfys")
 
 [node name="roof_bx_12" type="Node3D" parent="." unique_id=289548228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_bx_1" type="MeshInstance3D" parent="roof_bx_12" unique_id=140296205]
 mesh = SubResource("ArrayMesh_ntuog")
@@ -20978,6 +20875,7 @@ shape = SubResource("ConcavePolygonShape3D_q1n3x")
 
 [node name="roof_bx_1_corner_12" type="Node3D" parent="." unique_id=524988451]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_bx_1_corner_1" type="MeshInstance3D" parent="roof_bx_1_corner_12" unique_id=1828264859]
 mesh = SubResource("ArrayMesh_8urm7")
@@ -20989,6 +20887,7 @@ shape = SubResource("ConcavePolygonShape3D_pel3b")
 
 [node name="roof_bx_1_corner_22" type="Node3D" parent="." unique_id=2055235177]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_bx_1_corner_2" type="MeshInstance3D" parent="roof_bx_1_corner_22" unique_id=651157642]
 mesh = SubResource("ArrayMesh_bot74")
@@ -21000,6 +20899,7 @@ shape = SubResource("ConcavePolygonShape3D_f3w1l")
 
 [node name="roof_bx_1_side2" type="Node3D" parent="." unique_id=1398586546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_bx_1_side" type="MeshInstance3D" parent="roof_bx_1_side2" unique_id=211980842]
 mesh = SubResource("ArrayMesh_mxul8")
@@ -21011,6 +20911,7 @@ shape = SubResource("ConcavePolygonShape3D_cne6a")
 
 [node name="roof_bx_22" type="Node3D" parent="." unique_id=914158339]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_bx_2" type="MeshInstance3D" parent="roof_bx_22" unique_id=1072495362]
 mesh = SubResource("ArrayMesh_1w8hl")
@@ -21022,6 +20923,7 @@ shape = SubResource("ConcavePolygonShape3D_ric3q")
 
 [node name="roof_hr_3_middle_angle2" type="Node3D" parent="." unique_id=2138314318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_middle_angle" type="MeshInstance3D" parent="roof_hr_3_middle_angle2" unique_id=878006700]
 mesh = SubResource("ArrayMesh_rst2x")
@@ -21033,6 +20935,7 @@ shape = SubResource("ConcavePolygonShape3D_3dvio")
 
 [node name="roof_hr_3_side_1_angle2" type="Node3D" parent="." unique_id=1874677520]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_side_1_angle" type="MeshInstance3D" parent="roof_hr_3_side_1_angle2" unique_id=1229644162]
 mesh = SubResource("ArrayMesh_5yyry")
@@ -21044,6 +20947,7 @@ shape = SubResource("ConcavePolygonShape3D_3xreb")
 
 [node name="roof_hr_3_side_2_angle_corner_12" type="Node3D" parent="." unique_id=1225701368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_side_2_angle_corner_1" type="MeshInstance3D" parent="roof_hr_3_side_2_angle_corner_12" unique_id=171184510]
 mesh = SubResource("ArrayMesh_ksskx")
@@ -21055,6 +20959,7 @@ shape = SubResource("ConcavePolygonShape3D_attkd")
 
 [node name="roof_hr_3_side_2_angle_corner_22" type="Node3D" parent="." unique_id=1516018748]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_side_2_angle_corner_2" type="MeshInstance3D" parent="roof_hr_3_side_2_angle_corner_22" unique_id=379203561]
 mesh = SubResource("ArrayMesh_bce41")
@@ -21066,6 +20971,7 @@ shape = SubResource("ConcavePolygonShape3D_3l3tm")
 
 [node name="roof_hr_3_side_2_angle_edge_12" type="Node3D" parent="." unique_id=968345348]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_side_2_angle_edge_1" type="MeshInstance3D" parent="roof_hr_3_side_2_angle_edge_12" unique_id=196582711]
 mesh = SubResource("ArrayMesh_5uo0e")
@@ -21077,6 +20983,7 @@ shape = SubResource("ConcavePolygonShape3D_gdvl7")
 
 [node name="roof_hr_3_side_2_angle_edge_22" type="Node3D" parent="." unique_id=310539153]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_hr_3_side_2_angle_edge_2" type="MeshInstance3D" parent="roof_hr_3_side_2_angle_edge_22" unique_id=1268790372]
 mesh = SubResource("ArrayMesh_ri7ck")
@@ -21088,6 +20995,7 @@ shape = SubResource("ConcavePolygonShape3D_3jnl3")
 
 [node name="roof_mh_12" type="Node3D" parent="." unique_id=1475946172]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_1" type="MeshInstance3D" parent="roof_mh_12" unique_id=436226029]
 mesh = SubResource("ArrayMesh_vp732")
@@ -21099,6 +21007,7 @@ shape = SubResource("ConcavePolygonShape3D_mco5d")
 
 [node name="roof_mh_22" type="Node3D" parent="." unique_id=1310930479]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_2" type="MeshInstance3D" parent="roof_mh_22" unique_id=799790401]
 mesh = SubResource("ArrayMesh_yr2vp")
@@ -21110,6 +21019,7 @@ shape = SubResource("ConcavePolygonShape3D_g45ie")
 
 [node name="roof_mh_32" type="Node3D" parent="." unique_id=406561118]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_3" type="MeshInstance3D" parent="roof_mh_32" unique_id=854507453]
 mesh = SubResource("ArrayMesh_cpjch")
@@ -21121,6 +21031,7 @@ shape = SubResource("ConcavePolygonShape3D_3xtvt")
 
 [node name="roof_mh_4_a_12" type="Node3D" parent="." unique_id=1093348694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_a_1" type="MeshInstance3D" parent="roof_mh_4_a_12" unique_id=54533670]
 mesh = SubResource("ArrayMesh_s2vns")
@@ -21132,6 +21043,7 @@ shape = SubResource("ConcavePolygonShape3D_ymjny")
 
 [node name="roof_mh_4_a_22" type="Node3D" parent="." unique_id=99197810]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_a_2" type="MeshInstance3D" parent="roof_mh_4_a_22" unique_id=1442457042]
 mesh = SubResource("ArrayMesh_e061l")
@@ -21143,6 +21055,7 @@ shape = SubResource("ConcavePolygonShape3D_u33dt")
 
 [node name="roof_mh_4_a_32" type="Node3D" parent="." unique_id=674609363]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_a_3" type="MeshInstance3D" parent="roof_mh_4_a_32" unique_id=1513417889]
 mesh = SubResource("ArrayMesh_wrlox")
@@ -21154,6 +21067,7 @@ shape = SubResource("ConcavePolygonShape3D_x26ep")
 
 [node name="roof_mh_4_a_42" type="Node3D" parent="." unique_id=807492317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_a_4" type="MeshInstance3D" parent="roof_mh_4_a_42" unique_id=1132472832]
 mesh = SubResource("ArrayMesh_nuvyi")
@@ -21165,6 +21079,7 @@ shape = SubResource("ConcavePolygonShape3D_m0xp4")
 
 [node name="roof_mh_4_b_12" type="Node3D" parent="." unique_id=1231979737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_b_1" type="MeshInstance3D" parent="roof_mh_4_b_12" unique_id=1599042873]
 mesh = SubResource("ArrayMesh_a5hra")
@@ -21176,6 +21091,7 @@ shape = SubResource("ConcavePolygonShape3D_drqba")
 
 [node name="roof_mh_4_b_22" type="Node3D" parent="." unique_id=1198749997]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_b_2" type="MeshInstance3D" parent="roof_mh_4_b_22" unique_id=2040319103]
 mesh = SubResource("ArrayMesh_sc7n5")
@@ -21187,6 +21103,7 @@ shape = SubResource("ConcavePolygonShape3D_ktjws")
 
 [node name="roof_mh_4_b_32" type="Node3D" parent="." unique_id=1932665570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_b_3" type="MeshInstance3D" parent="roof_mh_4_b_32" unique_id=867775279]
 mesh = SubResource("ArrayMesh_rkaok")
@@ -21198,6 +21115,7 @@ shape = SubResource("ConcavePolygonShape3D_0gcf2")
 
 [node name="roof_mh_4_b_42" type="Node3D" parent="." unique_id=1303926801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mh_4_b_4" type="MeshInstance3D" parent="roof_mh_4_b_42" unique_id=1182290134]
 mesh = SubResource("ArrayMesh_p6e76")
@@ -21209,6 +21127,7 @@ shape = SubResource("ConcavePolygonShape3D_uf6ek")
 
 [node name="roof_mx_12" type="Node3D" parent="." unique_id=1713742925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_mx_1" type="MeshInstance3D" parent="roof_mx_12" unique_id=1192879599]
 mesh = SubResource("ArrayMesh_j28jx")
@@ -21220,6 +21139,7 @@ shape = SubResource("ConcavePolygonShape3D_mo45s")
 
 [node name="roof_small_hr_12" type="Node3D" parent="." unique_id=2087231587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_small_hr_1" type="MeshInstance3D" parent="roof_small_hr_12" unique_id=1717728674]
 mesh = SubResource("ArrayMesh_wlbvg")
@@ -21231,6 +21151,7 @@ shape = SubResource("ConcavePolygonShape3D_h7otj")
 
 [node name="roof_small_hr_22" type="Node3D" parent="." unique_id=683781481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_small_hr_2" type="MeshInstance3D" parent="roof_small_hr_22" unique_id=1430574025]
 mesh = SubResource("ArrayMesh_pjtho")
@@ -21242,6 +21163,7 @@ shape = SubResource("ConcavePolygonShape3D_u28yo")
 
 [node name="roof_small_hr_32" type="Node3D" parent="." unique_id=645905031]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="roof_small_hr_3" type="MeshInstance3D" parent="roof_small_hr_32" unique_id=1264863509]
 mesh = SubResource("ArrayMesh_7521m")
@@ -21253,7 +21175,6 @@ shape = SubResource("ConcavePolygonShape3D_h7wri")
 
 [node name="seam_hl_22" type="Node3D" parent="." unique_id=906307595]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="seam_hl_2" type="MeshInstance3D" parent="seam_hl_22" unique_id=1964130423]
 mesh = SubResource("ArrayMesh_u1fai")
@@ -21265,7 +21186,6 @@ shape = SubResource("ConcavePolygonShape3D_6j3oo")
 
 [node name="seam_hr_12" type="Node3D" parent="." unique_id=2092498997]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="seam_hr_1" type="MeshInstance3D" parent="seam_hr_12" unique_id=62910782]
 mesh = SubResource("ArrayMesh_aoq1a")
@@ -21277,7 +21197,6 @@ shape = SubResource("ConcavePolygonShape3D_tio7d")
 
 [node name="structure_piece_rg_12" type="Node3D" parent="." unique_id=1088192331]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="structure_piece_rg_1" type="MeshInstance3D" parent="structure_piece_rg_12" unique_id=226797158]
 mesh = SubResource("ArrayMesh_ig87q")
@@ -21289,7 +21208,6 @@ shape = SubResource("ConcavePolygonShape3D_4c6l1")
 
 [node name="structure_piece_rg_1_12" type="Node3D" parent="." unique_id=247970741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="structure_piece_rg_1_1" type="MeshInstance3D" parent="structure_piece_rg_1_12" unique_id=1901012190]
 mesh = SubResource("ArrayMesh_nk7w4")
@@ -21301,7 +21219,6 @@ shape = SubResource("ConcavePolygonShape3D_hbnch")
 
 [node name="structure_piece_rg_22" type="Node3D" parent="." unique_id=1780901221]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="structure_piece_rg_2" type="MeshInstance3D" parent="structure_piece_rg_22" unique_id=885075878]
 mesh = SubResource("ArrayMesh_pmm5j")
@@ -21313,7 +21230,6 @@ shape = SubResource("ConcavePolygonShape3D_mspd0")
 
 [node name="wall_hr_12" type="Node3D" parent="." unique_id=960793896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1" type="MeshInstance3D" parent="wall_hr_12" unique_id=1829069677]
 mesh = SubResource("ArrayMesh_1eihd")
@@ -21325,7 +21241,6 @@ shape = SubResource("ConcavePolygonShape3D_egbwv")
 
 [node name="wall_hr_1_double2" type="Node3D" parent="." unique_id=1320045345]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_double" type="MeshInstance3D" parent="wall_hr_1_double2" unique_id=1117789413]
 mesh = SubResource("ArrayMesh_i6g3o")
@@ -21337,7 +21252,6 @@ shape = SubResource("ConcavePolygonShape3D_s82fa")
 
 [node name="wall_hr_1_hole_12" type="Node3D" parent="." unique_id=1155341178]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_hole_1" type="MeshInstance3D" parent="wall_hr_1_hole_12" unique_id=979448549]
 mesh = SubResource("ArrayMesh_xcimw")
@@ -21349,7 +21263,6 @@ shape = SubResource("ConcavePolygonShape3D_opj6l")
 
 [node name="wall_hr_1_hole_22" type="Node3D" parent="." unique_id=312943087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_hole_2" type="MeshInstance3D" parent="wall_hr_1_hole_22" unique_id=830037318]
 mesh = SubResource("ArrayMesh_alt5s")
@@ -21361,7 +21274,6 @@ shape = SubResource("ConcavePolygonShape3D_yp7aa")
 
 [node name="wall_hr_1_m1a_12" type="Node3D" parent="." unique_id=1799032957]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_m1a_1" type="MeshInstance3D" parent="wall_hr_1_m1a_12" unique_id=445183547]
 mesh = SubResource("ArrayMesh_oct1q")
@@ -21373,7 +21285,6 @@ shape = SubResource("ConcavePolygonShape3D_kval6")
 
 [node name="wall_hr_1_m1a_22" type="Node3D" parent="." unique_id=1176365154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_m1a_2" type="MeshInstance3D" parent="wall_hr_1_m1a_22" unique_id=372860161]
 mesh = SubResource("ArrayMesh_1i0i8")
@@ -21385,7 +21296,6 @@ shape = SubResource("ConcavePolygonShape3D_dwlf5")
 
 [node name="wall_hr_1_m2a_12" type="Node3D" parent="." unique_id=1858603157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_m2a_1" type="MeshInstance3D" parent="wall_hr_1_m2a_12" unique_id=1375418847]
 mesh = SubResource("ArrayMesh_rf0jw")
@@ -21397,7 +21307,6 @@ shape = SubResource("ConcavePolygonShape3D_fw3bd")
 
 [node name="wall_hr_1_m2a_22" type="Node3D" parent="." unique_id=876475811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_m2a_2" type="MeshInstance3D" parent="wall_hr_1_m2a_22" unique_id=31418970]
 mesh = SubResource("ArrayMesh_atgmu")
@@ -21409,7 +21318,6 @@ shape = SubResource("ConcavePolygonShape3D_yo1do")
 
 [node name="wall_hr_1_m_22" type="Node3D" parent="." unique_id=1715002197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_m_2" type="MeshInstance3D" parent="wall_hr_1_m_22" unique_id=85714919]
 mesh = SubResource("ArrayMesh_7r0cn")
@@ -21421,7 +21329,6 @@ shape = SubResource("ConcavePolygonShape3D_4pgk4")
 
 [node name="wall_hr_1_t_12" type="Node3D" parent="." unique_id=2103040887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_t_1" type="MeshInstance3D" parent="wall_hr_1_t_12" unique_id=1253540659]
 mesh = SubResource("ArrayMesh_r0ajp")
@@ -21433,7 +21340,6 @@ shape = SubResource("ConcavePolygonShape3D_jso0d")
 
 [node name="wall_hr_1_t_22" type="Node3D" parent="." unique_id=6371302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_1_t_2" type="MeshInstance3D" parent="wall_hr_1_t_22" unique_id=164926026]
 mesh = SubResource("ArrayMesh_6a07x")
@@ -21445,7 +21351,6 @@ shape = SubResource("ConcavePolygonShape3D_1o7gp")
 
 [node name="wall_hr_22" type="Node3D" parent="." unique_id=1782452771]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_2" type="MeshInstance3D" parent="wall_hr_22" unique_id=975947033]
 mesh = SubResource("ArrayMesh_ml1pe")
@@ -21457,7 +21362,6 @@ shape = SubResource("ConcavePolygonShape3D_tp5mt")
 
 [node name="wall_hr_152" type="Node3D" parent="." unique_id=485573017]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_15" type="MeshInstance3D" parent="wall_hr_152" unique_id=1281759373]
 mesh = SubResource("ArrayMesh_iearu")
@@ -21469,7 +21373,6 @@ shape = SubResource("ConcavePolygonShape3D_vixey")
 
 [node name="wall_hr_15_double2" type="Node3D" parent="." unique_id=1878870127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hr_15_double" type="MeshInstance3D" parent="wall_hr_15_double2" unique_id=719535601]
 mesh = SubResource("ArrayMesh_hsqe5")
@@ -21481,7 +21384,6 @@ shape = SubResource("ConcavePolygonShape3D_jngvo")
 
 [node name="wall_hs_12" type="Node3D" parent="." unique_id=506601460]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1" type="MeshInstance3D" parent="wall_hs_12" unique_id=1338667021]
 mesh = SubResource("ArrayMesh_5wupg")
@@ -21493,7 +21395,6 @@ shape = SubResource("ConcavePolygonShape3D_8fpho")
 
 [node name="wall_hs_1_double2" type="Node3D" parent="." unique_id=605856236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_double" type="MeshInstance3D" parent="wall_hs_1_double2" unique_id=239660051]
 mesh = SubResource("ArrayMesh_25xwk")
@@ -21505,7 +21406,6 @@ shape = SubResource("ConcavePolygonShape3D_nenmq")
 
 [node name="wall_hs_1_hole_12" type="Node3D" parent="." unique_id=1387952311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_hole_1" type="MeshInstance3D" parent="wall_hs_1_hole_12" unique_id=555964359]
 mesh = SubResource("ArrayMesh_axioo")
@@ -21517,7 +21417,6 @@ shape = SubResource("ConcavePolygonShape3D_ck7xp")
 
 [node name="wall_hs_1_hole_22" type="Node3D" parent="." unique_id=1500195256]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_hole_2" type="MeshInstance3D" parent="wall_hs_1_hole_22" unique_id=511752283]
 mesh = SubResource("ArrayMesh_vq81e")
@@ -21529,7 +21428,6 @@ shape = SubResource("ConcavePolygonShape3D_ptx7c")
 
 [node name="wall_hs_1_m1a_12" type="Node3D" parent="." unique_id=2143604796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_m1a_1" type="MeshInstance3D" parent="wall_hs_1_m1a_12" unique_id=340792451]
 mesh = SubResource("ArrayMesh_6o0qb")
@@ -21541,7 +21439,6 @@ shape = SubResource("ConcavePolygonShape3D_fvdex")
 
 [node name="wall_hs_1_m2a_12" type="Node3D" parent="." unique_id=568931300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_m2a_1" type="MeshInstance3D" parent="wall_hs_1_m2a_12" unique_id=660426146]
 mesh = SubResource("ArrayMesh_u0mns")
@@ -21553,7 +21450,6 @@ shape = SubResource("ConcavePolygonShape3D_jopni")
 
 [node name="wall_hs_1_m_22" type="Node3D" parent="." unique_id=747546994]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_m_2" type="MeshInstance3D" parent="wall_hs_1_m_22" unique_id=2069160864]
 mesh = SubResource("ArrayMesh_bfu0e")
@@ -21565,7 +21461,6 @@ shape = SubResource("ConcavePolygonShape3D_qgq2k")
 
 [node name="wall_hs_1_t_12" type="Node3D" parent="." unique_id=85857334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_t_1" type="MeshInstance3D" parent="wall_hs_1_t_12" unique_id=710935355]
 mesh = SubResource("ArrayMesh_jeygg")
@@ -21577,7 +21472,6 @@ shape = SubResource("ConcavePolygonShape3D_ariwn")
 
 [node name="wall_hs_1_t_22" type="Node3D" parent="." unique_id=127914924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_1_t_2" type="MeshInstance3D" parent="wall_hs_1_t_22" unique_id=1477194014]
 mesh = SubResource("ArrayMesh_2llum")
@@ -21589,7 +21483,6 @@ shape = SubResource("ConcavePolygonShape3D_f8bvw")
 
 [node name="wall_hs_152" type="Node3D" parent="." unique_id=1380917270]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_15" type="MeshInstance3D" parent="wall_hs_152" unique_id=805809185]
 mesh = SubResource("ArrayMesh_0vxrj")
@@ -21601,7 +21494,6 @@ shape = SubResource("ConcavePolygonShape3D_a110g")
 
 [node name="wall_hs_15_double2" type="Node3D" parent="." unique_id=21536252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_hs_15_double" type="MeshInstance3D" parent="wall_hs_15_double2" unique_id=1134378059]
 mesh = SubResource("ArrayMesh_vrjlf")
@@ -21613,7 +21505,6 @@ shape = SubResource("ConcavePolygonShape3D_ps336")
 
 [node name="wall_rg_12" type="Node3D" parent="." unique_id=298055378]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1" type="MeshInstance3D" parent="wall_rg_12" unique_id=122729578]
 mesh = SubResource("ArrayMesh_6tdfb")
@@ -21625,7 +21516,6 @@ shape = SubResource("ConcavePolygonShape3D_evy5f")
 
 [node name="wall_rg_1_angle2" type="Node3D" parent="." unique_id=1737750750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_angle" type="MeshInstance3D" parent="wall_rg_1_angle2" unique_id=2027652971]
 mesh = SubResource("ArrayMesh_ix4f6")
@@ -21637,7 +21527,6 @@ shape = SubResource("ConcavePolygonShape3D_1ybtm")
 
 [node name="wall_rg_1_double2" type="Node3D" parent="." unique_id=1252362311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_double" type="MeshInstance3D" parent="wall_rg_1_double2" unique_id=398011604]
 mesh = SubResource("ArrayMesh_8702e")
@@ -21649,7 +21538,6 @@ shape = SubResource("ConcavePolygonShape3D_pgpoj")
 
 [node name="wall_rg_1_hole_12" type="Node3D" parent="." unique_id=2147158123]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_hole_1" type="MeshInstance3D" parent="wall_rg_1_hole_12" unique_id=672582744]
 mesh = SubResource("ArrayMesh_ys7fo")
@@ -21661,7 +21549,6 @@ shape = SubResource("ConcavePolygonShape3D_1ob2x")
 
 [node name="wall_rg_1_hole_22" type="Node3D" parent="." unique_id=104229790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_hole_2" type="MeshInstance3D" parent="wall_rg_1_hole_22" unique_id=1965693430]
 mesh = SubResource("ArrayMesh_iltew")
@@ -21673,7 +21560,6 @@ shape = SubResource("ConcavePolygonShape3D_qyt26")
 
 [node name="wall_rg_1_m1a_12" type="Node3D" parent="." unique_id=1960277879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_m1a_1" type="MeshInstance3D" parent="wall_rg_1_m1a_12" unique_id=1167077512]
 mesh = SubResource("ArrayMesh_weshb")
@@ -21685,7 +21571,6 @@ shape = SubResource("ConcavePolygonShape3D_08bru")
 
 [node name="wall_rg_1_m2a_12" type="Node3D" parent="." unique_id=1336608198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_m2a_1" type="MeshInstance3D" parent="wall_rg_1_m2a_12" unique_id=671336870]
 mesh = SubResource("ArrayMesh_4curu")
@@ -21697,7 +21582,6 @@ shape = SubResource("ConcavePolygonShape3D_233hc")
 
 [node name="wall_rg_1_m_22" type="Node3D" parent="." unique_id=863084824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_m_2" type="MeshInstance3D" parent="wall_rg_1_m_22" unique_id=136029153]
 mesh = SubResource("ArrayMesh_copp2")
@@ -21709,7 +21593,6 @@ shape = SubResource("ConcavePolygonShape3D_gphft")
 
 [node name="wall_rg_1_t_12" type="Node3D" parent="." unique_id=28112395]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_t_1" type="MeshInstance3D" parent="wall_rg_1_t_12" unique_id=1814183385]
 mesh = SubResource("ArrayMesh_3lh3x")
@@ -21721,7 +21604,6 @@ shape = SubResource("ConcavePolygonShape3D_fwrhu")
 
 [node name="wall_rg_1_t_22" type="Node3D" parent="." unique_id=2051729768]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_1_t_2" type="MeshInstance3D" parent="wall_rg_1_t_22" unique_id=1144067047]
 mesh = SubResource("ArrayMesh_ex12q")
@@ -21733,7 +21615,6 @@ shape = SubResource("ConcavePolygonShape3D_tx44w")
 
 [node name="wall_rg_152" type="Node3D" parent="." unique_id=1848987519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_15" type="MeshInstance3D" parent="wall_rg_152" unique_id=935014651]
 mesh = SubResource("ArrayMesh_3yhsh")
@@ -21745,7 +21626,6 @@ shape = SubResource("ConcavePolygonShape3D_yse8d")
 
 [node name="wall_rg_15_double2" type="Node3D" parent="." unique_id=336585546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rg_15_double" type="MeshInstance3D" parent="wall_rg_15_double2" unique_id=303817560]
 mesh = SubResource("ArrayMesh_dfhoe")
@@ -21757,7 +21637,6 @@ shape = SubResource("ConcavePolygonShape3D_ipxkl")
 
 [node name="wall_rtx_12" type="Node3D" parent="." unique_id=1552300783]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rtx_1" type="MeshInstance3D" parent="wall_rtx_12" unique_id=1800667482]
 mesh = SubResource("ArrayMesh_ppxa3")
@@ -21769,7 +21648,6 @@ shape = SubResource("ConcavePolygonShape3D_ll54x")
 
 [node name="wall_rtx_22" type="Node3D" parent="." unique_id=2097192590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rtx_2" type="MeshInstance3D" parent="wall_rtx_22" unique_id=274333042]
 mesh = SubResource("ArrayMesh_evkkx")
@@ -21781,7 +21659,6 @@ shape = SubResource("ConcavePolygonShape3D_d2qut")
 
 [node name="wall_rx_12" type="Node3D" parent="." unique_id=1819268443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1" type="MeshInstance3D" parent="wall_rx_12" unique_id=1621976906]
 mesh = SubResource("ArrayMesh_i5ijw")
@@ -21793,7 +21670,6 @@ shape = SubResource("ConcavePolygonShape3D_ufxg3")
 
 [node name="wall_rx_1_1_3_height2" type="Node3D" parent="." unique_id=803543406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_1_3_height" type="MeshInstance3D" parent="wall_rx_1_1_3_height2" unique_id=1772132526]
 mesh = SubResource("ArrayMesh_1taps")
@@ -21805,7 +21681,6 @@ shape = SubResource("ConcavePolygonShape3D_7h2s2")
 
 [node name="wall_rx_1_1_3_height_1_2_width2" type="Node3D" parent="." unique_id=2090570898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_1_3_height_1_2_width" type="MeshInstance3D" parent="wall_rx_1_1_3_height_1_2_width2" unique_id=1143705165]
 mesh = SubResource("ArrayMesh_mahk2")
@@ -21817,7 +21692,6 @@ shape = SubResource("ConcavePolygonShape3D_i1hap")
 
 [node name="wall_rx_1_1_4_width2" type="Node3D" parent="." unique_id=1560461325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_1_4_width" type="MeshInstance3D" parent="wall_rx_1_1_4_width2" unique_id=1033940786]
 mesh = SubResource("ArrayMesh_ee3ga")
@@ -21829,7 +21703,6 @@ shape = SubResource("ConcavePolygonShape3D_wbkbp")
 
 [node name="wall_rx_1_1_4_width_1_3_height2" type="Node3D" parent="." unique_id=714205639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_1_4_width_1_3_height" type="MeshInstance3D" parent="wall_rx_1_1_4_width_1_3_height2" unique_id=211001129]
 mesh = SubResource("ArrayMesh_5yasa")
@@ -21841,7 +21714,6 @@ shape = SubResource("ConcavePolygonShape3D_fa54e")
 
 [node name="wall_rx_1_2_3_height2" type="Node3D" parent="." unique_id=784053576]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_2_3_height" type="MeshInstance3D" parent="wall_rx_1_2_3_height2" unique_id=1380903081]
 mesh = SubResource("ArrayMesh_5x81v")
@@ -21853,7 +21725,6 @@ shape = SubResource("ConcavePolygonShape3D_wyr84")
 
 [node name="wall_rx_1_2_3_height_1_2_width2" type="Node3D" parent="." unique_id=1058039446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_2_3_height_1_2_width" type="MeshInstance3D" parent="wall_rx_1_2_3_height_1_2_width2" unique_id=1468220641]
 mesh = SubResource("ArrayMesh_50quc")
@@ -21865,7 +21736,6 @@ shape = SubResource("ConcavePolygonShape3D_2ce32")
 
 [node name="wall_rx_1_m1a_12" type="Node3D" parent="." unique_id=597174254]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m1a_1" type="MeshInstance3D" parent="wall_rx_1_m1a_12" unique_id=1858593847]
 mesh = SubResource("ArrayMesh_qmmmt")
@@ -21877,7 +21747,6 @@ shape = SubResource("ConcavePolygonShape3D_5h18u")
 
 [node name="wall_rx_1_m1a_1_1_3_height2" type="Node3D" parent="." unique_id=1396234453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m1a_1_1_3_height" type="MeshInstance3D" parent="wall_rx_1_m1a_1_1_3_height2" unique_id=911642743]
 mesh = SubResource("ArrayMesh_os04u")
@@ -21889,7 +21758,6 @@ shape = SubResource("ConcavePolygonShape3D_l3atw")
 
 [node name="wall_rx_1_m1a_1_2_3_height2" type="Node3D" parent="." unique_id=1832957505]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m1a_1_2_3_height" type="MeshInstance3D" parent="wall_rx_1_m1a_1_2_3_height2" unique_id=1132869362]
 mesh = SubResource("ArrayMesh_6on4d")
@@ -21901,7 +21769,6 @@ shape = SubResource("ConcavePolygonShape3D_h7b6a")
 
 [node name="wall_rx_1_m2a_12" type="Node3D" parent="." unique_id=53479572]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m2a_1" type="MeshInstance3D" parent="wall_rx_1_m2a_12" unique_id=172337685]
 mesh = SubResource("ArrayMesh_ksbed")
@@ -21913,7 +21780,6 @@ shape = SubResource("ConcavePolygonShape3D_6wxa3")
 
 [node name="wall_rx_1_m2a_1_1_3_height2" type="Node3D" parent="." unique_id=1926479445]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m2a_1_1_3_height" type="MeshInstance3D" parent="wall_rx_1_m2a_1_1_3_height2" unique_id=1104579265]
 mesh = SubResource("ArrayMesh_w0kis")
@@ -21925,7 +21791,6 @@ shape = SubResource("ConcavePolygonShape3D_sj5km")
 
 [node name="wall_rx_1_m2a_1_2_3_height2" type="Node3D" parent="." unique_id=1506903170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_1_m2a_1_2_3_height" type="MeshInstance3D" parent="wall_rx_1_m2a_1_2_3_height2" unique_id=1566256101]
 mesh = SubResource("ArrayMesh_e0ucw")
@@ -21937,7 +21802,6 @@ shape = SubResource("ConcavePolygonShape3D_633r2")
 
 [node name="wall_rx_22" type="Node3D" parent="." unique_id=1404020647]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_2" type="MeshInstance3D" parent="wall_rx_22" unique_id=1596230241]
 mesh = SubResource("ArrayMesh_r3j64")
@@ -21949,7 +21813,6 @@ shape = SubResource("ConcavePolygonShape3D_0g76n")
 
 [node name="wall_rx_42" type="Node3D" parent="." unique_id=1375251220]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_rx_4" type="MeshInstance3D" parent="wall_rx_42" unique_id=82109791]
 mesh = SubResource("ArrayMesh_ufoc8")
@@ -21961,7 +21824,6 @@ shape = SubResource("ConcavePolygonShape3D_uks2u")
 
 [node name="wall_top_part_hr_12" type="Node3D" parent="." unique_id=1499418791]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hr_1" type="MeshInstance3D" parent="wall_top_part_hr_12" unique_id=358991029]
 mesh = SubResource("ArrayMesh_jjcfe")
@@ -21973,7 +21835,6 @@ shape = SubResource("ConcavePolygonShape3D_w17kr")
 
 [node name="wall_top_part_hr_22" type="Node3D" parent="." unique_id=1304796581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hr_2" type="MeshInstance3D" parent="wall_top_part_hr_22" unique_id=918451166]
 mesh = SubResource("ArrayMesh_rvxpn")
@@ -21985,7 +21846,6 @@ shape = SubResource("ConcavePolygonShape3D_30wn7")
 
 [node name="wall_top_part_hr_32" type="Node3D" parent="." unique_id=311210004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hr_3" type="MeshInstance3D" parent="wall_top_part_hr_32" unique_id=1997216563]
 mesh = SubResource("ArrayMesh_c7vtx")
@@ -21997,7 +21857,6 @@ shape = SubResource("ConcavePolygonShape3D_65yvr")
 
 [node name="wall_top_part_hs_12" type="Node3D" parent="." unique_id=1084277044]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hs_1" type="MeshInstance3D" parent="wall_top_part_hs_12" unique_id=312645134]
 mesh = SubResource("ArrayMesh_4tuqc")
@@ -22009,7 +21868,6 @@ shape = SubResource("ConcavePolygonShape3D_85xak")
 
 [node name="wall_top_part_hs_22" type="Node3D" parent="." unique_id=1409845801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hs_2" type="MeshInstance3D" parent="wall_top_part_hs_22" unique_id=1282724831]
 mesh = SubResource("ArrayMesh_qw58u")
@@ -22021,7 +21879,6 @@ shape = SubResource("ConcavePolygonShape3D_tcwmj")
 
 [node name="wall_top_part_hs_32" type="Node3D" parent="." unique_id=232932623]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_hs_3" type="MeshInstance3D" parent="wall_top_part_hs_32" unique_id=1568797178]
 mesh = SubResource("ArrayMesh_cdo32")
@@ -22033,7 +21890,6 @@ shape = SubResource("ConcavePolygonShape3D_vnldb")
 
 [node name="wall_top_part_rg_12" type="Node3D" parent="." unique_id=188040977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_rg_1" type="MeshInstance3D" parent="wall_top_part_rg_12" unique_id=486505695]
 mesh = SubResource("ArrayMesh_nqkg4")
@@ -22045,7 +21901,6 @@ shape = SubResource("ConcavePolygonShape3D_xwrwn")
 
 [node name="wall_top_part_rg_22" type="Node3D" parent="." unique_id=2052396771]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_rg_2" type="MeshInstance3D" parent="wall_top_part_rg_22" unique_id=1023076350]
 mesh = SubResource("ArrayMesh_kcy2u")
@@ -22057,7 +21912,6 @@ shape = SubResource("ConcavePolygonShape3D_migsn")
 
 [node name="wall_top_part_rg_32" type="Node3D" parent="." unique_id=915156875]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="wall_top_part_rg_3" type="MeshInstance3D" parent="wall_top_part_rg_32" unique_id=1886884895]
 mesh = SubResource("ArrayMesh_ajr1x")
@@ -22069,6 +21923,7 @@ shape = SubResource("ConcavePolygonShape3D_k5a4f")
 
 [node name="warehouse_hs_1_roof_12" type="Node3D" parent="." unique_id=262226562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
+visible = false
 
 [node name="warehouse_hs_1_roof_1" type="MeshInstance3D" parent="warehouse_hs_1_roof_12" unique_id=45536255]
 mesh = SubResource("ArrayMesh_q2l6r")
@@ -22079,6 +21934,7 @@ mesh = SubResource("ArrayMesh_q2l6r")
 shape = SubResource("ConcavePolygonShape3D_wyogg")
 
 [node name="warehouse_hs_1_roof_22" type="Node3D" parent="." unique_id=1189828112]
+visible = false
 
 [node name="warehouse_hs_1_roof_2" type="MeshInstance3D" parent="warehouse_hs_1_roof_22" unique_id=665376998]
 mesh = SubResource("ArrayMesh_pnmam")
@@ -22090,7 +21946,6 @@ shape = SubResource("ConcavePolygonShape3D_xf0au")
 
 [node name="windows_hr_12" type="Node3D" parent="." unique_id=610476303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="windows_hr_1" type="MeshInstance3D" parent="windows_hr_12" unique_id=1518042700]
 mesh = SubResource("ArrayMesh_oogb7")
@@ -22102,7 +21957,6 @@ shape = SubResource("ConcavePolygonShape3D_2o2wj")
 
 [node name="windows_hr_22" type="Node3D" parent="." unique_id=1427961572]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="windows_hr_2" type="MeshInstance3D" parent="windows_hr_22" unique_id=2028167657]
 mesh = SubResource("ArrayMesh_fxd4a")
@@ -22114,7 +21968,6 @@ shape = SubResource("ConcavePolygonShape3D_edths")
 
 [node name="windows_hs_12" type="Node3D" parent="." unique_id=77621736]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="windows_hs_1" type="MeshInstance3D" parent="windows_hs_12" unique_id=1022245454]
 mesh = SubResource("ArrayMesh_hbq6c")
@@ -22126,7 +21979,6 @@ shape = SubResource("ConcavePolygonShape3D_agam5")
 
 [node name="windows_rg_12" type="Node3D" parent="." unique_id=1267793419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="windows_rg_1" type="MeshInstance3D" parent="windows_rg_12" unique_id=2134797407]
 mesh = SubResource("ArrayMesh_2gjtn")
@@ -22138,7 +21990,6 @@ shape = SubResource("ConcavePolygonShape3D_anc57")
 
 [node name="window_hr_12" type="Node3D" parent="." unique_id=918607260]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="window_hr_1" type="MeshInstance3D" parent="window_hr_12" unique_id=524532339]
 mesh = SubResource("ArrayMesh_ms3gt")
@@ -22150,7 +22001,6 @@ shape = SubResource("ConcavePolygonShape3D_gcf5f")
 
 [node name="window_hr_22" type="Node3D" parent="." unique_id=193010852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="window_hr_2" type="MeshInstance3D" parent="window_hr_22" unique_id=332058401]
 mesh = SubResource("ArrayMesh_lqqd3")
@@ -22162,7 +22012,6 @@ shape = SubResource("ConcavePolygonShape3D_vqryf")
 
 [node name="window_hs_12" type="Node3D" parent="." unique_id=1984264646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="window_hs_1" type="MeshInstance3D" parent="window_hs_12" unique_id=1109168631]
 mesh = SubResource("ArrayMesh_fe7en")
@@ -22174,7 +22023,6 @@ shape = SubResource("ConcavePolygonShape3D_67nvx")
 
 [node name="window_rg_12" type="Node3D" parent="." unique_id=1045519204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="window_rg_1" type="MeshInstance3D" parent="window_rg_12" unique_id=558956690]
 mesh = SubResource("ArrayMesh_3c2vj")
@@ -22186,10 +22034,8 @@ shape = SubResource("ConcavePolygonShape3D_hxplw")
 
 [node name="window_rtx_12" type="Node3D" parent="." unique_id=350941191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0357901, 0, 2.5543342)
-visible = false
 
 [node name="window_rtx_1" type="MeshInstance3D" parent="window_rtx_12" unique_id=176993606]
-visible = false
 mesh = SubResource("ArrayMesh_xfqhg")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="window_rtx_12/window_rtx_1" unique_id=1297644657]
