@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dtmemgigp6s5n"]
+
+[ext_resource type="Shader" uid="uid://ds7djltl52yak" path="res://assets/shaders/pp_psx.gdshader" id="1_eueb8"]
+[ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="2_f1jq1"]
+[ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="3_5mhvx"]
+[ext_resource type="MeshLibrary" uid="uid://bj6jcuw3ikeo7" path="res://assets/models/PSX Mega Pack II/tres/modular_structures_library.tres" id="4_hrebq"]
+[ext_resource type="MeshLibrary" uid="uid://denbwfb53usgq" path="res://assets/models/PSX Mega Pack II/tres/modular_props.tres" id="5_wcq0y"]
+[ext_resource type="MeshLibrary" uid="uid://bp8r7m8d2435x" path="res://assets/models/PSX Mega Pack II/tres/buildings.tres" id="6_3lca4"]
+[ext_resource type="MeshLibrary" uid="uid://b5x30aamp1w1d" path="res://assets/models/PSX Mega Pack II/tres/structures.tres" id="7_w5o0a"]
+[ext_resource type="MeshLibrary" uid="uid://cmkv242aegl4g" path="res://assets/models/PSX Mega Pack II/tres/props.tres" id="8_b3knk"]
+[ext_resource type="MeshLibrary" uid="uid://cl7f5hlo7yq6b" path="res://assets/models/PSX Mega Pack II/tres/large_props_machinery.tres" id="9_e2u7k"]
+[ext_resource type="MeshLibrary" uid="uid://phdm4cmxfprl" path="res://assets/models/PSX Mega Pack II/tres/debris.tres" id="10_dhw2c"]
+[ext_resource type="MeshLibrary" uid="uid://bafxlfb3i6atc" path="res://assets/models/PSX Mega Pack II/tres/doors.tres" id="11_510pp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3amep"]
+shader = ExtResource("1_eueb8")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 16
+shader_parameter/dither_size = 2
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3ylc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_q35fs"]
+sky_material = SubResource("ProceduralSkyMaterial_b3ylc")
+
+[sub_resource type="Environment" id="Environment_t0ie7"]
+background_mode = 2
+sky = SubResource("Sky_q35fs")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ix6xw"]
+cell_height = 0.01
+
+[node name="level3" type="Node3D" unique_id=2030513847]
+
+[node name="GameRoot" type="Node3D" parent="." unique_id=29580600]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="GameRoot" unique_id=1822522860]
+material = SubResource("ShaderMaterial_3amep")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="GameRoot/SubViewportContainer" unique_id=1972008102]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameRoot/SubViewportContainer/SubViewport" unique_id=1251250272]
+transform = Transform3D(-0.86602354, -0.43301606, 0.25000072, 0, 0.49999818, 0.86602646, -0.5000033, 0.7499993, -0.4330102, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GameRoot/SubViewportContainer/SubViewport" unique_id=2064934553]
+environment = SubResource("Environment_t0ie7")
+
+[node name="Player" parent="GameRoot/SubViewportContainer/SubViewport" unique_id=838304920 instance=ExtResource("2_f1jq1")]
+
+[node name="GameManager" type="Node" parent="GameRoot" unique_id=1493449352]
+script = ExtResource("3_5mhvx")
+
+[node name="Environment" type="Node3D" parent="GameRoot" unique_id=747469099]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="GameRoot/Environment" unique_id=82850703]
+navigation_mesh = SubResource("NavigationMesh_ix6xw")
+
+[node name="Room1" type="Node3D" parent="GameRoot/Environment/NavigationRegion3D" unique_id=1605633053]
+
+[node name="GridMapFloor" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=334663758]
+mesh_library = ExtResource("4_hrebq")
+cell_size = Vector3(4, 0.35, 4)
+cell_center_y = false
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="GridMapFence" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=1074443717]
+mesh_library = ExtResource("5_wcq0y")
+cell_size = Vector3(0.5, 0.1, 0.5)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="GridMapBuildings" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=911812302]
+mesh_library = ExtResource("6_3lca4")
+cell_size = Vector3(0.5, 0.1, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+
+[node name="GridMapStructures" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=1255489797]
+mesh_library = ExtResource("7_w5o0a")
+cell_size = Vector3(0.5, 0.1, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+
+[node name="GridMapSmallProps" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=1896863126]
+mesh_library = ExtResource("8_b3knk")
+cell_size = Vector3(0.5, 0.1, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+metadata/_editor_floor_ = Vector3(0, 38, 0)
+
+[node name="GridMapLargeProps" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=19212501]
+mesh_library = ExtResource("9_e2u7k")
+cell_size = Vector3(0.5, 0.1, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+metadata/_editor_floor_ = Vector3(0, 38, 0)
+
+[node name="GridMapDebris" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=1214436720]
+mesh_library = ExtResource("10_dhw2c")
+cell_size = Vector3(0.5, 0.1, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+
+[node name="GridMapDoors" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room1" unique_id=1316546769]
+mesh_library = ExtResource("11_510pp")
+cell_size = Vector3(0.1, 0.1, 0.1)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+
+[node name="Room2" type="Node3D" parent="GameRoot/Environment/NavigationRegion3D" unique_id=1504385535]
+
+[node name="GridMapFloor" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D/Room2" unique_id=1441676892]
+mesh_library = ExtResource("4_hrebq")
+cell_size = Vector3(0.5, 0.3, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="GridMapBuildings" type="GridMap" parent="GameRoot/Environment/NavigationRegion3D" unique_id=76192713]
+mesh_library = ExtResource("6_3lca4")
+cell_size = Vector3(0.5, 0.9, 0.5)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+metadata/_editor_floor_ = Vector3(0, -2, 0)
+
+[node name="Enemies" type="Node3D" parent="GameRoot" unique_id=72106614]

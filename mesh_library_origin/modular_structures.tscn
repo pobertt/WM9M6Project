@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://exxcflq1326j"]
 
-[ext_resource type="Script" uid="uid://bowlahm82imy0" path="res://modular_structures.gd" id="1_cw5gc"]
+[ext_resource type="Script" uid="uid://bowlahm82imy0" path="res://mesh_library_origin/modular_structures.gd" id="1_cw5gc"]
 [ext_resource type="Texture2D" uid="uid://dlak5hqykfrpl" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/asphalt_hr_1_asphalt_hr_1.png" id="2_vset5"]
 [ext_resource type="Texture2D" uid="uid://mpf5ga2w5q35" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/asphalt_hr_1_large_asphalt_hr_1.png" id="3_lvyyf"]
 [ext_resource type="Texture2D" uid="uid://dhbl6dmawl34i" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/asphalt_hr_2_asphalt_hr_1.png" id="4_3015t"]
@@ -61,7 +61,6 @@
 [ext_resource type="Texture2D" uid="uid://d3f6th0xt00n7" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/doorway_rx_1_concrete_hr_3.png" id="59_32y2h"]
 [ext_resource type="Texture2D" uid="uid://box8ybwvrwjhs" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/doorway_rx_1_plastic_mx_3.png" id="60_o0bsn"]
 [ext_resource type="Texture2D" uid="uid://cwqrrw60lkyiy" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/doorway_rx_1_door_hr_11.png" id="61_gs8s3"]
-[ext_resource type="Texture2D" uid="uid://iv4ofwf5foe2" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/floor_ceiling_hr_1_concrete_hr_3.png" id="62_vsptc"]
 [ext_resource type="Texture2D" uid="uid://beq3u4mriws55" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/floor_ceiling_hr_2_hole_concrete_hr_3.png" id="63_34knh"]
 [ext_resource type="Texture2D" uid="uid://ddtqc7fo6f1mw" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/floor_ceiling_hr_2_hole_rebar_hr_1.png" id="64_qu3wf"]
 [ext_resource type="Texture2D" uid="uid://djjmsrykxsgi1" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/floor_ceiling_hr_3_concrete_hr_1.png" id="65_554qu"]
@@ -2734,7 +2733,7 @@ data = PackedVector3Array(-1, 0, 0.049999997, -1, 2.1, 0, -1, 2.1, 0.049999997, 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4uyw"]
 resource_name = "concrete_hr_3"
 cull_mode = 2
-albedo_texture = ExtResource("62_vsptc")
+albedo_texture = ExtResource("2_vset5")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2ykx2"]

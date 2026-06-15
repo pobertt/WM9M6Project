@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://v1k04d2ggjbs"]
 
-[ext_resource type="Script" uid="uid://bowlahm82imy0" path="res://modular_structures.gd" id="1_v81ul"]
+[ext_resource type="Script" uid="uid://bowlahm82imy0" path="res://mesh_library_origin/modular_structures.gd" id="1_v81ul"]
 [ext_resource type="Texture2D" uid="uid://cwikrp4botf2b" path="res://assets/models/PSX Mega Pack II/Models/GLB/Buildings/garages_block_hr_1_bricks_hr_1.png" id="2_yotbx"]
 [ext_resource type="Texture2D" uid="uid://douf60bn40qo2" path="res://assets/models/PSX Mega Pack II/Models/GLB/Buildings/garages_block_hr_1_garage_door_hm_4.png" id="3_put75"]
 [ext_resource type="Texture2D" uid="uid://bygq5wqifx3v7" path="res://assets/models/PSX Mega Pack II/Models/GLB/Buildings/garages_block_hr_1_concrete_hr_3.png" id="4_bhclw"]

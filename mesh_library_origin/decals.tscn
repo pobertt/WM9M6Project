@@ -1,0 +1,574 @@
+[gd_scene format=4 uid="uid://u3nn2vuflsmu"]
+
+[ext_resource type="Script" uid="uid://bowlahm82imy0" path="res://mesh_library_origin/modular_structures.gd" id="1_xuqcg"]
+[ext_resource type="Texture2D" uid="uid://bwjga4ebn648m" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/graffiti_mx_1_graffiti_mx_1.png" id="2_84qus"]
+[ext_resource type="Texture2D" uid="uid://bnolb0qby5huk" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/graffiti_mx_2_graffiti_mx_2.png" id="3_77jvg"]
+[ext_resource type="Texture2D" uid="uid://bxu2sj8cdj1lu" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/graffiti_mx_4_graffiti_mx_4.png" id="4_wlttd"]
+[ext_resource type="Texture2D" uid="uid://dwqt4t0dpo7kb" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/graffiti_mx_5_graffiti_mx_5.png" id="5_dh6vo"]
+[ext_resource type="Texture2D" uid="uid://bj2gi6n3a2xfo" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_4_poster_cx_4.png" id="6_uafx3"]
+[ext_resource type="Texture2D" uid="uid://dg4gppj13vhky" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_5_poster_cx_5.png" id="7_4ngkx"]
+[ext_resource type="Texture2D" uid="uid://dgeobcdgsij82" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_9_poster_cx_9.png" id="8_u78vt"]
+[ext_resource type="Texture2D" uid="uid://ciixpv6jqgi7o" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_11_poster_cx_11.png" id="9_ewqli"]
+[ext_resource type="Texture2D" uid="uid://td3psjqppes3" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_12_poster_cx_12.png" id="10_pwahh"]
+[ext_resource type="Texture2D" uid="uid://cmjuf463ej66w" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_13_poster_cx_13.png" id="11_c2s1d"]
+[ext_resource type="Texture2D" uid="uid://bxfgj1cmjhi3x" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_15_poster_cx_15.png" id="12_33xeb"]
+[ext_resource type="Texture2D" uid="uid://bhgvjonfrskyj" path="res://assets/models/PSX Mega Pack II/Models/GLB/Decals/poster_cx_16_poster_cx_16.png" id="13_35uph"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43a5g"]
+resource_name = "graffiti_mx_1"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_84qus")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tcbge"]
+_surfaces = [{
+"aabb": AABB(-0.30729166, -0.5, -3.774892e-08, 0.6145833, 1, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "graffiti_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("VVWdvgAAAL9gISIzVVWdPgAAAD9gISKzVVWdPgAAAL9gISIzVVWdvgAAAD9gISKz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4kpny"]
+resource_name = "graffiti_mx_1_graffiti_mx_1"
+_surfaces = [{
+"aabb": AABB(-0.30729166, -0.5, -3.774892e-08, 0.6145833, 1, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_43a5g"),
+"name": "graffiti_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("VVWdvgAAAL9gISIzVVWdPgAAAD9gISKzVVWdPgAAAL9gISIzVVWdvgAAAD9gISKz/3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tcbge")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yg5u"]
+resource_name = "graffiti_mx_2"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("3_77jvg")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lw4rp"]
+_surfaces = [{
+"aabb": AABB(-1.0749608, -0.9027506, -6.4173264e-08, 2.1499217, 1.8055012, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "graffiti_mx_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("WnR8v6oaZ7+gz4kzWnR8P6oaZz+gz4mzUZiJP2aAS7+gz4kzUZiJv2aASz+gz4mz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tymvi"]
+resource_name = "graffiti_mx_2_graffiti_mx_2"
+_surfaces = [{
+"aabb": AABB(-1.0749608, -0.9027506, -6.4173264e-08, 2.1499217, 1.8055012, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_6yg5u"),
+"name": "graffiti_mx_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("WnR8v6oaZ7+gz4kzWnR8P6oaZz+gz4mzUZiJP2aAS7+gz4kzUZiJv2aASz+gz4mz/3//f6L5LcP/f/9/ovktw/9//3+i+S3D/3//f6L5LcM=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lw4rp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mfyq"]
+resource_name = "graffiti_mx_4"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("4_wlttd")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nyuhm"]
+_surfaces = [{
+"aabb": AABB(-1.8743037, -0.5321699, -2.1855726e-08, 3.7486074, 1.0643398, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "graffiti_mx_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("L+nvv9xz775AvbuyL+nvP9xz7z5Avbsy77LtP0k8CL9Avbuy77Ltv0k8CD9Avbsy")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ivmyw"]
+resource_name = "graffiti_mx_4_graffiti_mx_4"
+_surfaces = [{
+"aabb": AABB(-1.8743037, -0.5321699, -2.1855726e-08, 3.7486074, 1.0643398, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_7mfyq"),
+"name": "graffiti_mx_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("L+nvv9xz775AvbuyL+nvP9xz7z5Avbsy77LtP0k8CL9Avbuy77Ltv0k8CD9Avbsy/3//f9L96L7/f/9/0v3ovv9//3/S/ei+/3//f9L96L4=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nyuhm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6e16g"]
+resource_name = "graffiti_mx_5"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("5_dh6vo")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b6e16"]
+_surfaces = [{
+"aabb": AABB(-0.8137031, -0.5560282, -3.7749032e-08, 1.6274062, 1.1120564, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "graffiti_mx_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("53I9v91XDr+AISIz53I9P91XDj+AISKz2U5QPyHs4b5gISIz2U5QvyHs4T5gISKz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bnpp0"]
+resource_name = "graffiti_mx_5_graffiti_mx_5"
+_surfaces = [{
+"aabb": AABB(-0.8137031, -0.5560282, -3.7749032e-08, 1.6274062, 1.1120564, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_6e16g"),
+"name": "graffiti_mx_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("53I9v91XDr+AISIz53I9P91XDj+AISKz2U5QPyHs4b5gISIz2U5QvyHs4T5gISKz/3//fzD3ZsT/f/9/MPdmxP9//38w92bE/3//fzD3ZsQ=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_b6e16")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuli8"]
+resource_name = "poster_cx_4"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("6_uafx3")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w2dap"]
+_surfaces = [{
+"aabb": AABB(-0.20874992, -0.2798435, -2.0131154e-08, 0.41749984, 0.559687, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("PLItvqZHj77A7KwyPLItPqZHjz7A7KyyisJVPlYHgb7g7KwyisJVvlYHgT7g7Kyy")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hfe02"]
+resource_name = "poster_cx_4_poster_cx_4"
+_surfaces = [{
+"aabb": AABB(-0.20874992, -0.2798435, -2.0131154e-08, 0.41749984, 0.559687, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_fuli8"),
+"name": "poster_cx_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("PLItvqZHj77A7KwyPLItPqZHjz7A7KyyisJVPlYHgb7g7KwyisJVvlYHgT7g7Kyy/3//fzn3YcT/f/9/OfdhxP9//38592HE/3//fzn3YcQ=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w2dap")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vtla"]
+resource_name = "poster_cx_5"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("7_4ngkx")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lx54j"]
+_surfaces = [{
+"aabb": AABB(-0.42383638, -0.57432616, -4.152389e-08, 0.84767276, 1.1486523, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("FQHZvv72Bb8AWDIzFQHZPv72BT8AWDKzQQa0PgoHE78AWDIzQQa0vgoHEz8AWDKz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jud30"]
+resource_name = "poster_cx_5_poster_cx_5"
+_surfaces = [{
+"aabb": AABB(-0.42383638, -0.57432616, -4.152389e-08, 0.84767276, 1.1486523, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_1vtla"),
+"name": "poster_cx_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("FQHZvv72Bb8AWDIzFQHZPv72BT8AWDKzQQa0PgoHE78AWDIzQQa0vgoHEz8AWDKz/3//fxf4C7z/f/9/F/gLvP9//38X+Au8/3//fxf4C7w=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lx54j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_au20v"]
+resource_name = "poster_cx_9"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("8_u78vt")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s7tc8"]
+_surfaces = [{
+"aabb": AABB(-0.31329572, -0.41217262, -3.0199203e-08, 0.62659144, 0.82434523, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_9",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("tBuPvkoI075gtAEztBuPPkoI0z5gtAGzTGigPsAzxr5gtAEzTGigvsAzxj5gtAGz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w8aul"]
+resource_name = "poster_cx_9_poster_cx_9"
+_surfaces = [{
+"aabb": AABB(-0.31329572, -0.41217262, -3.0199203e-08, 0.62659144, 0.82434523, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_au20v"),
+"name": "poster_cx_9",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("tBuPvkoI075gtAEztBuPPkoI0z5gtAGzTGigPsAzxr5gtAEzTGigvsAzxj5gtAGz/3//f876l8L/f/9/zvqXwv9//3/O+pfC/3//f876l8I=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s7tc8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rj5pg"]
+resource_name = "poster_cx_11"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_ewqli")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rcrlp"]
+_surfaces = [{
+"aabb": AABB(-0.31631085, -0.42096394, -3.0199203e-08, 0.6326217, 0.8419279, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_11",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("RTqCvpaI175gtAEzRTqCPpaI1z5gtAGzf/OhPgzWwL5gtAEzf/OhvgzWwD5gtAGz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ih8wr"]
+resource_name = "poster_cx_11_poster_cx_11"
+_surfaces = [{
+"aabb": AABB(-0.31631085, -0.42096394, -3.0199203e-08, 0.6326217, 0.8419279, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_rj5pg"),
+"name": "poster_cx_11",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("RTqCvpaI175gtAEzRTqCPpaI1z5gtAGzf/OhPgzWwL5gtAEzf/OhvgzWwD5gtAGz/3//f8X2nMT/f/9/xfacxP9//3/F9pzE/3//f8X2nMQ=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rcrlp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiufi"]
+resource_name = "poster_cx_12"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("10_pwahh")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t8fd0"]
+_surfaces = [{
+"aabb": AABB(-0.33412793, -0.43625262, -3.0199203e-08, 0.66825587, 0.87250525, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_12",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("0RKrvqvntb5gtAEz0RKrPqvntT5gtAGzwktfPoFc375gtAEzwktfvoFc3z5gtAGz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qel4o"]
+resource_name = "poster_cx_12_poster_cx_12"
+_surfaces = [{
+"aabb": AABB(-0.33412793, -0.43625262, -3.0199203e-08, 0.66825587, 0.87250525, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_wiufi"),
+"name": "poster_cx_12",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("0RKrvqvntb5gtAEz0RKrPqvntT5gtAGzwktfPoFc375gtAEzwktfvoFc3z5gtAGz/3//f6Dv0Lf/f/9/oO/Qt/9//3+g79C3/3//f6Dv0Lc=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t8fd0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agya0"]
+resource_name = "poster_cx_13"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("11_c2s1d")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1bvax"]
+_surfaces = [{
+"aabb": AABB(-0.30625665, -0.4184819, -3.0199203e-08, 0.6125133, 0.8369638, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_13",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("+j6AvkJD1r5gtAEz+j6APkJD1j5gtAGzrM2cPi5Xwr5gtAEzrM2cvi5Xwj5gtAGz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wi1xm"]
+resource_name = "poster_cx_13_poster_cx_13"
+_surfaces = [{
+"aabb": AABB(-0.30625665, -0.4184819, -3.0199203e-08, 0.6125133, 0.8369638, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_agya0"),
+"name": "poster_cx_13",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("+j6AvkJD1r5gtAEz+j6APkJD1j5gtAGzrM2cPi5Xwr5gtAEzrM2cvi5Xwj5gtAGz/3//f6L3LcT/f/9/ovctxP9//3+i9y3E/3//f6L3LcQ=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1bvax")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvukj"]
+resource_name = "poster_cx_15"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("12_33xeb")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xtwsx"]
+_surfaces = [{
+"aabb": AABB(-0.32312998, -0.41247755, -3.0199203e-08, 0.64625996, 0.8249551, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_15",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("LU+UvkIw075gtAEzLU+UPkIw0z5gtAGzS3GlPpINxr5gtAEzS3GlvpINxj5gtAGz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l4cml"]
+resource_name = "poster_cx_15_poster_cx_15"
+_surfaces = [{
+"aabb": AABB(-0.32312998, -0.41247755, -3.0199203e-08, 0.64625996, 0.8249551, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_gvukj"),
+"name": "poster_cx_15",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("LU+UvkIw075gtAEzLU+UPkIw0z5gtAGzS3GlPpINxr5gtAEzS3GlvpINxj5gtAGz/3//f9r6kcL/f/9/2vqRwv9//3/a+pHC/3//f9r6kcI=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xtwsx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j20qa"]
+resource_name = "poster_cx_16"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("13_35uph")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8vl4k"]
+_surfaces = [{
+"aabb": AABB(-0.40455902, -0.28700328, -2.0384448e-08, 0.80911803, 0.57400656, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "poster_cx_16",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("XCLPvn5Egb7gGa8yXCLPPn5EgT7gGa+yzP3CPhjykr7AGa8yzP3Cvhjykj7AGa+y")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ucvd0"]
+resource_name = "poster_cx_16_poster_cx_16"
+_surfaces = [{
+"aabb": AABB(-0.40455902, -0.28700328, -2.0384448e-08, 0.80911803, 0.57400656, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_j20qa"),
+"name": "poster_cx_16",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("XCLPvn5Egb7gGa8yXCLPPn5EgT7gGa+yzP3CPhjykr7AGa8yzP3Cvhjykj7AGa+y/3//f5v6Tb3/f/9/m/pNvf9//3+b+k29/3//f5v6Tb0=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8vl4k")
+
+[node name="Decals" type="Node3D" unique_id=516462027]
+script = ExtResource("1_xuqcg")
+
+[node name="graffiti_mx_12" type="Node3D" parent="." unique_id=1093266429]
+
+[node name="graffiti_mx_1" type="MeshInstance3D" parent="graffiti_mx_12" unique_id=1698495716]
+mesh = SubResource("ArrayMesh_4kpny")
+
+[node name="graffiti_mx_22" type="Node3D" parent="." unique_id=824958214]
+
+[node name="graffiti_mx_2" type="MeshInstance3D" parent="graffiti_mx_22" unique_id=1326517655]
+mesh = SubResource("ArrayMesh_tymvi")
+
+[node name="graffiti_mx_42" type="Node3D" parent="." unique_id=1167764327]
+
+[node name="graffiti_mx_4" type="MeshInstance3D" parent="graffiti_mx_42" unique_id=1189832928]
+mesh = SubResource("ArrayMesh_ivmyw")
+
+[node name="graffiti_mx_52" type="Node3D" parent="." unique_id=2021658562]
+
+[node name="graffiti_mx_5" type="MeshInstance3D" parent="graffiti_mx_52" unique_id=1081701624]
+mesh = SubResource("ArrayMesh_bnpp0")
+
+[node name="poster_cx_42" type="Node3D" parent="." unique_id=1286015032]
+
+[node name="poster_cx_4" type="MeshInstance3D" parent="poster_cx_42" unique_id=1966226610]
+mesh = SubResource("ArrayMesh_hfe02")
+
+[node name="poster_cx_52" type="Node3D" parent="." unique_id=2143425189]
+
+[node name="poster_cx_5" type="MeshInstance3D" parent="poster_cx_52" unique_id=115402178]
+mesh = SubResource("ArrayMesh_jud30")
+
+[node name="poster_cx_92" type="Node3D" parent="." unique_id=1355332885]
+
+[node name="poster_cx_9" type="MeshInstance3D" parent="poster_cx_92" unique_id=530472503]
+mesh = SubResource("ArrayMesh_w8aul")
+
+[node name="poster_cx_112" type="Node3D" parent="." unique_id=556064740]
+
+[node name="poster_cx_11" type="MeshInstance3D" parent="poster_cx_112" unique_id=1720850101]
+mesh = SubResource("ArrayMesh_ih8wr")
+
+[node name="poster_cx_122" type="Node3D" parent="." unique_id=503824003]
+
+[node name="poster_cx_12" type="MeshInstance3D" parent="poster_cx_122" unique_id=55366534]
+mesh = SubResource("ArrayMesh_qel4o")
+
+[node name="poster_cx_132" type="Node3D" parent="." unique_id=1166109102]
+
+[node name="poster_cx_13" type="MeshInstance3D" parent="poster_cx_132" unique_id=704984900]
+mesh = SubResource("ArrayMesh_wi1xm")
+
+[node name="poster_cx_152" type="Node3D" parent="." unique_id=1267692989]
+
+[node name="poster_cx_15" type="MeshInstance3D" parent="poster_cx_152" unique_id=2123314942]
+mesh = SubResource("ArrayMesh_l4cml")
+
+[node name="poster_cx_162" type="Node3D" parent="." unique_id=1272074770]
+
+[node name="poster_cx_16" type="MeshInstance3D" parent="poster_cx_162" unique_id=322896081]
+mesh = SubResource("ArrayMesh_ucvd0")

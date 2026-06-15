@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dwesxjoxcv6mn" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Structures/warehouse_hs_1_roof_2.glb" id="8_hoo32"]
 [ext_resource type="PackedScene" uid="uid://biqjyt4rxny4o" path="res://pickups/ammo_pickup.tscn" id="8_n6f2s"]
 [ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="8_vscsl"]
+[ext_resource type="MeshLibrary" uid="uid://denbwfb53usgq" path="res://assets/models/PSX Mega Pack II/tres/modular_props.tres" id="9_n6f2s"]
+[ext_resource type="PackedScene" uid="uid://c0fxirnkho51a" path="res://assets/models/Modular Retro FPS/GLB/ceiling_lamp_fps_1.glb" id="11_ulkxl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
 shader = ExtResource("1_qae1c")
@@ -125,9 +127,9 @@ cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(196613, 20, 1048613, 196613, 12, 1048613)
+"cells": PackedInt32Array(196613, 20, 1048613, 196613, 12, 1048613, 458749, 65516, 131106, 393221, 65516, 131106, 393229, 65516, 131106, 393237, 65516, 131106, 393245, 65516, 131106, 393245, 65524, 131106, 393237, 65524, 131106, 393229, 65524, 131106, 393221, 65524, 131106, 458749, 65524, 131106, 458749, 65532, 131106, 458749, 4, 131106, 393221, 65532, 131106, 393229, 65532, 131106, 393221, 4, 131106)
 }
-metadata/_editor_floor_ = Vector3(0, 5, 0)
+metadata/_editor_floor_ = Vector3(0, 6, 0)
 
 [node name="Room2" type="Node3D" parent="Environment/NavigationRegion3D" unique_id=178764351]
 
@@ -149,9 +151,9 @@ cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(-262107, 65528, 179, -262107, 65512, 179, -262099, 65528, 179, -262091, 65528, 179, -262083, 65528, 179, -262080, 65516, 1441971, -262053, 65524, 1441805, -262076, 65512, 179, -262064, 65524, 1441973, -262061, 65512, 655539, -262058, 65508, 1048755, -262058, 65500, 1048755, -262058, 65492, 1048755, -262058, 65484, 1048755, -262094, 65442, 1441971, -262094, 65434, 1441971, -262086, 65434, 1441971, -262086, 65442, 1441971, -262082, 65445, 655539, -262055, 65459, 179, -262055, 65461, 1441971, -262069, 65512, 655539, -262040, 65524, 1048757, -262051, 65524, 1048589, -262080, 65524, 1048800, -262075, 65528, 24, -262067, 65528, 177, -262076, 65520, 177, -262072, 65516, 1441969, -262064, 65516, 1441969, 262240, 65469, 1441969, -262099, 65512, 179, -262105, 65508, 1048755, -262105, 65500, 1048755, -262105, 65484, 1048755, -262105, 65492, 1048755, -262105, 65460, 1048755, -262105, 65468, 1048755, -262105, 65476, 1048755, -262074, 65445, 179, -262066, 65445, 179, -262058, 65445, 179, -262058, 65449, 1441971, -262058, 65455, 1441971, -262055, 65465, 655539, -262047, 65465, 655539, -262058, 65476, 1048755, -262054, 65473, 179, -262046, 65473, 179, -262098, 65445, 655539, -262106, 65445, 655539, -262105, 65452, 1048755, -262105, 65444, 1048755, -262040, 65469, 1441824, -262036, 65465, 655551, -262032, 65469, 1048767, -262032, 65477, 1048767, -262032, 65485, 1048767, -262032, 65493, 1048767, -262040, 65477, 1048767, -262040, 65485, 1048767, -262040, 65493, 1048767, -262040, 65501, 1048767, -262032, 65501, 1048767, -262032, 65509, 1048767, -262040, 65509, 1441983, -262040, 65516, 1048767, -262036, 65528, 186, -262032, 65524, 1441969, -262032, 65516, 1441983, -262036, 65520, 655392, -262044, 65465, 655539, -262044, 65473, 655539, -262086, 65428, 1441971, -262094, 65428, 1441971, -262082, 65424, 655539, -262082, 65420, 1048755, -262082, 65412, 1048755, -262098, 65424, 179, -262098, 65420, 1441971, -262098, 65412, 1441971, -262102, 65408, 655539, -262110, 65408, 655539, -262078, 65408, 655539, -262070, 65408, 655539, -262110, 65392, 179, -262102, 65392, 179, -262098, 65376, 179, -262098, 65380, 1441971, -262098, 65388, 1441971, -262082, 65376, 655539, -262082, 65380, 1048755, -262082, 65388, 1048755, -262078, 65392, 179, -262070, 65392, 179, -262066, 65404, 1048755, -262066, 65396, 1048755, -262114, 65396, 1048755, -262114, 65404, 1048755, -262090, 65376, 179, 720962, 65392, 655537, 720958, 65388, 1048753, 720942, 65388, 1048753, 720938, 65392, 177, 720938, 65408, 177, 720942, 65412, 1441969, 720958, 65412, 1441969, 720962, 65408, 655537)
+"cells": PackedInt32Array(-262107, 65528, 179, -262107, 65512, 179, -262099, 65528, 179, -262091, 65528, 179, -262083, 65528, 179, -262080, 65516, 1441971, -262053, 65524, 1441805, -262076, 65512, 179, -262064, 65524, 1441973, -262061, 65512, 655539, -262058, 65508, 1048755, -262058, 65500, 1048755, -262058, 65492, 1048755, -262058, 65484, 1048755, -262094, 65442, 1441971, -262094, 65434, 1441971, -262086, 65434, 1441971, -262086, 65442, 1441971, -262082, 65445, 655539, -262055, 65459, 179, -262055, 65461, 1441971, -262069, 65512, 655539, -262040, 65524, 1048757, -262051, 65524, 1048589, -262080, 65524, 1048800, -262075, 65528, 24, -262067, 65528, 177, -262076, 65520, 177, -262072, 65516, 1441969, -262064, 65516, 1441969, 262240, 65469, 1441969, -262099, 65512, 179, -262105, 65508, 1048755, -262105, 65500, 1048755, -262105, 65484, 1048755, -262105, 65492, 1048755, -262105, 65460, 1048755, -262105, 65468, 1048755, -262105, 65476, 1048755, -262074, 65445, 179, -262066, 65445, 179, -262058, 65445, 179, -262058, 65449, 1441971, -262058, 65455, 1441971, -262055, 65465, 655539, -262047, 65465, 655539, -262058, 65476, 1048755, -262054, 65473, 179, -262046, 65473, 179, -262098, 65445, 655539, -262106, 65445, 655539, -262105, 65452, 1048755, -262105, 65444, 1048755, -262040, 65469, 1441824, -262036, 65465, 655551, -262032, 65469, 1048767, -262032, 65477, 1048767, -262032, 65485, 1048767, -262032, 65493, 1048767, -262040, 65477, 1048767, -262040, 65485, 1048767, -262040, 65493, 1048767, -262040, 65501, 1048767, -262032, 65501, 1048767, -262032, 65509, 1048767, -262040, 65509, 1441983, -262040, 65516, 1048767, -262036, 65528, 186, -262032, 65524, 1441969, -262032, 65516, 1441983, -262036, 65520, 655392, -262044, 65465, 655539, -262044, 65473, 655539, -262086, 65428, 1441971, -262094, 65428, 1441971, -262082, 65424, 655539, -262082, 65420, 1048755, -262082, 65412, 1048755, -262098, 65424, 179, -262098, 65420, 1441971, -262098, 65412, 1441971, -262102, 65408, 655539, -262110, 65408, 655539, -262078, 65408, 655539, -262070, 65408, 655539, -262110, 65392, 179, -262102, 65392, 179, -262098, 65376, 179, -262098, 65380, 1441971, -262098, 65388, 1441971, -262082, 65376, 655539, -262082, 65380, 1048755, -262082, 65388, 1048755, -262078, 65392, 179, -262070, 65392, 179, -262066, 65404, 1048755, -262066, 65396, 1048755, -262114, 65396, 1048755, -262114, 65404, 1048755, -262090, 65376, 179, 720962, 65392, 655537, 720958, 65388, 1048753, 720942, 65388, 1048753, 720938, 65392, 177, 720938, 65408, 177, 720942, 65412, 1441969, 720958, 65412, 1441969, 720962, 65408, 655537, 262208, 65524, 1441969)
 }
-metadata/_editor_floor_ = Vector3(0, -4, 0)
+metadata/_editor_floor_ = Vector3(0, 4, 0)
 
 [node name="GridMapCeiling" type="GridMap" parent="Environment/NavigationRegion3D/Room2" unique_id=1870975449]
 mesh_library = ExtResource("4_gd1gh")
@@ -177,12 +179,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.508015, -1.5, -8.166307)
 
 [node name="InteractableDoor3" parent="Environment/NavigationRegion3D/Room2" unique_id=2129779325 instance=ExtResource("6_t0khj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.998547, -1.5, -4.1598425)
+is_level_transition = true
+next_level_path = "uid://b62awyrvn0owi"
 
 [node name="HealthPickup" parent="Environment/NavigationRegion3D/Room2" unique_id=793811414 instance=ExtResource("7_qae1c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4680841, 0.4000001, 6.8998137)
 
 [node name="AmmoPickup" parent="Environment/NavigationRegion3D/Room2" unique_id=1541619410 instance=ExtResource("8_n6f2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9554524, 0.6471846, 7.0537634)
+
+[node name="GridMapProps" type="GridMap" parent="Environment/NavigationRegion3D/Room2" unique_id=502387193]
+mesh_library = ExtResource("9_n6f2s")
+cell_size = Vector3(0.5, 0.3, 0.5)
+data = {
+"cells": PackedInt32Array(-327612, 65501, 655366, -327612, 65492, 655366, -327611, 65482, 655366, -327612, 65473, 655366, -327627, 65501, 655364, -327630, 65458, 1048580)
+}
+metadata/_editor_floor_ = Vector3(0, -5, 0)
 
 [node name="GridMapBuildings" type="GridMap" parent="Environment/NavigationRegion3D" unique_id=1805386975]
 mesh_library = ExtResource("5_a1r6t")
@@ -194,6 +206,97 @@ data = {
 "cells": PackedInt32Array(-130994, 65492, 1441792, -130993, 65461, 1441794, -130989, 65450, 0, -131011, 65450, 5, -131027, 65493, 4, -131027, 65505, 655363, -131027, 65475, 1048578, -131030, 65484, 1048586, -131026, 65451, 1048577)
 }
 metadata/_editor_floor_ = Vector3(0, -2, 0)
+
+[node name="ceiling_lamp_fps_1" parent="Environment" unique_id=744403219 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5656886, 3.2150977, 7.961935)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_1" unique_id=1725018384]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_2" parent="Environment" unique_id=804984610 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5656886, 6.1854424, -1.9284215)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_2" unique_id=750244775]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 54.749
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_3" parent="Environment" unique_id=1200035775 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5656886, 6.1854424, -9.147585)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_3" unique_id=908035920]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 54.749
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_4" parent="Environment" unique_id=2114166552 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.759659, 6.1854424, -7.7784605)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_4" unique_id=570292474]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 54.749
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_5" parent="Environment" unique_id=1244029445 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.508986, 4.374208, -8.038841)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_5" unique_id=1835098800]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 9.877
+spot_attenuation = 0.23
+spot_angle = 81.53
+
+[node name="ceiling_lamp_fps_6" parent="Environment" unique_id=1373502524 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.192646, 8.608851, -21.150768)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_6" unique_id=149207807]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 31.277
+spot_attenuation = 0.7
+spot_angle = 76.44
+
+[node name="ceiling_lamp_fps_7" parent="Environment" unique_id=1965866151 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.192646, 8.608851, -36.985012)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_7" unique_id=482955348]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 31.277
+spot_attenuation = 0.7
+spot_angle = 76.44
+
+[node name="ceiling_lamp_fps_8" parent="Environment" unique_id=1524708984 instance=ExtResource("11_ulkxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9747, 6.0963926, -67.99059)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/ceiling_lamp_fps_8" unique_id=1292430687]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_range = 31.277
+spot_attenuation = 0.7
+spot_angle = 76.44
 
 [node name="Enemies" type="Node3D" parent="." unique_id=898324394]
 

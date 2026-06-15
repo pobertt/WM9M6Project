@@ -340,6 +340,56 @@ light_energy = 3.71
 light_specular = 0.266
 spot_angle = 67.83
 
+[node name="ceiling_lamp_fps_16" parent="Environment/NavigationRegion3D/Room2" unique_id=1449699762 instance=ExtResource("10_kqqvm")]
+transform = Transform3D(0.9849408, -0.17289184, 0, 0.17289184, 0.9849408, 0, 0, 0, 1, -47.9537, 0.002400875, -18.548946)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/NavigationRegion3D/Room2/ceiling_lamp_fps_16" unique_id=1944293947]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_17" parent="Environment/NavigationRegion3D/Room2" unique_id=1625875174 instance=ExtResource("10_kqqvm")]
+transform = Transform3D(0.9849408, -0.17289184, 0, 0.17289184, 0.9849408, 0, 0, 0, 1, -72.61061, -13.91081, -18.548946)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/NavigationRegion3D/Room2/ceiling_lamp_fps_17" unique_id=1596282159]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_18" parent="Environment/NavigationRegion3D/Room2" unique_id=1150003404 instance=ExtResource("10_kqqvm")]
+transform = Transform3D(0.9390283, -0.34384, 0, 0.34384, 0.9390283, 0, 0, 0, 1, -97.3328, -28.184345, -18.548946)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/NavigationRegion3D/Room2/ceiling_lamp_fps_18" unique_id=674266638]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_19" parent="Environment/NavigationRegion3D/Room2" unique_id=543355784 instance=ExtResource("10_kqqvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.348724, -35.40527, -18.548946)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/NavigationRegion3D/Room2/ceiling_lamp_fps_19" unique_id=1512365130]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
+[node name="ceiling_lamp_fps_20" parent="Environment/NavigationRegion3D/Room2" unique_id=1895985237 instance=ExtResource("10_kqqvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.348724, -35.40527, -15.829668)
+
+[node name="CeilingLightSpotLight" type="SpotLight3D" parent="Environment/NavigationRegion3D/Room2/ceiling_lamp_fps_20" unique_id=371949093]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
+light_energy = 3.71
+light_specular = 0.266
+spot_angle = 67.83
+
 [node name="Room2Slope" type="Node3D" parent="Environment/NavigationRegion3D" unique_id=178274196]
 
 [node name="GridMapSlopeWalls" type="GridMap" parent="Environment/NavigationRegion3D/Room2Slope" unique_id=1445276790]
