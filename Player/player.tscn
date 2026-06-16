@@ -34,21 +34,25 @@ current = true
 [node name="WeaponManager" type="Node3D" parent="Head/Camera3D" unique_id=352046307]
 script = ExtResource("2_yw30f")
 
-[node name="Rifle" parent="Head/Camera3D/WeaponManager" unique_id=1762601991 instance=ExtResource("6_yllr7")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-visible = false
-fire_rate = 0.15
-
-[node name="SMG" parent="Head/Camera3D/WeaponManager" unique_id=743925542 instance=ExtResource("4_g6k8r")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.089548826, -0.052334547)
-fire_sound = Array[AudioStream]([ExtResource("7_yllr7")])
-reload_sound = ExtResource("5_rgyib")
-
 [node name="USP-S" parent="Head/Camera3D/WeaponManager" unique_id=1772087004 instance=ExtResource("3_yw30f")]
 transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0.030226111, 0)
 visible = false
 fire_sound = Array[AudioStream]([ExtResource("4_boad6")])
 reload_sound = ExtResource("5_rgyib")
+
+[node name="SMG" parent="Head/Camera3D/WeaponManager" unique_id=743925542 instance=ExtResource("4_g6k8r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.089548826, -0.052334547)
+weapon_name = "SMG"
+is_unlocked = false
+fire_sound = Array[AudioStream]([ExtResource("7_yllr7")])
+reload_sound = ExtResource("5_rgyib")
+
+[node name="Rifle" parent="Head/Camera3D/WeaponManager" unique_id=1762601991 instance=ExtResource("6_yllr7")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
+weapon_name = "Rifle"
+is_unlocked = false
+fire_rate = 0.15
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Head/Camera3D" unique_id=727182240]
 current = true

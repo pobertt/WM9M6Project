@@ -1,6 +1,10 @@
 class_name Weapon
 extends Node3D
 
+@export_group("Identity")
+@export var weapon_name: String = "USP-S"
+@export var is_unlocked: bool = true
+
 @export var damage: int = 10
 @export var fire_rate: float = 0.25
 @export var is_full_auto: bool = false
