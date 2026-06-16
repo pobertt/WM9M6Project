@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dl31v5yxcppnc"]
+
+[ext_resource type="Script" uid="uid://bd5ursotsq2e7" path="res://pickups/scripts/aimbot_pickup.gd" id="1_jc0ka"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nrk5n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jc0ka"]
+albedo_color = Color(0.64705884, 0.41568628, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nrk5n"]
+
+[node name="AimbotPickup" type="Area3D" unique_id=1829904262]
+script = ExtResource("1_jc0ka")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=452859608]
+shape = SubResource("BoxShape3D_nrk5n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=985984791]
+material_override = SubResource("StandardMaterial3D_jc0ka")
+mesh = SubResource("SphereMesh_nrk5n")

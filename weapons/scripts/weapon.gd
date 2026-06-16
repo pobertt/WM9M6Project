@@ -76,11 +76,20 @@ func fire() -> void:
 	if is_reloading or Time.get_ticks_msec() - last_shot_time < (fire_rate * 1000.0):
 		return 
 		
-	if current_mag_ammo <= 0:
+	# --- THE HACK CHECK ---
+	var player = get_tree().get_first_node_in_group("Player")
+	var is_hacked = player and player.get("is_aimbot_active") == true
+		
+	# If we are out of ammo AND we aren't hacked, stop firing
+	if current_mag_ammo <= 0 and not is_hacked:
 		return
 		
 	last_shot_time = Time.get_ticks_msec()
-	current_mag_ammo -= 1
+	
+	# Only subtract ammo if the hack is offline
+	if not is_hacked:
+		current_mag_ammo -= 1
+		
 	update_ammo_ui()
 	
 	_weapon_behavior() 

@@ -37,6 +37,10 @@ var last_step_cycle: int = 0
 @export var footstep_sounds: Array[AudioStream]
 @export var footstep_rate: float = 6.0
 
+@export_group("Aimbot Powerup")
+var is_aimbot_active: bool = false
+var aimbot_timer: float = 0.0
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	current_health = max_health
@@ -93,6 +97,28 @@ func _physics_process(delta: float) -> void:
 	# Delegate movement states and physics math to the component
 	velocity = movement_component.update_state(wants_to_crouch, ceiling_clear, is_on_floor(), direction, -head.transform.basis.z, velocity)
 	velocity = movement_component.process_velocity(velocity, direction, look_direction, is_sprinting, is_on_floor(), get_floor_normal(), delta)
+	
+	# --- AIMBOT EXECUTION ---
+	if is_aimbot_active:
+		aimbot_timer -= delta
+		if aimbot_timer <= 0.0:
+			is_aimbot_active = false
+			print("AIMBOT OFFLINE")
+		else:
+			var target = get_aimbot_target()
+			if target != null:
+				var target_pos = target.global_position + Vector3(0, 1.0, 0)
+				var aimbot_direction = head.global_position.direction_to(target_pos)
+				
+				# Math magic: Calculate the exact Euler angles needed to look at the target.
+				# We use atan2 instead of 'look_at()' to prevent the camera from rolling/tilting sideways.
+				var target_y_rot = atan2(-aimbot_direction.x, -aimbot_direction.z)
+				var horizontal_distance = Vector2(aimbot_direction.x, aimbot_direction.z).length()
+				var target_x_rot = atan2(aimbot_direction.y, horizontal_distance)
+				
+				# Aggressively snap the camera towards the calculated angles
+				head.rotation.y = lerp_angle(head.rotation.y, target_y_rot, delta * 30.0)
+				camera.rotation.x = lerp_angle(camera.rotation.x, target_x_rot, delta * 30.0)
 	
 	# Apply visually and move
 	adjust_posture_smoothly(delta)
@@ -181,3 +207,49 @@ func heal(amount: int) -> void:
 func die() -> void:
 	# Reload scene on death
 	get_tree().reload_current_scene()
+
+func activate_aimbot(duration: float) -> void:
+	is_aimbot_active = true
+	aimbot_timer = duration
+	print("AIMBOT ONLINE: ", duration, " SECONDS")
+
+func get_aimbot_target() -> Node3D:
+	var enemies = get_tree().get_nodes_in_group("Enemy")
+	var best_target: Node3D = null
+	var closest_distance: float = 10000.0 
+	
+	# NEW: Get access to the 3D physics world so we can shoot invisible test lasers
+	var space_state = get_world_3d().direct_space_state
+
+	for enemy in enemies:
+		if "health" in enemy and enemy.health <= 0:
+			continue
+			
+		var target_pos = enemy.global_position + Vector3(0, 1.0, 0)
+		var dir_to_enemy = head.global_position.direction_to(target_pos)
+		var look_dir = -head.global_transform.basis.z
+
+		var dot = look_dir.dot(dir_to_enemy)
+		var distance = head.global_position.distance_to(target_pos)
+
+		# 1. Are they generally in front of us, and are they closer than the last guy?
+		if dot > 0.3 and distance < closest_distance:
+			
+			# --- LINE OF SIGHT CHECK ---
+			# Create a laser from our eyes to the enemy's chest
+			var query = PhysicsRayQueryParameters3D.create(head.global_position, target_pos)
+			
+			# Tell the laser to ignore the player's own body so we don't block our own view
+			query.exclude = [self.get_rid()] 
+
+			# Fire the laser and get the result!
+			var result = space_state.intersect_ray(query)
+
+			# If the laser hit something, AND that something is the enemy (or a hitbox inside the enemy)
+			if result and (result.collider == enemy or enemy.is_ancestor_of(result.collider)):
+				
+				# They passed the wall check! Make them the new priority target.
+				closest_distance = distance
+				best_target = enemy
+
+	return best_target

@@ -36,9 +36,13 @@ func _weapon_behavior() -> void:
 	if player and player.velocity.length() > 1.0:
 		final_spread += movement_penalty
 		
+	# --- PERFECT ACCURACY OVERRIDE ---
+	if player and player.get("is_aimbot_active") == true:
+		final_spread = 0.0
+		
 	raycast.rotation_degrees.x = randf_range(-final_spread, final_spread)
 	raycast.rotation_degrees.y = randf_range(-final_spread, final_spread)
-	raycast.force_raycast_update() 
+	raycast.force_raycast_update()
 	
 	# 3. COLLISION
 	if raycast.is_colliding():

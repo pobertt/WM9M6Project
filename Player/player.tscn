@@ -44,6 +44,7 @@ reload_sound = ExtResource("5_rgyib")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.089548826, -0.052334547)
 weapon_name = "SMG"
 is_unlocked = false
+damage = 8
 fire_sound = Array[AudioStream]([ExtResource("7_yllr7")])
 reload_sound = ExtResource("5_rgyib")
 
@@ -52,6 +53,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 visible = false
 weapon_name = "Rifle"
 is_unlocked = false
+damage = 15
 fire_rate = 0.15
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Head/Camera3D" unique_id=727182240]

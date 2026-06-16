@@ -80,6 +80,11 @@ func _on_hurt_box_took_damage(amount: int) -> void:
 			$StateMachine.on_child_transition($StateMachine.current_state, "state_chase")
 
 func die() -> void:
+	# Immediately remove them from the group so aimbots and radars ignore them
+	if is_in_group("Enemy"):
+		remove_from_group("Enemy")
+		
+
 	$DetectionZone/CollisionShape3D.set_deferred("disabled", true)
 	$CollisionShape3D.set_deferred("disabled", true)
 	

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="3_bkxn3"]
 [ext_resource type="PackedScene" uid="uid://d0u5fsbkdvshg" path="res://pickups/weapon_pickup.tscn" id="3_vkwk6"]
 [ext_resource type="MeshLibrary" uid="uid://licr4uj0avvp" path="res://assets/models/PSX Mega Pack II/tres/asphaltfloor.tres" id="4_82s7j"]
+[ext_resource type="PackedScene" uid="uid://dl31v5yxcppnc" path="res://pickups/aimbot_pickup.tscn" id="4_vkwk6"]
 [ext_resource type="MeshLibrary" uid="uid://denbwfb53usgq" path="res://assets/models/PSX Mega Pack II/tres/modular_props.tres" id="5_axulw"]
 [ext_resource type="MeshLibrary" uid="uid://b5x30aamp1w1d" path="res://assets/models/PSX Mega Pack II/tres/structures.tres" id="7_nuokl"]
 [ext_resource type="MeshLibrary" uid="uid://cmkv242aegl4g" path="res://assets/models/PSX Mega Pack II/tres/props.tres" id="8_82s7j"]
@@ -71,6 +72,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.902386, 0.5091064, 6.96500
 [node name="WeaponPickup" parent="SubViewportContainer/SubViewport" unique_id=1195432585 instance=ExtResource("3_vkwk6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.380638, 0.8862972, 2.5517952)
 weapon_to_give = "Rifle"
+
+[node name="AimbotPickup" parent="SubViewportContainer/SubViewport" unique_id=1829904262 instance=ExtResource("4_vkwk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.126371, 0.5499997, 0.90371513)
+duration = 100.0
 
 [node name="GameManager" type="Node" parent="." unique_id=1493449352]
 script = ExtResource("3_bkxn3")
