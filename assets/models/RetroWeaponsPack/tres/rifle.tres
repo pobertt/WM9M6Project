@@ -1,11 +1,8 @@
 [gd_resource type="ArrayMesh" format=4 uid="uid://bmhld3aqoggbl"]
 
-[ext_resource type="Texture2D" uid="uid://dmidp2xsks6k1" path="res://assets/models/RetroWeaponsPack/Guns/Rifle_01/Textures/Rifle_01_Albedo.png" id="1_sgmyp"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0f8u"]
 resource_name = "Rifle_01_MI"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_sgmyp")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0

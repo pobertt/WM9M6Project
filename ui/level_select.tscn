@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cdun1v203hgmu"]
+
+[ext_resource type="Script" uid="uid://crh84dy0vmmi7" path="res://ui/scripts/level_select.gd" id="1_o7pgs"]
+
+[node name="LevelSelect" type="Control" unique_id=514275101]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o7pgs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1915797619]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=556642450]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1817572540]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Level Select"
+horizontal_alignment = 1
+
+[node name="TutorialButton" type="Button" parent="VBoxContainer" unique_id=457674974]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Level1Button" type="Button" parent="VBoxContainer" unique_id=802819780]
+layout_mode = 2
+text = "Level 2
+"
+
+[node name="Level2Button" type="Button" parent="VBoxContainer" unique_id=1129567522]
+layout_mode = 2
+text = "Level 3
+"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=799055448]
+layout_mode = 2
+text = "Back
+"
+
+[connection signal="pressed" from="VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

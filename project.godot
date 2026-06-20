@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="WM9M6Project"
-run/main_scene="uid://7lhhmdta07gd"
+run/main_scene="uid://cmcgk3sgg0gxk"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

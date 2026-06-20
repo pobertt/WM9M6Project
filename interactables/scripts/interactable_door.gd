@@ -11,6 +11,7 @@ extends Interactable
 @export_group("Level Transition")
 @export var is_level_transition: bool = false
 @export_file("*.tscn") var next_level_path: String = ""
+@export var is_level_exit: bool = false
 
 var is_open: bool = false
 var is_moving: bool = false
@@ -32,6 +33,11 @@ func _ready() -> void:
 		print("WARNING: Door '", name, "' requires a button but none is assigned!")
 
 func interact(interactor: Node3D) -> void:
+	if is_level_exit:
+		print("Exit door activated! Loading Win Screen...")
+		get_tree().change_scene_to_file("res://ui/win_screen.tscn")
+		return # Stop the rest of the code from running
+		
 	# If the door needs a button and hasn't been opened yet, reject interaction
 	if requires_button and not is_open:
 		print("The door is locked. Find a button!")

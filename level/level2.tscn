@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c0fxirnkho51a" path="res://assets/models/Modular Retro FPS/GLB/ceiling_lamp_fps_1.glb" id="12_bsijp"]
 [ext_resource type="PackedScene" uid="uid://dw5a48wn25pyl" path="res://ai/enemies/enemy_ranged.tscn" id="13_bsijp"]
 [ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="14_bkxn3"]
+[ext_resource type="PackedScene" uid="uid://c88qm1ctbfkkk" path="res://interactables/interactable_door.tscn" id="15_ygglr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3amep"]
 shader = ExtResource("1_kouoh")
@@ -178,6 +179,10 @@ light_color = Color(0.879374, 0.5633141, 3.85046e-07, 1)
 light_energy = 3.71
 light_specular = 0.266
 spot_angle = 67.83
+
+[node name="InteractableDoor2" parent="Environment/NavigationRegion3D" unique_id=920926322 instance=ExtResource("15_ygglr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.988777, 0.98923373, 36.844048)
+is_level_exit = true
 
 [node name="Enemies" type="Node3D" parent="." unique_id=72106614]
 

@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c40fsbof3ghgc"]
+
+[ext_resource type="Script" uid="uid://6hxdlsq7m54h" path="res://ui/scripts/controls_menu.gd" id="1_yj47f"]
+
+[node name="ControlsMenu" type="Control" unique_id=1340240547]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yj47f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=28273575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=330658320]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1639936254]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Controls
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1723389524]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "W, A, S, D - Move
+Mouse - Look / Aim
+Left Click - Fire Weapon
+Mouse Wheel (or 1, 2) - Swap Weapons
+R - Reload
+
+Shift - Sprint
+C -  Crouch & Slide (While Sprinting)
+
+Walk over floating Powerups to hack the system!
+"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=54093408]
+layout_mode = 2
+text = "Back
+"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
