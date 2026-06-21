@@ -1,7 +1,6 @@
 class_name GameManager
 extends Node
 
-# This allows any script to talk to the GameManager instantly!
 static var instance: GameManager
 
 var total_enemies: int = 0
@@ -25,14 +24,11 @@ func on_enemy_killed() -> void:
 		trigger_victory()
 
 func update_objective_ui() -> void:
-	# For now, we will just print to the console. 
-	# Later, we can hook this up to a slick text prompt on the player's HUD!
 	print("OBJECTIVE: Eliminate all targets (", enemies_killed, " / ", total_enemies, ")")
 
 func trigger_victory() -> void:
 	print("ROOM CLEARED!")
 	
-	# THE FIX: Give the final enemy 2 seconds to fall over before deleting the world!
 	await get_tree().create_timer(2.0).timeout
 	
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()

@@ -65,7 +65,6 @@ func physics_update(_delta: float) -> void:
 	var result = space_state.intersect_ray(query)
 
 	# Lose interest if too far or line of sight is broken
-	# NEW
 	if actor.global_position.distance_to(player.global_position) > lose_interest_range:
 		actor.get_node("StateMachine").on_child_transition(self, "state_chase")
 		return

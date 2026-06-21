@@ -16,7 +16,6 @@ var player: CharacterBody3D
 var weapon_manager: Node3D 
 
 func _process(delta: float) -> void:
-	# Fallback to safely fetch player on load
 	if player == null:
 		player = get_tree().get_first_node_in_group("Player")
 		if player != null:

@@ -13,7 +13,7 @@ func physics_update(_delta: float) -> void:
 		
 	var distance = actor.global_position.distance_to(player.global_position)
 	
-	# Fetch actor properties dynamically
+	# Fetch actor properties
 	var check_melee = actor.get("is_melee_enemy") if "is_melee_enemy" in actor else false
 	var melee_range = actor.get("melee_attack_range") if "melee_attack_range" in actor else 2.0
 	var check_ranged = actor.get("is_ranged_enemy") if "is_ranged_enemy" in actor else false

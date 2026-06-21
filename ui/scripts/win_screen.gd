@@ -1,7 +1,6 @@
 extends Control
 
 func _ready() -> void:
-	# Unlock the mouse so the player can click the button
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_button_pressed() -> void:

@@ -41,8 +41,7 @@ func spawn_impact(pos: Vector3, normal: Vector3) -> void:
 func spawn_blood(pos: Vector3, normal: Vector3, target: Node3D = null) -> void:
 	var blood = blood_pool[blood_index]
 	
-	# FIX: If the blood was destroyed (because the scene reloaded or the enemy was deleted),
-	# we just instantiate a fresh replacement to heal the pool!
+	# instantiate a fresh replacement
 	if not is_instance_valid(blood):
 		blood = blood_scene.instantiate()
 		add_child(blood) # Add it to the tree first so reparenting works

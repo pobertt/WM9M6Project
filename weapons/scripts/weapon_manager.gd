@@ -61,37 +61,27 @@ func equip_weapon(index: int) -> void:
 	current_weapon.update_ammo_ui()
 
 func receive_weapon_pickup(target_weapon_name: String, ammo_amount: int) -> bool:
-	print("--- PICKUP ATTEMPT ---")
-	print("Looking for: '", target_weapon_name, "'")
 	
 	for i in range(get_child_count()):
 		var w = get_child(i) as Weapon
 		if w == null:
 			continue
 			
-		print("Checking slot ", i, " - Found: '", w.weapon_name, "'")
 		
 		if w.weapon_name == target_weapon_name:
-			print("MATCH FOUND!")
 			if not w.is_unlocked:
-				print("Weapon was locked. Unlocking now!")
 				w.is_unlocked = true
 				w.add_ammo(ammo_amount)
 				equip_weapon(i) 
 				return true
 			else:
-				print("Weapon already unlocked. Checking ammo...")
 				if w.current_reserve_ammo < w.max_reserve_ammo:
-					print("Player needs ammo. Giving ammo!")
 					w.add_ammo(ammo_amount)
 					if w == current_weapon:
 						w.update_ammo_ui()
 					return true
 				else:
-					print("Ammo is completely full. Rejecting pickup.")
 					return false
-					
-	print("ERROR: Checked all guns, could not find one named: '", target_weapon_name, "'")
 	return false
 
 func play_animation(anim_name: String) -> void:

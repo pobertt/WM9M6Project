@@ -43,21 +43,16 @@ func _physics_process(_delta: float) -> void:
 			is_in_combat = true 
 			$StateMachine.on_child_transition($StateMachine.current_state, "state_chase")
 	
-	# NEW: Calculate the horizontal speed (ignore jumping/falling)
 	var horizontal_speed = Vector2(velocity.x, velocity.z).length()
 	
-	# Normalize the speed to a 0.0 - 1.0 range (Assuming your max run speed is around 5.0)
 	var blend_value = clamp(horizontal_speed / 5.0, 0.0, 1.0)
 	
-	# Send that value to BOTH BlendSpaces
 	if anim_state_machine:
 		var anim_tree = find_child("AnimationTree", true, false)
 		anim_tree.set("parameters/Movement/blend_position", blend_value)
 		anim_tree.set("parameters/Shooting/blend_position", blend_value)
 
-# The gun looks for this exact name!
 func take_damage(amount: int) -> void:
-	# Pass the damage straight into your existing health logic
 	_on_hurt_box_took_damage(amount)
 	
 func _on_hurt_box_took_damage(amount: int) -> void:
@@ -80,7 +75,6 @@ func _on_hurt_box_took_damage(amount: int) -> void:
 			$StateMachine.on_child_transition($StateMachine.current_state, "state_chase")
 
 func die() -> void:
-	# Immediately remove them from the group so aimbots and radars ignore them
 	if is_in_group("Enemy"):
 		remove_from_group("Enemy")
 		

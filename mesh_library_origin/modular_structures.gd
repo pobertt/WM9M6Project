@@ -16,12 +16,10 @@ func _unpack_with_structure() -> void:
 		
 		if found_meshes.size() > 0:
 			
-			# --- THE FIX: Steal the name and rename the old wrapper! ---
 			var original_name = instance.name
 			instance.name = original_name + "_garbage"
 			
 			var clean_parent = Node3D.new()
-			# Now Godot will accept the original name without panicking
 			clean_parent.name = original_name 
 			clean_parent.global_transform = instance.global_transform
 			
@@ -44,7 +42,7 @@ func _unpack_with_structure() -> void:
 	for old_instance in instances_to_delete:
 		old_instance.queue_free()
 					
-	print("--- FINISHED! Successfully rebuilt ", count, " perfectly named folders! ---")
+	print("--- FINISHED! Successfully rebuilt ", count)
 
 func _find_all_meshes(node: Node) -> Array:
 	var result = []

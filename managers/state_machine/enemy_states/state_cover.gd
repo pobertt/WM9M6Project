@@ -20,8 +20,6 @@ func enter() -> void:
 	reached_cover = false
 	is_peeking = false
 	
-	# FIX 1: Tell the tree to use the Movement BlendSpace. 
-	# They will automatically run while moving, and automatically idle when they reach the wall!
 	if actor.anim_state_machine:
 		actor.anim_state_machine.travel("Movement")
 	
@@ -34,7 +32,6 @@ func physics_update(_delta: float) -> void:
 	if player == null:
 		return
 		
-	# Keep gravity active
 	if not actor.is_on_floor():
 		actor.velocity += actor.get_gravity() * _delta
 		
@@ -47,7 +44,6 @@ func physics_update(_delta: float) -> void:
 			
 		nav.target_position = target_cover_position
 		
-		# FIX 2: The Bulletproof Distance Check (Bypasses the 1-frame nav bug)
 		var current_pos = actor.global_position
 		var target_pos = nav.target_position
 		var horizontal_dist = Vector2(current_pos.x, current_pos.z).distance_to(Vector2(target_pos.x, target_pos.z))
@@ -90,16 +86,13 @@ func find_best_cover() -> void:
 	target_cover_position = best_point
 
 func execute_cover_loop() -> void:
-	# 1. Stop and hide (Velocity hits 0, so the BlendSpace drops them into rifle_idle)
 	actor.velocity = Vector3.ZERO
 	await get_tree().create_timer(wait_in_cover_time).timeout
 	
-	# Safety check in case they died while hiding
 	if not is_inside_tree() or actor.current_health <= 0: return
 	
 	is_peeking = true
 	
-	# 2. CALCULATE THE PEEK
 	var to_player = actor.global_position.direction_to(player.global_position)
 	to_player.y = 0
 	var right_vector = to_player.cross(Vector3.UP).normalized()
@@ -107,13 +100,12 @@ func execute_cover_loop() -> void:
 	var peek_dir = right_vector * [-1, 1].pick_random()
 	var peek_target = actor.global_position + (peek_dir * 1.5)
 	
-	# 3. STEP OUT (Replaced nav_agent with a clean distance check to prevent infinite loops)
 	while is_inside_tree() and actor.current_health > 0:
 		var current_pos = actor.global_position
 		var dist_to_peek = Vector2(current_pos.x, current_pos.z).distance_to(Vector2(peek_target.x, peek_target.z))
 		
 		if dist_to_peek < 0.5:
-			break # We arrived at the peek spot!
+			break 
 			
 		var dir = current_pos.direction_to(peek_target)
 		dir.y = 0
@@ -128,6 +120,5 @@ func execute_cover_loop() -> void:
 		
 		await get_tree().physics_frame 
 		
-	# 4. OPEN FIRE
 	if is_inside_tree() and actor.current_health > 0:
 		actor.get_node("StateMachine").on_child_transition(self, "state_attack_ranged")

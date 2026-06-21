@@ -40,7 +40,6 @@ func _weapon_behavior() -> void:
 	if player and player.velocity.length() > 1.0:
 		final_spread += movement_penalty
 		
-	# --- PERFECT ACCURACY OVERRIDE ---
 	if player and player.get("is_aimbot_active") == true:
 		final_spread = 0.0
 		
@@ -62,11 +61,9 @@ func _weapon_behavior() -> void:
 			ObjectPoolManager.spawn_impact(hit_point, hit_normal)
 			
 	raycast.rotation_degrees = Vector3.ZERO
-	# Stamp the time for the next bullet using our independent variable
 	last_spread_time = current_time
 
 func _weapon_reload_behavior() -> void:
-	#if anim_player.is_playing(): anim_player.stop()
 	
 	if reload_sound != null:
 		AudioManager.play_sound_3d(reload_sound, muzzle_light.global_position, 2.0)

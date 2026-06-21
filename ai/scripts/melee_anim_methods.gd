@@ -21,6 +21,4 @@ func trigger_end() -> void:
 
 func play_footstep() -> void:
 	if "enemy_footsteps" in self and not enemy_footsteps.is_empty():
-		# Parameters are now: (Stream, Position, Volume, Pitch, Max_Distance)
-		# We set Max_Distance to 15.0 meters so it fades out very quickly!
 		AudioManager.play_sound_3d(enemy_footsteps.pick_random(), global_position, -30.0, 1.0, 15.0)

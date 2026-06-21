@@ -36,7 +36,6 @@ func _weapon_behavior() -> void:
 	if player and player.velocity.length() > 1.0:
 		final_spread += movement_penalty
 		
-	# --- PERFECT ACCURACY OVERRIDE ---
 	if player and player.get("is_aimbot_active") == true:
 		final_spread = 0.0
 		
@@ -44,7 +43,6 @@ func _weapon_behavior() -> void:
 	raycast.rotation_degrees.y = randf_range(-final_spread, final_spread)
 	raycast.force_raycast_update()
 	
-	# 3. COLLISION
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		var hit_point = raycast.get_collision_point()
@@ -52,7 +50,6 @@ func _weapon_behavior() -> void:
 		
 		if target.has_method("take_damage"):
 			target.take_damage(damage)
-			# FIX: We now pass the 'target' so the blood sticks to them!
 			ObjectPoolManager.spawn_blood(hit_point, hit_normal, target)
 		else:
 			ObjectPoolManager.spawn_impact(hit_point, hit_normal)
