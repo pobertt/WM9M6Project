@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dw5a48wn25pyl" path="res://ai/enemies/enemy_ranged.tscn" id="12_6fx4s"]
 [ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="12_kqqvm"]
 [ext_resource type="Texture2D" uid="uid://b7efomvl010oo" path="res://assets/models/PSX Mega Pack II/Models/GLB/Modular Props/barricade_a_1_barricade_hr_1.png" id="13_6fx4s"]
+[ext_resource type="PackedScene" uid="uid://dl31v5yxcppnc" path="res://pickups/aimbot_pickup.tscn" id="14_22adx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
 shader = ExtResource("2_kw67p")
@@ -416,10 +417,10 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -4, 0)
 
 [node name="HealthPickup" parent="Environment" unique_id=793811414 instance=ExtResource("9_6fx4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.57518, 0.010000706, 3.963498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7076, 1.0539415, -19.019869)
 
 [node name="AmmoPickup" parent="Environment" unique_id=2108404521 instance=ExtResource("10_4u0ye")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.909477, 0.010000232, 6.1238337)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.198173, 0.734125, -13.685129)
 
 [node name="CoverPoint" parent="Environment" unique_id=1132386462 instance=ExtResource("10_f3h0t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.086678, 1.3014822, -22.758514)
@@ -453,6 +454,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.08414, 1.3014822, -22.233
 
 [node name="CoverPoint4" parent="Environment" unique_id=1454298944 instance=ExtResource("10_f3h0t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.149624, 1.2830751, -17.772758)
+
+[node name="AimbotPickup" parent="Environment" unique_id=1829904262 instance=ExtResource("14_22adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.730396, 1.6593695, -18.79883)
 
 [node name="Enemies" type="Node3D" parent="." unique_id=660462408]
 

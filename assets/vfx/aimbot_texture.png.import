@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddjxuq07hg5lo"
-path.s3tc="res://.godot/imported/Shotgun_01_Albedo.png-260ee8d5ac48d5463ae810ca23c6e4b0.s3tc.ctex"
+uid="uid://df044ehe8utad"
+path.s3tc="res://.godot/imported/aimbot_texture.png-0555b94b729bc2f5e0040c96d7c88d73.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/RetroWeaponsPack/Guns/Shotgun_01/Textures/Shotgun_01_Albedo.png"
-dest_files=["res://.godot/imported/Shotgun_01_Albedo.png-260ee8d5ac48d5463ae810ca23c6e4b0.s3tc.ctex"]
+source_file="res://assets/vfx/aimbot_texture.png"
+dest_files=["res://.godot/imported/aimbot_texture.png-0555b94b729bc2f5e0040c96d7c88d73.s3tc.ctex"]
 
 [params]
 

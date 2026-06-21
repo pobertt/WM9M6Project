@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://dw5a48wn25pyl" path="res://ai/enemies/enemy_ranged.tscn" id="13_bsijp"]
 [ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="14_bkxn3"]
 [ext_resource type="PackedScene" uid="uid://c88qm1ctbfkkk" path="res://interactables/interactable_door.tscn" id="15_ygglr"]
+[ext_resource type="PackedScene" uid="uid://0atj1ykprui1" path="res://pickups/health_pickup.tscn" id="16_c0tft"]
+[ext_resource type="PackedScene" uid="uid://biqjyt4rxny4o" path="res://pickups/ammo_pickup.tscn" id="17_gurg6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3amep"]
 shader = ExtResource("1_kouoh")
@@ -68,15 +70,17 @@ shadow_enabled = true
 environment = SubResource("Environment_t0ie7")
 
 [node name="Player" parent="SubViewportContainer/SubViewport" unique_id=838304920 instance=ExtResource("2_bsijp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.902386, 0.5091064, 6.9650006)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 29.494843, -0.064894676, -22.128096)
 
 [node name="WeaponPickup" parent="SubViewportContainer/SubViewport" unique_id=1195432585 instance=ExtResource("3_vkwk6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.380638, 0.8862972, 2.5517952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.543564, 4.881519, -9.183725)
 weapon_to_give = "Rifle"
 
 [node name="AimbotPickup" parent="SubViewportContainer/SubViewport" unique_id=1829904262 instance=ExtResource("4_vkwk6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.126371, 0.5499997, 0.90371513)
-duration = 100.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.894434, 0.5499997, 6.650491)
+
+[node name="WeaponPickup2" parent="SubViewportContainer/SubViewport" unique_id=652271808 instance=ExtResource("3_vkwk6")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 29.585043, 0.8378217, -21.240253)
 
 [node name="GameManager" type="Node" parent="." unique_id=1493449352]
 script = ExtResource("3_bkxn3")
@@ -183,6 +187,12 @@ spot_angle = 67.83
 [node name="InteractableDoor2" parent="Environment/NavigationRegion3D" unique_id=920926322 instance=ExtResource("15_ygglr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.988777, 0.98923373, 36.844048)
 is_level_exit = true
+
+[node name="HealthPickup" parent="Environment" unique_id=793811414 instance=ExtResource("16_c0tft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.829419, 0.33415782, 2.4867706)
+
+[node name="AmmoPickup" parent="Environment" unique_id=517095553 instance=ExtResource("17_gurg6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0478735, 0.8386091, -3.7433586)
 
 [node name="Enemies" type="Node3D" parent="." unique_id=72106614]
 

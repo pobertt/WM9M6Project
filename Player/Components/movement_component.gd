@@ -12,6 +12,7 @@ extends Node
 @export var air_acceleration: float = 3.0
 @export var jump_force: float = 4.5
 @export var slide_steer_speed: float = 30.0
+@onready var player: Player = get_parent()
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -51,7 +52,8 @@ func process_velocity(current_velocity: Vector3, direction: Vector3, look_direct
 	var new_velocity = current_velocity
 	
 	if is_sliding:
-		slide_direction = slide_direction.lerp(look_direction, delta * slide_steer_speed).normalized()
+		if not player.is_aimbot_active:
+			slide_direction = slide_direction.lerp(look_direction, delta * slide_steer_speed).normalized()
 		new_velocity = calculate_slide_velocity(current_velocity, slide_direction, is_on_floor, floor_normal, delta)
 		
 		# Cancel slide once friction stops movement completely

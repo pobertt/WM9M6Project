@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dc1f20ylpmp1" path="res://pickups/scripts/weapon_pickup.gd" id="1_ap43w"]
 [ext_resource type="ArrayMesh" uid="uid://bmhld3aqoggbl" path="res://assets/models/RetroWeaponsPack/tres/rifle.tres" id="2_ctq4s"]
+[ext_resource type="Texture2D" uid="uid://dmidp2xsks6k1" path="res://assets/models/RetroWeaponsPack/Guns/Rifle_01/Textures/Rifle_01_Albedo.png" id="2_kwv1x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hmf26"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2e5g6"]
+albedo_texture = ExtResource("2_kwv1x")
 
 [node name="WeaponPickup" type="Area3D" unique_id=1195432585]
 script = ExtResource("1_ap43w")
@@ -13,4 +17,5 @@ shape = SubResource("SphereShape3D_hmf26")
 
 [node name="Visual" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1458301553]
 transform = Transform3D(0.8048731, -0.21983887, -0.5512261, 0.59344697, 0.2981604, 0.7476103, 0, -0.9288548, 0.370444, -0.12168014, -0.077913284, 0)
+material_override = SubResource("StandardMaterial3D_2e5g6")
 mesh = ExtResource("2_ctq4s")

@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://ds7djltl52yak" path="res://assets/shaders/pp_psx.gdshader" id="1_qae1c"]
 [ext_resource type="PackedScene" uid="uid://c5pjyukli7lyi" path="res://player/player.tscn" id="2_n6f2s"]
 [ext_resource type="Script" uid="uid://bokwasyvmeq7d" path="res://managers/game_manager.gd" id="3_ulkxl"]
+[ext_resource type="PackedScene" uid="uid://dl31v5yxcppnc" path="res://pickups/aimbot_pickup.tscn" id="4_3f123"]
 [ext_resource type="MeshLibrary" uid="uid://bj6jcuw3ikeo7" path="res://assets/models/PSX Mega Pack II/tres/modular_structures_library.tres" id="4_gd1gh"]
 [ext_resource type="MeshLibrary" uid="uid://bp8r7m8d2435x" path="res://assets/models/PSX Mega Pack II/tres/buildings.tres" id="5_a1r6t"]
 [ext_resource type="PackedScene" uid="uid://dkvi6x6d1aq2x" path="res://interactables/interactable_button.tscn" id="5_vscsl"]
@@ -14,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cvw2ketkp0exn" path="res://ai/enemies/enemy_melee.tscn" id="8_vscsl"]
 [ext_resource type="MeshLibrary" uid="uid://denbwfb53usgq" path="res://assets/models/PSX Mega Pack II/tres/modular_props.tres" id="9_n6f2s"]
 [ext_resource type="PackedScene" uid="uid://c0fxirnkho51a" path="res://assets/models/Modular Retro FPS/GLB/ceiling_lamp_fps_1.glb" id="11_ulkxl"]
+[ext_resource type="PackedScene" uid="uid://d0u5fsbkdvshg" path="res://pickups/weapon_pickup.tscn" id="13_ejitl"]
+[ext_resource type="ArrayMesh" uid="uid://cv4dsjacdduvb" path="res://assets/models/RetroWeaponsPack/tres/smg.tres" id="14_kuxre"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33a3j"]
 shader = ExtResource("1_qae1c")
@@ -70,6 +73,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.430712, 0, 11.27441)
 script = ExtResource("3_ulkxl")
 
 [node name="Environment" type="Node3D" parent="." unique_id=546272945]
+
+[node name="AimbotPickup" parent="Environment" unique_id=1829904262 instance=ExtResource("4_3f123")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.220123, -0.83251643, -15.900254)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Environment" unique_id=1123269493]
 navigation_mesh = SubResource("NavigationMesh_jycr0")
@@ -183,10 +189,16 @@ is_level_transition = true
 next_level_path = "uid://b62awyrvn0owi"
 
 [node name="HealthPickup" parent="Environment/NavigationRegion3D/Room2" unique_id=793811414 instance=ExtResource("7_qae1c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4680841, 0.4000001, 6.8998137)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5808804, 0.4000001, -6.39157)
+
+[node name="HealthPickup2" parent="Environment/NavigationRegion3D/Room2" unique_id=142789667 instance=ExtResource("7_qae1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.268301, -0.30489987, -67.59469)
 
 [node name="AmmoPickup" parent="Environment/NavigationRegion3D/Room2" unique_id=1541619410 instance=ExtResource("8_n6f2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9554524, 0.6471846, 7.0537634)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.182251, -1.0176445, -8.053443)
+
+[node name="AmmoPickup2" parent="Environment/NavigationRegion3D/Room2" unique_id=79740315 instance=ExtResource("8_n6f2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.005947, -1.0176445, -36.652622)
 
 [node name="GridMapProps" type="GridMap" parent="Environment/NavigationRegion3D/Room2" unique_id=502387193]
 mesh_library = ExtResource("9_n6f2s")
@@ -298,6 +310,13 @@ spot_range = 31.277
 spot_attenuation = 0.7
 spot_angle = 76.44
 
+[node name="WeaponPickup" parent="Environment" unique_id=1195432585 instance=ExtResource("13_ejitl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6357667, 1.0142769, 6.125723)
+
+[node name="Visual" parent="Environment/WeaponPickup/CollisionShape3D" parent_id_path=PackedInt32Array(1195432585, 313545281) index="0" unique_id=1458301553]
+transform = Transform3D(1.9962355, 0.04543665, 0.11392827, -0.12265456, 0.7394934, 1.8542129, 0, -1.8577095, 0.740888, -0.08480668, -0.222453, 0)
+mesh = ExtResource("14_kuxre")
+
 [node name="Enemies" type="Node3D" parent="." unique_id=898324394]
 
 [node name="Room1" type="Node3D" parent="Enemies" unique_id=1520310764]
@@ -327,6 +346,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.423733, -1.8873358, -23.08
 transform = Transform3D(-0.94997746, 0, -0.31231844, 0, 1, 0, 0.31231844, 0, -0.94997746, 6.7343254, 3.05306, 8.61776)
 ranged_attack_range = 30.0
 
+[node name="enemy_ranged5" parent="Enemies/Room2" unique_id=1544260704 instance=ExtResource("7_hoo32")]
+transform = Transform3D(-0.94997746, 0, -0.31231844, 0, 1, 0, 0.31231844, 0, -0.94997746, 7.457039, 0.45079494, -45.982685)
+ranged_attack_range = 30.0
+
+[node name="enemy_ranged6" parent="Enemies/Room2" unique_id=1055097190 instance=ExtResource("7_hoo32")]
+transform = Transform3D(-0.94997746, 0, -0.31231844, 0, 1, 0, 0.31231844, 0, -0.94997746, -3.7913532, 0.4120028, -56.150707)
+ranged_attack_range = 30.0
+
+[node name="enemy_ranged7" parent="Enemies/Room2" unique_id=949815282 instance=ExtResource("7_hoo32")]
+transform = Transform3D(-0.94997746, 0, -0.31231844, 0, 1, 0, 0.31231844, 0, -0.94997746, -14.440098, 0.44101334, -44.19576)
+ranged_attack_range = 30.0
+
 [node name="enemy_ranged2" parent="Enemies/Room2" unique_id=1579533104 instance=ExtResource("7_hoo32")]
 transform = Transform3D(-0.9999948, 0, 0.0032113194, 0, 1, 0, -0.0032113194, 0, -0.9999948, 8.424042, 3.4181025, -7.381315)
 ranged_attack_range = 30.0
@@ -345,5 +376,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1942484, 0.7889252, -9.897
 [node name="enemy_melee2" parent="Enemies/Room2" unique_id=1644124708 instance=ExtResource("8_vscsl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.614128, 0.9509274, -9.897632)
 
+[node name="enemy_melee3" parent="Enemies/Room2" unique_id=2131663464 instance=ExtResource("8_vscsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.276434, 1.3273093, -45.31142)
+
+[node name="enemy_melee4" parent="Enemies/Room2" unique_id=770725533 instance=ExtResource("8_vscsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.641348, 1.3273093, -45.31142)
+
 [node name="warehouse_hs_1_roof_22" parent="." unique_id=1527737352 instance=ExtResource("8_hoo32")]
 transform = Transform3D(2.893891, 0, 0, 0, 2.63177, 0, 0, 0, 4.199366, 31.254719, 4.381831, -28.980911)
+
+[editable path="Environment/WeaponPickup"]
