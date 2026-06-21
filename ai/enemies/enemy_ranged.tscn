@@ -1,15 +1,25 @@
-[gd_scene format=3 uid="uid://dw5a48wn25pyl"]
+[gd_scene format=4 uid="uid://dw5a48wn25pyl"]
 
 [ext_resource type="Script" uid="uid://bv2f40wgyojbt" path="res://ai/scripts/enemy_dummy.gd" id="1_vcn27"]
+[ext_resource type="AudioStream" uid="uid://diopanonthhst" path="res://assets/sfx/840218__kreha__hurt-3.wav" id="2_fwhid"]
 [ext_resource type="Script" uid="uid://dmb4uh072kqo4" path="res://ai/scripts/hurt_box.gd" id="2_gynje"]
 [ext_resource type="AudioStream" uid="uid://bx1n5g0tu0ceh" path="res://assets/sfx/morganpurkis/396316__morganpurkis__meaty-gunshot.wav" id="2_r7736"]
+[ext_resource type="AudioStream" uid="uid://wlv15ojufa02" path="res://assets/sfx/853664__k27k_mike__enemy-hurt-2.mp3" id="3_o65cf"]
 [ext_resource type="Script" uid="uid://dnvbg8aw513pt" path="res://managers/state_machine/state_machine.gd" id="3_r7736"]
+[ext_resource type="AudioStream" uid="uid://u4frr4r2jbvl" path="res://assets/sfx/853659__k27k_mike__enemy-hurt-1.mp3" id="4_nl50d"]
 [ext_resource type="Script" uid="uid://ciwxyqhrw4oco" path="res://managers/state_machine/enemy_states/state_wander.gd" id="4_wjxv8"]
 [ext_resource type="Script" uid="uid://skhaa2uyai0u" path="res://managers/state_machine/enemy_states/state_chase.gd" id="5_fwhid"]
+[ext_resource type="AudioStream" uid="uid://b8o032f8krt5b" path="res://assets/sfx/386024__taramg__deathgroan001.wav" id="5_o65cf"]
 [ext_resource type="Script" uid="uid://da5ifib2svvxt" path="res://managers/state_machine/enemy_states/state_attack_ranged.gd" id="6_o65cf"]
+[ext_resource type="AudioStream" uid="uid://b4odxshdeaobl" path="res://assets/sfx/855844__sadiquecat__whoosh-long-bamboo-stick-os-st-13.wav" id="6_v5c6i"]
+[ext_resource type="AudioStream" uid="uid://8ni3bonmvyi0" path="res://assets/sfx/831766__ivanmk10__punch.wav" id="7_3w2gq"]
 [ext_resource type="Script" uid="uid://d0kkc2fr5rf5m" path="res://managers/state_machine/enemy_states/state_death.gd" id="7_nl50d"]
 [ext_resource type="Script" uid="uid://ddw1iqh5ub261" path="res://managers/state_machine/enemy_states/state_cover.gd" id="9_3w2gq"]
 [ext_resource type="PackedScene" uid="uid://ej2rgknbhvuy" path="res://ai/visuals/bad_guy_ranged_visual.tscn" id="10_gynje"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_v5c6i"]
+data = PackedByteArray("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")
+format = 3
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mj3t4"]
 radius = 0.25
@@ -23,6 +33,10 @@ radius = 20.0
 [node name="enemy_ranged" type="CharacterBody3D" unique_id=158084193 groups=["Enemy"]]
 script = ExtResource("1_vcn27")
 ranged_attack_range = 15.0
+hurt_sounds = Array[AudioStream]([SubResource("AudioStreamWAV_v5c6i"), ExtResource("2_fwhid"), ExtResource("3_o65cf"), ExtResource("4_nl50d")])
+death_sounds = Array[AudioStream]([ExtResource("5_o65cf")])
+melee_swing_sound = ExtResource("6_v5c6i")
+melee_hit_sound = ExtResource("7_3w2gq")
 shoot_sounds = Array[AudioStream]([ExtResource("2_r7736")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=629176959]
@@ -74,21 +88,21 @@ target_position = Vector3(0, 0, -1)
 [node name="BadGuy" parent="." unique_id=1492012931 instance=ExtResource("10_gynje")]
 
 [node name="Skeleton3D" parent="BadGuy/enemy_ranged/Armature" parent_id_path=PackedInt32Array(1492012931, 972838549) index="0" unique_id=1352030129]
-bones/0/position = Vector3(1.4551405, -0.5717437, -104.0081)
-bones/0/rotation = Quaternion(-0.7502996, -0.005814521, 0.044199068, 0.6595933)
-bones/1/rotation = Quaternion(0.0030231331, 0.01745358, -0.018360218, 0.99967456)
-bones/2/rotation = Quaternion(0.012966317, 0.005762018, -0.0048122527, 0.99988776)
+bones/0/position = Vector3(7.74617, 3.5643392, -104.285675)
+bones/0/rotation = Quaternion(-0.74332625, -0.0350007, 0.0637235, 0.6649664)
+bones/1/rotation = Quaternion(-0.00094012194, 0.03494101, -0.017542722, 0.99923503)
+bones/2/rotation = Quaternion(0.012937185, 0.0070652375, -0.008582431, 0.9998546)
 bones/3/rotation = Quaternion(0.0129068, 0.0070144385, -0.005359498, 0.99987775)
-bones/4/rotation = Quaternion(0.065406166, 0.048116438, 0.018115744, 0.99653333)
+bones/4/rotation = Quaternion(0.061786115, 0.04636982, 0.018905101, 0.9968325)
 bones/5/position = Vector3(2.9802322e-07, 3.8359146, 1.1609004)
-bones/5/rotation = Quaternion(0.03431185, -0.090682186, 0.0059555457, 0.99527085)
-bones/7/rotation = Quaternion(-0.66590804, -0.32598948, 0.522542, -0.42100748)
+bones/5/rotation = Quaternion(0.0073153465, -0.087378725, 0.02128351, 0.995921)
+bones/7/rotation = Quaternion(-0.66481906, -0.32708508, 0.52401066, -0.42005217)
 bones/8/position = Vector3(1.4834209e-06, 13.05749, -8.312888e-06)
-bones/8/rotation = Quaternion(0.2793782, 0.041654866, 0.024828296, 0.9589558)
+bones/8/rotation = Quaternion(0.29470867, 0.029005276, 0.080393605, 0.9517576)
 bones/9/position = Vector3(-1.4305115e-06, 30.697012, 1.0728836e-06)
-bones/9/rotation = Quaternion(0.09886632, 0.005349126, 0.6252206, 0.7741422)
+bones/9/rotation = Quaternion(0.091342635, 0.005604867, 0.5776414, 0.8111446)
 bones/10/position = Vector3(-2.3306288e-06, 26.930788, 9.215037e-06)
-bones/10/rotation = Quaternion(-0.09265598, -0.72241735, -0.0814664, 0.6803611)
+bones/10/rotation = Quaternion(-0.05662779, -0.7123931, -0.08129484, 0.69475216)
 bones/11/position = Vector3(-2.5224912, 2.3529131, -7.2791054e-06)
 bones/11/rotation = Quaternion(-0.017341597, -0.010161813, 0.45997632, 0.8877037)
 bones/12/position = Vector3(0.20519799, 2.7519975, -4.8257007e-06)
@@ -106,11 +120,11 @@ bones/18/position = Vector3(-0.12199712, 3.0876994, -5.6380595e-06)
 bones/19/position = Vector3(-6.4637623, 16.02417, -0.09638047)
 bones/19/rotation = Quaternion(0.65123373, -0.35379845, 0.4773694, 0.47205907)
 bones/20/position = Vector3(6.5573005e-07, 13.057496, 1.6802274e-05)
-bones/20/rotation = Quaternion(0.32098192, -0.12649634, -0.11382436, 0.93167233)
+bones/20/rotation = Quaternion(0.31150135, -0.12507789, -0.09687396, 0.93698347)
 bones/21/position = Vector3(4.7683716e-07, 30.706127, 6.0796738e-06)
-bones/21/rotation = Quaternion(0.11692901, -0.004540742, -0.7417839, 0.66035104)
+bones/21/rotation = Quaternion(0.11691349, -0.0045414944, -0.7416855, 0.66046447)
 bones/22/position = Vector3(-9.976983e-06, 26.921011, 4.0096097e-06)
-bones/22/rotation = Quaternion(0.25245717, 0.09569807, 0.08861518, 0.95877767)
+bones/22/rotation = Quaternion(0.22718439, 0.096915826, 0.08066985, 0.9656537)
 bones/23/position = Vector3(2.5809968, 1.9490024, 2.55962e-06)
 bones/23/rotation = Quaternion(0.33675164, -0.17859098, -0.43311718, 0.81677)
 bones/24/position = Vector3(-0.36270273, 2.5619018, -9.953623e-06)
@@ -125,17 +139,17 @@ bones/28/rotation = Quaternion(0.44010338, 0.002535874, -0.09372693, 0.8930386)
 bones/29/position = Vector3(0.059798166, 4.2508993, 4.6589776e-06)
 bones/29/rotation = Quaternion(0.55541795, -0.012866413, -0.13301486, 0.8207633)
 bones/30/position = Vector3(0.09219754, 2.6713982, -7.0079113e-06)
-bones/31/rotation = Quaternion(0.10224266, 0.097142324, 0.9897088, -0.024213735)
-bones/32/rotation = Quaternion(-0.18309624, -0.070023514, 0.03140204, 0.9800951)
-bones/33/rotation = Quaternion(0.49476513, 0.05397511, -0.08310982, 0.86335796)
-bones/34/rotation = Quaternion(0.26374924, -0.06480004, 0.01773953, 0.9622488)
-bones/36/rotation = Quaternion(-0.13582128, -0.0047005275, 0.9889837, 0.05866687)
-bones/37/rotation = Quaternion(-0.2391991, 0.07779769, -0.0559723, 0.966229)
-bones/38/rotation = Quaternion(0.6312825, -0.01787989, 0.085890576, 0.7705749)
-bones/39/rotation = Quaternion(0.2817788, 0.06378903, -0.01809522, 0.95718557)
+bones/31/rotation = Quaternion(0.09691216, 0.09857517, 0.99039143, -0.0039865966)
+bones/32/rotation = Quaternion(-0.22241716, -0.08566366, 0.029378843, 0.97073644)
+bones/33/rotation = Quaternion(0.5396227, 0.040937904, -0.049538147, 0.83945066)
+bones/34/rotation = Quaternion(0.2674642, -0.06423066, 0.017699623, 0.96126175)
+bones/36/rotation = Quaternion(-0.15112731, -0.0296312, 0.9840136, 0.08944133)
+bones/37/rotation = Quaternion(-0.18178417, 0.05236215, -0.05771394, 0.9802459)
+bones/38/rotation = Quaternion(0.6061204, -0.02695839, 0.12498412, 0.78502893)
+bones/39/rotation = Quaternion(0.28043985, 0.06399769, -0.01810849, 0.95756465)
 
 [node name="BoneAttachment3D" parent="BadGuy/enemy_ranged/Armature/Skeleton3D" index="9" unique_id=1205195988]
-transform = Transform3D(0.37905166, 0.89319754, 0.24190378, -0.07170396, 0.2889757, -0.954647, -0.92259276, 0.3445154, 0.17358273, -12.872398, 24.523386, -131.10004)
+transform = Transform3D(0.40508154, 0.84986454, 0.3371024, -0.03689097, 0.38360128, -0.9227612, -0.9135355, 0.36135793, 0.18674235, -8.529932, 28.477558, -131.14249)
 
 [connection signal="took_damage" from="HurtBox" to="." method="_on_hurt_box_took_damage"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
