@@ -31,7 +31,4 @@ E: Interact
 
 1, 2, 3, Mouse Wheel: Swap Weapons
 
-Credits
-Programming & Design: Robert Grimwade
-
-Audio Assets: Sound effects provided by Morgan Purkis (including footsteps and gunshot audio profiles).
+WARNING: if unzipping and playing the project through the editor the animations of certain things seem to break.
